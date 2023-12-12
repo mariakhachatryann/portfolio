@@ -1,12 +1,8 @@
 <template>
-
     <section name="Home" class='relative w-full md:h-screen h-unset'>
-
         <div
             class='max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 py-16 md:py-0 md:flex-row md:gap-8'>
-
             <div class='flex flex-col justify-center items-center h-[85%] md:h-full order-2 md:order-1 md:items-start'>
-
                 <h1 class='text-4xl md:text-[52px] font-bold text-white mb-2 mt-3 md:mt-0 md:mb-4'>I'm Maria Khachatryan</h1>
                 <h2
                     class='rounded-md bg-primary-color/20 max-w-max px-6 inline text-xl md:text-3xl lg:text-4xl font-semibold text-white'>
@@ -32,9 +28,6 @@
             <img src="/mariaKh1.jpg" alt="My profile"
                 class='mb-2 rounded-2xl mx-auto w-2/3 max-w-lg md:max-w-sm object-cover md:w-[70rem] shadow-2xl shadow-primary-color/20'
                 style='filter: drop-shadow(0px -4px 4px rgba(0, 255, 0, 0.5))' />
-            <!-- {/* <img src="https://imgur.com/mebuqDk.png" alt="My profile"
-                class='rounded-2xl mx-auto w-2/3 max-w-lg md:max-w-sm object-cover md:w-[70rem] shadow-2xl shadow-primary-color/20'
-                style={{ filter: 'drop-shadow(0px -4px 4px rgba(0, 255, 0, 0.5))' }} /> */} -->
         </div>
     </div>
 </section>
