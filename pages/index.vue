@@ -3,4 +3,5 @@
     <Main />
     <About />
     <Technologies />
+    <Footer />
 </template>

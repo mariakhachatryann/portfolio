@@ -2,6 +2,7 @@
 declare module 'vue' {
   export interface GlobalComponents {
     'About': typeof import("../components/About.vue")['default']
+    'Footer': typeof import("../components/Footer.vue")['default']
     'Main': typeof import("../components/Main.vue")['default']
     'MobileSocialLinks': typeof import("../components/MobileSocialLinks.vue")['default']
     'Nav': typeof import("../components/Nav.vue")['default']
@@ -30,6 +31,7 @@ declare module 'vue' {
     'Html': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Html']
     'Body': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
     'LazyAbout': typeof import("../components/About.vue")['default']
+    'LazyFooter': typeof import("../components/Footer.vue")['default']
     'LazyMain': typeof import("../components/Main.vue")['default']
     'LazyMobileSocialLinks': typeof import("../components/MobileSocialLinks.vue")['default']
     'LazyNav': typeof import("../components/Nav.vue")['default']
@@ -61,6 +63,7 @@ declare module 'vue' {
 }
 
 export const About: typeof import("../components/About.vue")['default']
+export const Footer: typeof import("../components/Footer.vue")['default']
 export const Main: typeof import("../components/Main.vue")['default']
 export const MobileSocialLinks: typeof import("../components/MobileSocialLinks.vue")['default']
 export const Nav: typeof import("../components/Nav.vue")['default']
@@ -89,6 +92,7 @@ export const Head: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Html']
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 export const LazyAbout: typeof import("../components/About.vue")['default']
+export const LazyFooter: typeof import("../components/Footer.vue")['default']
 export const LazyMain: typeof import("../components/Main.vue")['default']
 export const LazyMobileSocialLinks: typeof import("../components/MobileSocialLinks.vue")['default']
 export const LazyNav: typeof import("../components/Nav.vue")['default']
