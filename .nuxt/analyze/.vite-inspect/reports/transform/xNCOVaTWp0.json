@@ -4,206 +4,206 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from \"./Core/Interfaces/Colors\";\nexport * from \"./Core/Interfaces/IBounds\";\nexport * from \"./Core/Interfaces/IBubbleParticleData\";\nexport * from \"./Core/Interfaces/ICircleBouncer\";\nexport * from \"./Core/Interfaces/IColorManager\";\nexport * from \"./Core/Interfaces/IContainerInteractivity\";\nexport * from \"./Core/Interfaces/IContainerPlugin\";\nexport * from \"./Core/Interfaces/ICoordinates\";\nexport * from \"./Core/Interfaces/IDelta\";\nexport * from \"./Core/Interfaces/IDimension\";\nexport * from \"./Core/Interfaces/IDistance\";\nexport * from \"./Core/Interfaces/IDrawParticleParams\";\nexport * from \"./Core/Interfaces/IExternalInteractor\";\nexport * from \"./Core/Interfaces/IInteractor\";\nexport * from \"./Core/Interfaces/ILoadParams\";\nexport * from \"./Core/Interfaces/IMouseData\";\nexport * from \"./Core/Interfaces/IMovePathGenerator\";\nexport * from \"./Core/Interfaces/IParticle\";\nexport * from \"./Core/Interfaces/IParticleColorStyle\";\nexport * from \"./Core/Interfaces/IParticleHslAnimation\";\nexport * from \"./Core/Interfaces/IParticleLife\";\nexport * from \"./Core/Interfaces/IParticleMover\";\nexport * from \"./Core/Interfaces/IParticleRetinaProps\";\nexport * from \"./Core/Interfaces/IParticleRoll\";\nexport * from \"./Core/Interfaces/IParticleTransformValues\";\nexport * from \"./Core/Interfaces/IParticleUpdater\";\nexport * from \"./Core/Interfaces/IParticleValueAnimation\";\nexport * from \"./Core/Interfaces/IParticlesInteractor\";\nexport * from \"./Core/Interfaces/IPlugin\";\nexport * from \"./Core/Interfaces/IPositionFromSizeParams\";\nexport * from \"./Core/Interfaces/IRangeValue\";\nexport * from \"./Core/Interfaces/IRectSideResult\";\nexport * from \"./Core/Interfaces/IShapeDrawer\";\nexport * from \"./Core/Interfaces/IShapeValues\";\nexport * from \"./Core/Interfaces/ISlowParticleData\";\nexport * from \"./Core/Interfaces/ITrailFillData\";\nexport * from \"./Options/Interfaces/Background/IBackground\";\nexport * from \"./Options/Interfaces/BackgroundMask/IBackgroundMask\";\nexport * from \"./Options/Interfaces/BackgroundMask/IBackgroundMaskCover\";\nexport * from \"./Options/Interfaces/FullScreen/IFullScreen\";\nexport * from \"./Options/Interfaces/IAnimatable\";\nexport * from \"./Options/Interfaces/IAnimatableColor\";\nexport * from \"./Options/Interfaces/IAnimation\";\nexport * from \"./Options/Interfaces/IColorAnimation\";\nexport * from \"./Options/Interfaces/IHslAnimation\";\nexport * from \"./Options/Interfaces/IManualParticle\";\nexport * from \"./Options/Interfaces/IOptionLoader\";\nexport * from \"./Options/Interfaces/IOptions\";\nexport * from \"./Options/Interfaces/IOptionsColor\";\nexport * from \"./Options/Interfaces/IResponsive\";\nexport * from \"./Options/Interfaces/IValueWithRandom\";\nexport * from \"./Options/Interfaces/Interactivity/Events/IClickEvent\";\nexport * from \"./Options/Interfaces/Interactivity/Events/IDivEvent\";\nexport * from \"./Options/Interfaces/Interactivity/Events/IEvents\";\nexport * from \"./Options/Interfaces/Interactivity/Events/IHoverEvent\";\nexport * from \"./Options/Interfaces/Interactivity/Events/IParallax\";\nexport * from \"./Options/Interfaces/Interactivity/Events/IResizeEvent\";\nexport * from \"./Options/Interfaces/Interactivity/Modes/IModeDiv\";\nexport * from \"./Options/Interfaces/Interactivity/Modes/IModes\";\nexport * from \"./Options/Interfaces/Interactivity/IInteractivity\";\nexport * from \"./Options/Interfaces/Particles/Bounce/IParticlesBounce\";\nexport * from \"./Options/Interfaces/Particles/Collisions/ICollisions\";\nexport * from \"./Options/Interfaces/Particles/Collisions/ICollisionsAbsorb\";\nexport * from \"./Options/Interfaces/Particles/Collisions/ICollisionsOverlap\";\nexport * from \"./Options/Interfaces/Particles/IParticlesOptions\";\nexport * from \"./Options/Interfaces/Particles/IShadow\";\nexport * from \"./Options/Interfaces/Particles/IStroke\";\nexport * from \"./Options/Interfaces/Particles/Move/IMoveAttract\";\nexport * from \"./Options/Interfaces/Particles/Move/IMove\";\nexport * from \"./Options/Interfaces/Particles/Move/IMoveAngle\";\nexport * from \"./Options/Interfaces/Particles/Move/IMoveCenter\";\nexport * from \"./Options/Interfaces/Particles/Move/IMoveGravity\";\nexport * from \"./Options/Interfaces/Particles/Move/Path/IMovePath\";\nexport * from \"./Options/Interfaces/Particles/Move/IOutModes\";\nexport * from \"./Options/Interfaces/Particles/Move/ISpin\";\nexport * from \"./Options/Interfaces/Particles/Move/IMoveTrail\";\nexport * from \"./Options/Interfaces/Particles/Number/IParticlesDensity\";\nexport * from \"./Options/Interfaces/Particles/Number/IParticlesNumber\";\nexport * from \"./Options/Interfaces/Particles/Opacity/IOpacity\";\nexport * from \"./Options/Interfaces/Particles/Opacity/IOpacityAnimation\";\nexport * from \"./Options/Interfaces/Particles/Shape/ICharacterShape\";\nexport * from \"./Options/Interfaces/Particles/Shape/IImageShape\";\nexport * from \"./Options/Interfaces/Particles/Shape/IPolygonShape\";\nexport * from \"./Options/Interfaces/Particles/Shape/IShape\";\nexport * from \"./Options/Interfaces/Particles/Shape/IShapeValues\";\nexport * from \"./Options/Interfaces/Particles/Shape/IStarShape\";\nexport * from \"./Options/Interfaces/Particles/Size/ISize\";\nexport * from \"./Options/Interfaces/Particles/Size/ISizeAnimation\";\nexport * from \"./Options/Interfaces/Particles/ZIndex/IZIndex\";\nexport * from \"./Options/Interfaces/Theme/ITheme\";\nexport * from \"./Options/Interfaces/Theme/IThemeDefault\";\nexport * from \"./Types/CustomEventArgs\";\nexport * from \"./Types/CustomEventListener\";\nexport * from \"./Types/ExportResult\";\nexport * from \"./Types/ISourceOptions\";\nexport * from \"./Types/ParticlesGroups\";\nexport * from \"./Types/PathOptions\";\nexport * from \"./Types/RangeValue\";\nexport * from \"./Types/RecursivePartial\";\nexport * from \"./Types/ShapeData\";\nexport * from \"./Types/ShapeDrawerFunctions\";\nexport * from \"./Types/SingleOrMultiple\";\n",
-      "start": 1702544650919,
-      "end": 1702544650943,
+      "start": 1702665911739,
+      "end": 1702665911839,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1702544650943,
-      "end": 1702544650943,
+      "start": 1702665911839,
+      "end": 1702665911839,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1702544650944,
-      "end": 1702544650944,
+      "start": 1702665911839,
+      "end": 1702665911839,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1702544650944,
-      "end": 1702544650944,
+      "start": 1702665911840,
+      "end": 1702665911840,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1702544650944,
-      "end": 1702544650944,
+      "start": 1702665911840,
+      "end": 1702665911840,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1702544650944,
-      "end": 1702544650944,
+      "start": 1702665911840,
+      "end": 1702665911840,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1702544650944,
-      "end": 1702544650944,
+      "start": 1702665911840,
+      "end": 1702665911840,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1702544650944,
-      "end": 1702544650944,
+      "start": 1702665911840,
+      "end": 1702665911840,
       "order": "normal"
     },
     {
       "name": "vite:vue",
-      "start": 1702544650944,
-      "end": 1702544650944,
+      "start": 1702665911840,
+      "end": 1702665911840,
       "order": "normal"
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1702544650944,
-      "end": 1702544650944,
+      "start": 1702665911840,
+      "end": 1702665911840,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1702544650944,
-      "end": 1702544650944,
+      "start": 1702665911840,
+      "end": 1702665911840,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1702544650944,
-      "end": 1702544650944,
+      "start": 1702665911840,
+      "end": 1702665911840,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1702544650944,
-      "end": 1702544650944,
+      "start": 1702665911840,
+      "end": 1702665911840,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1702544650944,
-      "end": 1702544650944,
+      "start": 1702665911840,
+      "end": 1702665911840,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1702544650944,
-      "end": 1702544650944,
+      "start": 1702665911840,
+      "end": 1702665911840,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1702544650944,
-      "end": 1702544650944,
+      "start": 1702665911840,
+      "end": 1702665911840,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1702544650944,
-      "end": 1702544650944,
+      "start": 1702665911840,
+      "end": 1702665911840,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1702544650944,
-      "end": 1702544650944,
+      "start": 1702665911840,
+      "end": 1702665911840,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1702544650944,
-      "end": 1702544650944,
+      "start": 1702665911840,
+      "end": 1702665911840,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1702544650944,
-      "end": 1702544650944,
+      "start": 1702665911840,
+      "end": 1702665911840,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1702544650944,
-      "end": 1702544650944,
+      "start": 1702665911840,
+      "end": 1702665911840,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1702544650944,
-      "end": 1702544650945,
+      "start": 1702665911840,
+      "end": 1702665911841,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1702544650945,
-      "end": 1702544650945,
+      "start": 1702665911841,
+      "end": 1702665911841,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1702544650945,
-      "end": 1702544650945,
+      "start": 1702665911841,
+      "end": 1702665911841,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1702544650945,
-      "end": 1702544650945,
+      "start": 1702665911841,
+      "end": 1702665911841,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1702544650945,
-      "end": 1702544650945,
+      "start": 1702665911841,
+      "end": 1702665911841,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1702544650945,
-      "end": 1702544650945,
+      "start": 1702665911841,
+      "end": 1702665911841,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1702544650945,
-      "end": 1702544650945,
+      "start": 1702665911841,
+      "end": 1702665911841,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1702544650945,
-      "end": 1702544650945,
+      "start": 1702665911841,
+      "end": 1702665911841,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1702544650945,
-      "end": 1702544650945,
+      "start": 1702665911841,
+      "end": 1702665911841,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1702544650945,
-      "end": 1702544650945,
+      "start": 1702665911841,
+      "end": 1702665911841,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1702544650945,
-      "end": 1702544650945,
+      "start": 1702665911841,
+      "end": 1702665911841,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1702544650945,
-      "end": 1702544650945,
+      "start": 1702665911841,
+      "end": 1702665911841,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1702544650945,
-      "end": 1702544650945,
+      "start": 1702665911841,
+      "end": 1702665911841,
       "order": "normal"
     }
   ]

@@ -4,57 +4,57 @@
     {
       "name": "vite:load-fallback",
       "result": "<template>\r\n    <section name=\"Home\" class='relative w-full md:h-screen h-unset'>\r\n        <div\r\n            class='max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 py-16 md:py-0 md:flex-row md:gap-8'>\r\n            <div class='flex flex-col justify-center items-center h-[85%] md:h-full order-2 md:order-1 md:items-start'>\r\n                <h1 class='text-4xl md:text-[52px] font-bold text-white mb-2 mt-3 md:mt-0 md:mb-4'>I'm Maria Khachatryan</h1>\r\n                <h2\r\n                    class='rounded-md bg-primary-color/20 max-w-max px-6 inline text-xl md:text-3xl lg:text-4xl font-semibold text-white'>\r\n                    Front End Developer</h2>\r\n                <p class='text-gray-300 py-4 max-x-md text-justify'>certified by Platzi, one of the largest online\r\n                    professional education platforms in Latin America, and by Academlo, where I graduated as a Full Stack\r\n                    developer with JavaScript. Welcome to my portfolio, I'm excited to share my journey with you!</p>\r\n\r\n                <div class='hidden desktop:flex'>\r\n                    <div \r\n                        class='group  text-black font-semibold w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-t from-green-400 to-primary-color cursor-pointer mx-auto md:mx-0'>\r\n                    About me\r\n                    <span class='group-hover:rotate-90 duration-300 '>\r\n                        <AiOutlineArrowRight size=\"20\" class='ml-2' />\r\n                    </span>\r\n                    </div>\r\n                </div>\r\n\r\n                <MobileSocialLinks />\r\n            </div>\r\n\r\n        <div class='flex order-1 md:order-2 mt-8 md:mt-0'>\r\n            <img src=\"/mariaKh1.jpg\" alt=\"My profile\"\r\n                class='mb-2 rounded-2xl mx-auto w-2/3 max-w-lg md:max-w-sm object-cover md:w-[70rem] shadow-2xl shadow-primary-color/20'\r\n                style='filter: drop-shadow(0px -4px 4px rgba(0, 255, 0, 0.5))' />\r\n        </div>\r\n    </div>\r\n</section>\r\n</template>\r\n\r\n<script setup>\r\nimport {AiOutlineArrowRight} from 'vue3-icons/ai'\r\n    \r\n</script>",
-      "start": 1702544647108,
-      "end": 1702544647304,
+      "start": 1702665908003,
+      "end": 1702665908440,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1702544647304,
-      "end": 1702544647304,
+      "start": 1702665908440,
+      "end": 1702665908440,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1702544647304,
-      "end": 1702544647304,
+      "start": 1702665908440,
+      "end": 1702665908440,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1702544647304,
-      "end": 1702544647305,
+      "start": 1702665908440,
+      "end": 1702665908440,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1702544647305,
-      "end": 1702544647305,
+      "start": 1702665908440,
+      "end": 1702665908440,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1702544647305,
-      "end": 1702544647305,
+      "start": 1702665908440,
+      "end": 1702665908440,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1702544647305,
-      "end": 1702544647305,
+      "start": 1702665908440,
+      "end": 1702665908440,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1702544647305,
-      "end": 1702544647305,
+      "start": 1702665908440,
+      "end": 1702665908440,
       "order": "normal"
     },
     {
       "name": "vite:vue",
       "result": "import { createElementVNode as _createElementVNode, unref as _unref, createVNode as _createVNode, createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\nimport _imports_0 from '/mariaKh1.jpg'\n\n\nconst _hoisted_1 = {\n  name: \"Home\",\n  class: \"relative w-full md:h-screen h-unset\"\n}\nconst _hoisted_2 = { class: \"max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 py-16 md:py-0 md:flex-row md:gap-8\" }\nconst _hoisted_3 = { class: \"flex flex-col justify-center items-center h-[85%] md:h-full order-2 md:order-1 md:items-start\" }\nconst _hoisted_4 = /*#__PURE__*/_createElementVNode(\"h1\", { class: \"text-4xl md:text-[52px] font-bold text-white mb-2 mt-3 md:mt-0 md:mb-4\" }, \"I'm Maria Khachatryan\", -1)\nconst _hoisted_5 = /*#__PURE__*/_createElementVNode(\"h2\", { class: \"rounded-md bg-primary-color/20 max-w-max px-6 inline text-xl md:text-3xl lg:text-4xl font-semibold text-white\" }, \" Front End Developer\", -1)\nconst _hoisted_6 = /*#__PURE__*/_createElementVNode(\"p\", { class: \"text-gray-300 py-4 max-x-md text-justify\" }, \"certified by Platzi, one of the largest online professional education platforms in Latin America, and by Academlo, where I graduated as a Full Stack developer with JavaScript. Welcome to my portfolio, I'm excited to share my journey with you!\", -1)\nconst _hoisted_7 = { class: \"hidden desktop:flex\" }\nconst _hoisted_8 = { class: \"group text-black font-semibold w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-t from-green-400 to-primary-color cursor-pointer mx-auto md:mx-0\" }\nconst _hoisted_9 = { class: \"group-hover:rotate-90 duration-300\" }\nconst _hoisted_10 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"flex order-1 md:order-2 mt-8 md:mt-0\" }, [\n  /*#__PURE__*/_createElementVNode(\"img\", {\n    src: _imports_0,\n    alt: \"My profile\",\n    class: \"mb-2 rounded-2xl mx-auto w-2/3 max-w-lg md:max-w-sm object-cover md:w-[70rem] shadow-2xl shadow-primary-color/20\",\n    style: {\"filter\":\"drop-shadow(0px -4px 4px rgba(0, 255, 0, 0.5))\"}\n  })\n], -1)\n\nimport {AiOutlineArrowRight} from 'vue3-icons/ai'\r\n    \r\n\nconst _sfc_main = {\n  __name: 'Main',\n  setup(__props) {\n\r\n\nreturn (_ctx, _cache) => {\n  const _component_MobileSocialLinks = _resolveComponent(\"MobileSocialLinks\")\n\n  return (_openBlock(), _createElementBlock(\"section\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _createElementVNode(\"div\", _hoisted_3, [\n        _hoisted_4,\n        _hoisted_5,\n        _hoisted_6,\n        _createElementVNode(\"div\", _hoisted_7, [\n          _createElementVNode(\"div\", _hoisted_8, [\n            _createTextVNode(\" About me \"),\n            _createElementVNode(\"span\", _hoisted_9, [\n              _createVNode(_unref(AiOutlineArrowRight), {\n                size: \"20\",\n                class: \"ml-2\"\n              })\n            ])\n          ])\n        ]),\n        _createVNode(_component_MobileSocialLinks)\n      ]),\n      _hoisted_10\n    ])\n  ]))\n}\n}\n\n}\n\n\n\nexport default _sfc_main",
-      "start": 1702544647305,
-      "end": 1702544647312,
+      "start": 1702665908440,
+      "end": 1702665908448,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -62,153 +62,153 @@
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1702544647312,
-      "end": 1702544647312,
+      "start": 1702665908448,
+      "end": 1702665908448,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1702544647312,
-      "end": 1702544647312,
+      "start": 1702665908448,
+      "end": 1702665908449,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1702544647312,
-      "end": 1702544647312,
+      "start": 1702665908449,
+      "end": 1702665908449,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1702544647312,
-      "end": 1702544647312,
+      "start": 1702665908449,
+      "end": 1702665908449,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1702544647312,
-      "end": 1702544647312,
+      "start": 1702665908449,
+      "end": 1702665908449,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1702544647313,
-      "end": 1702544647313,
+      "start": 1702665908449,
+      "end": 1702665908449,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1702544647313,
-      "end": 1702544647313,
+      "start": 1702665908449,
+      "end": 1702665908449,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1702544647313,
-      "end": 1702544647313,
+      "start": 1702665908449,
+      "end": 1702665908449,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1702544647313,
-      "end": 1702544647313,
+      "start": 1702665908449,
+      "end": 1702665908449,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1702544647313,
-      "end": 1702544647313,
+      "start": 1702665908449,
+      "end": 1702665908449,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1702544647313,
-      "end": 1702544647313,
+      "start": 1702665908449,
+      "end": 1702665908449,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1702544647313,
-      "end": 1702544647313,
+      "start": 1702665908449,
+      "end": 1702665908449,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1702544647313,
-      "end": 1702544647313,
+      "start": 1702665908449,
+      "end": 1702665908449,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1702544647313,
-      "end": 1702544647313,
+      "start": 1702665908449,
+      "end": 1702665908449,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1702544647313,
-      "end": 1702544647313,
+      "start": 1702665908449,
+      "end": 1702665908449,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1702544647313,
-      "end": 1702544647313,
+      "start": 1702665908449,
+      "end": 1702665908449,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1702544647313,
-      "end": 1702544647314,
+      "start": 1702665908449,
+      "end": 1702665908451,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1702544647315,
-      "end": 1702544647315,
+      "start": 1702665908451,
+      "end": 1702665908451,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1702544647315,
-      "end": 1702544647315,
+      "start": 1702665908451,
+      "end": 1702665908451,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1702544647315,
-      "end": 1702544647315,
+      "start": 1702665908451,
+      "end": 1702665908451,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1702544647315,
-      "end": 1702544647315,
+      "start": 1702665908451,
+      "end": 1702665908451,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
       "result": "import { default as __nuxt_component_0 } from \"C:/Users/user/Desktop/portfolio/components/MobileSocialLinks.vue\";\nimport { createElementVNode as _createElementVNode, unref as _unref, createVNode as _createVNode, createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\nimport _imports_0 from '/mariaKh1.jpg'\n\n\nconst _hoisted_1 = {\n  name: \"Home\",\n  class: \"relative w-full md:h-screen h-unset\"\n}\nconst _hoisted_2 = { class: \"max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 py-16 md:py-0 md:flex-row md:gap-8\" }\nconst _hoisted_3 = { class: \"flex flex-col justify-center items-center h-[85%] md:h-full order-2 md:order-1 md:items-start\" }\nconst _hoisted_4 = /*#__PURE__*/_createElementVNode(\"h1\", { class: \"text-4xl md:text-[52px] font-bold text-white mb-2 mt-3 md:mt-0 md:mb-4\" }, \"I'm Maria Khachatryan\", -1)\nconst _hoisted_5 = /*#__PURE__*/_createElementVNode(\"h2\", { class: \"rounded-md bg-primary-color/20 max-w-max px-6 inline text-xl md:text-3xl lg:text-4xl font-semibold text-white\" }, \" Front End Developer\", -1)\nconst _hoisted_6 = /*#__PURE__*/_createElementVNode(\"p\", { class: \"text-gray-300 py-4 max-x-md text-justify\" }, \"certified by Platzi, one of the largest online professional education platforms in Latin America, and by Academlo, where I graduated as a Full Stack developer with JavaScript. Welcome to my portfolio, I'm excited to share my journey with you!\", -1)\nconst _hoisted_7 = { class: \"hidden desktop:flex\" }\nconst _hoisted_8 = { class: \"group text-black font-semibold w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-t from-green-400 to-primary-color cursor-pointer mx-auto md:mx-0\" }\nconst _hoisted_9 = { class: \"group-hover:rotate-90 duration-300\" }\nconst _hoisted_10 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"flex order-1 md:order-2 mt-8 md:mt-0\" }, [\n  /*#__PURE__*/_createElementVNode(\"img\", {\n    src: _imports_0,\n    alt: \"My profile\",\n    class: \"mb-2 rounded-2xl mx-auto w-2/3 max-w-lg md:max-w-sm object-cover md:w-[70rem] shadow-2xl shadow-primary-color/20\",\n    style: {\"filter\":\"drop-shadow(0px -4px 4px rgba(0, 255, 0, 0.5))\"}\n  })\n], -1)\n\nimport {AiOutlineArrowRight} from 'vue3-icons/ai'\r\n    \r\n\nconst _sfc_main = {\n  __name: 'Main',\n  setup(__props) {\n\r\n\nreturn (_ctx, _cache) => {\n  const _component_MobileSocialLinks = __nuxt_component_0\n\n  return (_openBlock(), _createElementBlock(\"section\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _createElementVNode(\"div\", _hoisted_3, [\n        _hoisted_4,\n        _hoisted_5,\n        _hoisted_6,\n        _createElementVNode(\"div\", _hoisted_7, [\n          _createElementVNode(\"div\", _hoisted_8, [\n            _createTextVNode(\" About me \"),\n            _createElementVNode(\"span\", _hoisted_9, [\n              _createVNode(_unref(AiOutlineArrowRight), {\n                size: \"20\",\n                class: \"ml-2\"\n              })\n            ])\n          ])\n        ]),\n        _createVNode(_component_MobileSocialLinks)\n      ]),\n      _hoisted_10\n    ])\n  ]))\n}\n}\n\n}\n\n\n\nexport default _sfc_main",
-      "start": 1702544647315,
-      "end": 1702544647315,
+      "start": 1702665908451,
+      "end": 1702665908452,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1702544647315,
-      "end": 1702544647315,
+      "start": 1702665908452,
+      "end": 1702665908452,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1702544647315,
-      "end": 1702544647315,
+      "start": 1702665908452,
+      "end": 1702665908452,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1702544647315,
-      "end": 1702544647315,
+      "start": 1702665908452,
+      "end": 1702665908452,
       "order": "normal"
     }
   ]

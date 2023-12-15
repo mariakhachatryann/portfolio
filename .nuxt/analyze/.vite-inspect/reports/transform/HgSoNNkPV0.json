@@ -4,206 +4,206 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Circle, ExternalInteractorBase, Vector, clamp, getDistances, getEasing, isInArray, mouseMoveEvent, } from \"tsparticles-engine\";\nimport { Attract } from \"./Options/Classes/Attract\";\nexport class Attractor extends ExternalInteractorBase {\n    constructor(engine, container) {\n        super(container);\n        this._clickAttract = () => {\n            const container = this.container;\n            if (!container.attract) {\n                container.attract = { particles: [] };\n            }\n            const { attract } = container;\n            if (!attract.finish) {\n                if (!attract.count) {\n                    attract.count = 0;\n                }\n                attract.count++;\n                if (attract.count === container.particles.count) {\n                    attract.finish = true;\n                }\n            }\n            if (attract.clicking) {\n                const mousePos = container.interactivity.mouse.clickPosition, attractRadius = container.retina.attractModeDistance;\n                if (!attractRadius || attractRadius < 0 || !mousePos) {\n                    return;\n                }\n                this._processAttract(mousePos, attractRadius, new Circle(mousePos.x, mousePos.y, attractRadius));\n            }\n            else if (attract.clicking === false) {\n                attract.particles = [];\n            }\n            return;\n        };\n        this._hoverAttract = () => {\n            const container = this.container, mousePos = container.interactivity.mouse.position, attractRadius = container.retina.attractModeDistance;\n            if (!attractRadius || attractRadius < 0 || !mousePos) {\n                return;\n            }\n            this._processAttract(mousePos, attractRadius, new Circle(mousePos.x, mousePos.y, attractRadius));\n        };\n        this._processAttract = (position, attractRadius, area) => {\n            const container = this.container, attractOptions = container.actualOptions.interactivity.modes.attract;\n            if (!attractOptions) {\n                return;\n            }\n            const query = container.particles.quadTree.query(area, (p) => this.isEnabled(p));\n            for (const particle of query) {\n                const { dx, dy, distance } = getDistances(particle.position, position);\n                const velocity = attractOptions.speed * attractOptions.factor;\n                const attractFactor = clamp(getEasing(attractOptions.easing)(1 - distance / attractRadius) * velocity, 0, attractOptions.maxSpeed);\n                const normVec = Vector.create(distance === 0 ? velocity : (dx / distance) * attractFactor, distance === 0 ? velocity : (dy / distance) * attractFactor);\n                particle.position.subFrom(normVec);\n            }\n        };\n        this._engine = engine;\n        if (!container.attract) {\n            container.attract = { particles: [] };\n        }\n        this.handleClickMode = (mode) => {\n            const options = this.container.actualOptions, attract = options.interactivity.modes.attract;\n            if (!attract || mode !== \"attract\") {\n                return;\n            }\n            if (!container.attract) {\n                container.attract = { particles: [] };\n            }\n            container.attract.clicking = true;\n            container.attract.count = 0;\n            for (const particle of container.attract.particles) {\n                if (!this.isEnabled(particle)) {\n                    continue;\n                }\n                particle.velocity.setTo(particle.initialVelocity);\n            }\n            container.attract.particles = [];\n            container.attract.finish = false;\n            setTimeout(() => {\n                if (container.destroyed) {\n                    return;\n                }\n                if (!container.attract) {\n                    container.attract = { particles: [] };\n                }\n                container.attract.clicking = false;\n            }, attract.duration * 1000);\n        };\n    }\n    clear() {\n    }\n    init() {\n        const container = this.container, attract = container.actualOptions.interactivity.modes.attract;\n        if (!attract) {\n            return;\n        }\n        container.retina.attractModeDistance = attract.distance * container.retina.pixelRatio;\n    }\n    async interact() {\n        const container = this.container, options = container.actualOptions, mouseMoveStatus = container.interactivity.status === mouseMoveEvent, events = options.interactivity.events, hoverEnabled = events.onHover.enable, hoverMode = events.onHover.mode, clickEnabled = events.onClick.enable, clickMode = events.onClick.mode;\n        if (mouseMoveStatus && hoverEnabled && isInArray(\"attract\", hoverMode)) {\n            this._hoverAttract();\n        }\n        else if (clickEnabled && isInArray(\"attract\", clickMode)) {\n            this._clickAttract();\n        }\n    }\n    isEnabled(particle) {\n        const container = this.container, options = container.actualOptions, mouse = container.interactivity.mouse, events = (particle?.interactivity ?? options.interactivity).events;\n        if ((!mouse.position || !events.onHover.enable) && (!mouse.clickPosition || !events.onClick.enable)) {\n            return false;\n        }\n        const hoverMode = events.onHover.mode, clickMode = events.onClick.mode;\n        return isInArray(\"attract\", hoverMode) || isInArray(\"attract\", clickMode);\n    }\n    loadModeOptions(options, ...sources) {\n        if (!options.attract) {\n            options.attract = new Attract();\n        }\n        for (const source of sources) {\n            options.attract.load(source?.attract);\n        }\n    }\n    reset() {\n    }\n}\n",
-      "start": 1702544652121,
-      "end": 1702544652198,
+      "start": 1702665912929,
+      "end": 1702665913024,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1702544652198,
-      "end": 1702544652198,
+      "start": 1702665913024,
+      "end": 1702665913024,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1702544652198,
-      "end": 1702544652198,
+      "start": 1702665913024,
+      "end": 1702665913024,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1702544652198,
-      "end": 1702544652198,
+      "start": 1702665913024,
+      "end": 1702665913024,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1702544652198,
-      "end": 1702544652198,
+      "start": 1702665913024,
+      "end": 1702665913024,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1702544652198,
-      "end": 1702544652198,
+      "start": 1702665913024,
+      "end": 1702665913024,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1702544652198,
-      "end": 1702544652199,
+      "start": 1702665913025,
+      "end": 1702665913025,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1702544652199,
-      "end": 1702544652199,
+      "start": 1702665913025,
+      "end": 1702665913025,
       "order": "normal"
     },
     {
       "name": "vite:vue",
-      "start": 1702544652199,
-      "end": 1702544652199,
+      "start": 1702665913025,
+      "end": 1702665913025,
       "order": "normal"
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1702544652199,
-      "end": 1702544652199,
+      "start": 1702665913025,
+      "end": 1702665913025,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1702544652199,
-      "end": 1702544652199,
+      "start": 1702665913025,
+      "end": 1702665913025,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1702544652199,
-      "end": 1702544652199,
+      "start": 1702665913025,
+      "end": 1702665913025,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1702544652199,
-      "end": 1702544652199,
+      "start": 1702665913025,
+      "end": 1702665913025,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1702544652199,
-      "end": 1702544652199,
+      "start": 1702665913025,
+      "end": 1702665913025,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1702544652199,
-      "end": 1702544652199,
+      "start": 1702665913025,
+      "end": 1702665913025,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1702544652199,
-      "end": 1702544652199,
+      "start": 1702665913025,
+      "end": 1702665913025,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1702544652199,
-      "end": 1702544652199,
+      "start": 1702665913025,
+      "end": 1702665913025,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1702544652199,
-      "end": 1702544652199,
+      "start": 1702665913025,
+      "end": 1702665913025,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1702544652199,
-      "end": 1702544652199,
+      "start": 1702665913025,
+      "end": 1702665913025,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1702544652199,
-      "end": 1702544652199,
+      "start": 1702665913025,
+      "end": 1702665913025,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1702544652199,
-      "end": 1702544652199,
+      "start": 1702665913025,
+      "end": 1702665913025,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1702544652199,
-      "end": 1702544652201,
+      "start": 1702665913025,
+      "end": 1702665913026,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1702544652201,
-      "end": 1702544652201,
+      "start": 1702665913026,
+      "end": 1702665913026,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1702544652201,
-      "end": 1702544652201,
+      "start": 1702665913026,
+      "end": 1702665913026,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1702544652201,
-      "end": 1702544652201,
+      "start": 1702665913026,
+      "end": 1702665913026,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1702544652201,
-      "end": 1702544652201,
+      "start": 1702665913026,
+      "end": 1702665913027,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1702544652201,
-      "end": 1702544652201,
+      "start": 1702665913027,
+      "end": 1702665913027,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1702544652201,
-      "end": 1702544652202,
+      "start": 1702665913027,
+      "end": 1702665913027,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1702544652202,
-      "end": 1702544652202,
+      "start": 1702665913027,
+      "end": 1702665913027,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1702544652202,
-      "end": 1702544652202,
+      "start": 1702665913027,
+      "end": 1702665913027,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1702544652202,
-      "end": 1702544652202,
+      "start": 1702665913027,
+      "end": 1702665913027,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1702544652202,
-      "end": 1702544652202,
+      "start": 1702665913027,
+      "end": 1702665913027,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1702544652202,
-      "end": 1702544652202,
+      "start": 1702665913027,
+      "end": 1702665913027,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1702544652202,
-      "end": 1702544652202,
+      "start": 1702665913027,
+      "end": 1702665913027,
       "order": "normal"
     }
   ]

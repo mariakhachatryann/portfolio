@@ -3,58 +3,58 @@
   "transforms": [
     {
       "name": "vite:load-fallback",
-      "result": "<template>\r\n    <Nav />\r\n    <Main />\r\n    <About />\r\n    <Technologies />\r\n    <Footer />\r\n</template>",
-      "start": 1702544646521,
-      "end": 1702544646958,
+      "result": "<template>\r\n    <Nav />\r\n    <Main />\r\n    <About />\r\n    <Projects />\r\n    <Technologies />\r\n    <Contact />\r\n    <Footer />\r\n</template>",
+      "start": 1702665907261,
+      "end": 1702665907770,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1702544646958,
-      "end": 1702544646958,
+      "start": 1702665907770,
+      "end": 1702665907770,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1702544646958,
-      "end": 1702544646958,
+      "start": 1702665907770,
+      "end": 1702665907770,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1702544646958,
-      "end": 1702544646958,
+      "start": 1702665907770,
+      "end": 1702665907770,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1702544646958,
-      "end": 1702544646958,
+      "start": 1702665907770,
+      "end": 1702665907770,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1702544646958,
-      "end": 1702544646958,
+      "start": 1702665907770,
+      "end": 1702665907770,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1702544646958,
-      "end": 1702544646958,
+      "start": 1702665907770,
+      "end": 1702665907770,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1702544646958,
-      "end": 1702544646958,
+      "start": 1702665907770,
+      "end": 1702665907770,
       "order": "normal"
     },
     {
       "name": "vite:vue",
-      "result": "const _sfc_main = {}\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nfunction _sfc_render(_ctx, _cache) {\n  const _component_Nav = _resolveComponent(\"Nav\")\n  const _component_Main = _resolveComponent(\"Main\")\n  const _component_About = _resolveComponent(\"About\")\n  const _component_Technologies = _resolveComponent(\"Technologies\")\n  const _component_Footer = _resolveComponent(\"Footer\")\n\n  return (_openBlock(), _createElementBlock(_Fragment, null, [\n    _createVNode(_component_Nav),\n    _createVNode(_component_Main),\n    _createVNode(_component_About),\n    _createVNode(_component_Technologies),\n    _createVNode(_component_Footer)\n  ], 64))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
-      "start": 1702544646958,
-      "end": 1702544646960,
+      "result": "const _sfc_main = {}\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nfunction _sfc_render(_ctx, _cache) {\n  const _component_Nav = _resolveComponent(\"Nav\")\n  const _component_Main = _resolveComponent(\"Main\")\n  const _component_About = _resolveComponent(\"About\")\n  const _component_Projects = _resolveComponent(\"Projects\")\n  const _component_Technologies = _resolveComponent(\"Technologies\")\n  const _component_Contact = _resolveComponent(\"Contact\")\n  const _component_Footer = _resolveComponent(\"Footer\")\n\n  return (_openBlock(), _createElementBlock(_Fragment, null, [\n    _createVNode(_component_Nav),\n    _createVNode(_component_Main),\n    _createVNode(_component_About),\n    _createVNode(_component_Projects),\n    _createVNode(_component_Technologies),\n    _createVNode(_component_Contact),\n    _createVNode(_component_Footer)\n  ], 64))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1702665907770,
+      "end": 1702665907772,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -62,153 +62,153 @@
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1702544646960,
-      "end": 1702544646960,
+      "start": 1702665907772,
+      "end": 1702665907772,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1702544646960,
-      "end": 1702544646960,
+      "start": 1702665907772,
+      "end": 1702665907772,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1702544646960,
-      "end": 1702544646960,
+      "start": 1702665907772,
+      "end": 1702665907772,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1702544646960,
-      "end": 1702544646960,
+      "start": 1702665907772,
+      "end": 1702665907772,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1702544646960,
-      "end": 1702544646960,
+      "start": 1702665907772,
+      "end": 1702665907772,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1702544646960,
-      "end": 1702544646960,
+      "start": 1702665907772,
+      "end": 1702665907772,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1702544646960,
-      "end": 1702544646960,
+      "start": 1702665907772,
+      "end": 1702665907772,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1702544646960,
-      "end": 1702544646961,
+      "start": 1702665907772,
+      "end": 1702665907773,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1702544646961,
-      "end": 1702544646961,
+      "start": 1702665907773,
+      "end": 1702665907773,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1702544646961,
-      "end": 1702544646961,
+      "start": 1702665907773,
+      "end": 1702665907773,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1702544646961,
-      "end": 1702544646961,
+      "start": 1702665907773,
+      "end": 1702665907773,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1702544646961,
-      "end": 1702544646961,
+      "start": 1702665907773,
+      "end": 1702665907773,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1702544646961,
-      "end": 1702544646961,
+      "start": 1702665907773,
+      "end": 1702665907773,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1702544646961,
-      "end": 1702544646961,
+      "start": 1702665907773,
+      "end": 1702665907773,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1702544646961,
-      "end": 1702544646961,
+      "start": 1702665907773,
+      "end": 1702665907773,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1702544646961,
-      "end": 1702544646961,
+      "start": 1702665907773,
+      "end": 1702665907773,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1702544646961,
-      "end": 1702544646962,
+      "start": 1702665907773,
+      "end": 1702665907774,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1702544646962,
-      "end": 1702544646962,
+      "start": 1702665907774,
+      "end": 1702665907774,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1702544646962,
-      "end": 1702544646962,
+      "start": 1702665907774,
+      "end": 1702665907774,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1702544646962,
-      "end": 1702544646962,
+      "start": 1702665907774,
+      "end": 1702665907774,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1702544646962,
-      "end": 1702544646962,
+      "start": 1702665907774,
+      "end": 1702665907774,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "result": "import { default as __nuxt_component_0 } from \"C:/Users/user/Desktop/portfolio/components/Nav.vue\";\nimport { default as __nuxt_component_1 } from \"C:/Users/user/Desktop/portfolio/components/Main.vue\";\nimport { default as __nuxt_component_2 } from \"C:/Users/user/Desktop/portfolio/components/About.vue\";\nimport { default as __nuxt_component_3 } from \"C:/Users/user/Desktop/portfolio/components/Technologies.vue\";\nimport { default as __nuxt_component_4 } from \"C:/Users/user/Desktop/portfolio/components/Footer.vue\";\nconst _sfc_main = {}\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nfunction _sfc_render(_ctx, _cache) {\n  const _component_Nav = __nuxt_component_0\n  const _component_Main = __nuxt_component_1\n  const _component_About = __nuxt_component_2\n  const _component_Technologies = __nuxt_component_3\n  const _component_Footer = __nuxt_component_4\n\n  return (_openBlock(), _createElementBlock(_Fragment, null, [\n    _createVNode(_component_Nav),\n    _createVNode(_component_Main),\n    _createVNode(_component_About),\n    _createVNode(_component_Technologies),\n    _createVNode(_component_Footer)\n  ], 64))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
-      "start": 1702544646962,
-      "end": 1702544646963,
+      "result": "import { default as __nuxt_component_0 } from \"C:/Users/user/Desktop/portfolio/components/Nav.vue\";\nimport { default as __nuxt_component_1 } from \"C:/Users/user/Desktop/portfolio/components/Main.vue\";\nimport { default as __nuxt_component_2 } from \"C:/Users/user/Desktop/portfolio/components/About.vue\";\nimport { default as __nuxt_component_3 } from \"C:/Users/user/Desktop/portfolio/components/Projects.vue\";\nimport { default as __nuxt_component_4 } from \"C:/Users/user/Desktop/portfolio/components/Technologies.vue\";\nimport { default as __nuxt_component_5 } from \"C:/Users/user/Desktop/portfolio/components/Contact.vue\";\nimport { default as __nuxt_component_6 } from \"C:/Users/user/Desktop/portfolio/components/Footer.vue\";\nconst _sfc_main = {}\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nfunction _sfc_render(_ctx, _cache) {\n  const _component_Nav = __nuxt_component_0\n  const _component_Main = __nuxt_component_1\n  const _component_About = __nuxt_component_2\n  const _component_Projects = __nuxt_component_3\n  const _component_Technologies = __nuxt_component_4\n  const _component_Contact = __nuxt_component_5\n  const _component_Footer = __nuxt_component_6\n\n  return (_openBlock(), _createElementBlock(_Fragment, null, [\n    _createVNode(_component_Nav),\n    _createVNode(_component_Main),\n    _createVNode(_component_About),\n    _createVNode(_component_Projects),\n    _createVNode(_component_Technologies),\n    _createVNode(_component_Contact),\n    _createVNode(_component_Footer)\n  ], 64))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1702665907774,
+      "end": 1702665907775,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1702544646963,
-      "end": 1702544646963,
+      "start": 1702665907775,
+      "end": 1702665907775,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1702544646963,
-      "end": 1702544646963,
+      "start": 1702665907776,
+      "end": 1702665907776,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1702544646963,
-      "end": 1702544646963,
+      "start": 1702665907776,
+      "end": 1702665907776,
       "order": "normal"
     }
   ]
