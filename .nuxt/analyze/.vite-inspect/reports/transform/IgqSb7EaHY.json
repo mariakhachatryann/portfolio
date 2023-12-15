@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/Users/user/Desktop/portfolio/node_modules/tsparticles-engine/esm/Core/Retina.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { getRangeValue } from \"../Utils/NumberUtils\";\nimport { isSsr } from \"../Utils/Utils\";\nexport class Retina {\n    constructor(container) {\n        this.container = container;\n        this.pixelRatio = 1;\n        this.reduceFactor = 1;\n    }\n    init() {\n        const container = this.container, options = container.actualOptions;\n        this.pixelRatio = !options.detectRetina || isSsr() ? 1 : window.devicePixelRatio;\n        this.reduceFactor = 1;\n        const ratio = this.pixelRatio;\n        if (container.canvas.element) {\n            const element = container.canvas.element;\n            container.canvas.size.width = element.offsetWidth * ratio;\n            container.canvas.size.height = element.offsetHeight * ratio;\n        }\n        const particles = options.particles, moveOptions = particles.move;\n        this.attractDistance = getRangeValue(moveOptions.attract.distance) * ratio;\n        this.maxSpeed = getRangeValue(moveOptions.gravity.maxSpeed) * ratio;\n        this.sizeAnimationSpeed = getRangeValue(particles.size.animation.speed) * ratio;\n    }\n    initParticle(particle) {\n        const options = particle.options, ratio = this.pixelRatio, moveOptions = options.move, moveDistance = moveOptions.distance, props = particle.retina;\n        props.attractDistance = getRangeValue(moveOptions.attract.distance) * ratio;\n        props.moveDrift = getRangeValue(moveOptions.drift) * ratio;\n        props.moveSpeed = getRangeValue(moveOptions.speed) * ratio;\n        props.sizeAnimationSpeed = getRangeValue(options.size.animation.speed) * ratio;\n        const maxDistance = props.maxDistance;\n        maxDistance.horizontal = moveDistance.horizontal !== undefined ? moveDistance.horizontal * ratio : undefined;\n        maxDistance.vertical = moveDistance.vertical !== undefined ? moveDistance.vertical * ratio : undefined;\n        props.maxSpeed = getRangeValue(moveOptions.gravity.maxSpeed) * ratio;\n    }\n}\n",
+      "start": 1702544652385,
+      "end": 1702544652505,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1702544652505,
+      "end": 1702544652505,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1702544652505,
+      "end": 1702544652505,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1702544652505,
+      "end": 1702544652505,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1702544652505,
+      "end": 1702544652505,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1702544652505,
+      "end": 1702544652505,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1702544652505,
+      "end": 1702544652505,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1702544652505,
+      "end": 1702544652505,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1702544652505,
+      "end": 1702544652505,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1702544652505,
+      "end": 1702544652505,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1702544652505,
+      "end": 1702544652505,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1702544652505,
+      "end": 1702544652505,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1702544652505,
+      "end": 1702544652505,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1702544652505,
+      "end": 1702544652506,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1702544652506,
+      "end": 1702544652506,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1702544652506,
+      "end": 1702544652506,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1702544652506,
+      "end": 1702544652506,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1702544652506,
+      "end": 1702544652506,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1702544652506,
+      "end": 1702544652506,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1702544652506,
+      "end": 1702544652506,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1702544652506,
+      "end": 1702544652506,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1702544652506,
+      "end": 1702544652506,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1702544652506,
+      "end": 1702544652506,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1702544652506,
+      "end": 1702544652506,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1702544652506,
+      "end": 1702544652506,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1702544652506,
+      "end": 1702544652506,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1702544652507,
+      "end": 1702544652507,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1702544652507,
+      "end": 1702544652507,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1702544652507,
+      "end": 1702544652507,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1702544652507,
+      "end": 1702544652507,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1702544652507,
+      "end": 1702544652507,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1702544652507,
+      "end": 1702544652507,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1702544652507,
+      "end": 1702544652507,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1702544652507,
+      "end": 1702544652507,
+      "order": "normal"
+    }
+  ]
+}

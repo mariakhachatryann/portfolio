@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-    modules: [ "nuxt-particles" ],
+    modules: [ "nuxt-particles", "@vueuse/nuxt" ],
     css: [ "~/assets/css/main.css" ],
     postcss: {
         plugins: {

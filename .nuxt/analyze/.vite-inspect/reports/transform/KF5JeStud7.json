@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/Users/user/Desktop/portfolio/node_modules/tsparticles-updater-wobble/esm/Utils.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "export function updateWobble(particle, delta) {\n    const { wobble: wobbleOptions } = particle.options, { wobble } = particle;\n    if (!wobbleOptions?.enable || !wobble) {\n        return;\n    }\n    const angleSpeed = wobble.angleSpeed * delta.factor, moveSpeed = wobble.moveSpeed * delta.factor, distance = (moveSpeed * ((particle.retina.wobbleDistance ?? 0) * delta.factor)) / (1000 / 60), max = 2 * Math.PI, { position } = particle;\n    wobble.angle += angleSpeed;\n    if (wobble.angle > max) {\n        wobble.angle -= max;\n    }\n    position.x += distance * Math.cos(wobble.angle);\n    position.y += distance * Math.abs(Math.sin(wobble.angle));\n}\n",
+      "start": 1702544652484,
+      "end": 1702544652582,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1702544652582,
+      "end": 1702544652582,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1702544652582,
+      "end": 1702544652582,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1702544652582,
+      "end": 1702544652582,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1702544652582,
+      "end": 1702544652582,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1702544652582,
+      "end": 1702544652582,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1702544652582,
+      "end": 1702544652582,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1702544652582,
+      "end": 1702544652582,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1702544652582,
+      "end": 1702544652582,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1702544652582,
+      "end": 1702544652582,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1702544652582,
+      "end": 1702544652582,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1702544652582,
+      "end": 1702544652582,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1702544652582,
+      "end": 1702544652582,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1702544652582,
+      "end": 1702544652583,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1702544652583,
+      "end": 1702544652583,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1702544652583,
+      "end": 1702544652583,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1702544652583,
+      "end": 1702544652583,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1702544652583,
+      "end": 1702544652583,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1702544652583,
+      "end": 1702544652583,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1702544652583,
+      "end": 1702544652583,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1702544652583,
+      "end": 1702544652583,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1702544652583,
+      "end": 1702544652583,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1702544652583,
+      "end": 1702544652583,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1702544652583,
+      "end": 1702544652583,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1702544652583,
+      "end": 1702544652584,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1702544652584,
+      "end": 1702544652584,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1702544652584,
+      "end": 1702544652584,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1702544652584,
+      "end": 1702544652584,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1702544652584,
+      "end": 1702544652584,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1702544652584,
+      "end": 1702544652584,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1702544652584,
+      "end": 1702544652584,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1702544652584,
+      "end": 1702544652584,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1702544652584,
+      "end": 1702544652584,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1702544652584,
+      "end": 1702544652584,
+      "order": "normal"
+    }
+  ]
+}

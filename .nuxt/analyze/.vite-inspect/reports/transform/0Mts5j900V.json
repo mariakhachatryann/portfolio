@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/Users/user/Desktop/portfolio/node_modules/tsparticles-move-base/esm/Utils.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { clamp, getDistances, getRandom, } from \"tsparticles-engine\";\nexport function applyDistance(particle) {\n    const initialPosition = particle.initialPosition, { dx, dy } = getDistances(initialPosition, particle.position), dxFixed = Math.abs(dx), dyFixed = Math.abs(dy), { maxDistance } = particle.retina, hDistance = maxDistance.horizontal, vDistance = maxDistance.vertical;\n    if (!hDistance && !vDistance) {\n        return;\n    }\n    if (((hDistance && dxFixed >= hDistance) || (vDistance && dyFixed >= vDistance)) && !particle.misplaced) {\n        particle.misplaced = (!!hDistance && dxFixed > hDistance) || (!!vDistance && dyFixed > vDistance);\n        if (hDistance) {\n            particle.velocity.x = particle.velocity.y / 2 - particle.velocity.x;\n        }\n        if (vDistance) {\n            particle.velocity.y = particle.velocity.x / 2 - particle.velocity.y;\n        }\n    }\n    else if ((!hDistance || dxFixed < hDistance) && (!vDistance || dyFixed < vDistance) && particle.misplaced) {\n        particle.misplaced = false;\n    }\n    else if (particle.misplaced) {\n        const pos = particle.position, vel = particle.velocity;\n        if (hDistance && ((pos.x < initialPosition.x && vel.x < 0) || (pos.x > initialPosition.x && vel.x > 0))) {\n            vel.x *= -getRandom();\n        }\n        if (vDistance && ((pos.y < initialPosition.y && vel.y < 0) || (pos.y > initialPosition.y && vel.y > 0))) {\n            vel.y *= -getRandom();\n        }\n    }\n}\nexport function move(particle, moveOptions, moveSpeed, maxSpeed, moveDrift, delta) {\n    applyPath(particle, delta);\n    const gravityOptions = particle.gravity, gravityFactor = gravityOptions?.enable && gravityOptions.inverse ? -1 : 1;\n    if (moveDrift && moveSpeed) {\n        particle.velocity.x += (moveDrift * delta.factor) / (60 * moveSpeed);\n    }\n    if (gravityOptions?.enable && moveSpeed) {\n        particle.velocity.y += (gravityFactor * (gravityOptions.acceleration * delta.factor)) / (60 * moveSpeed);\n    }\n    const decay = particle.moveDecay;\n    particle.velocity.multTo(decay);\n    const velocity = particle.velocity.mult(moveSpeed);\n    if (gravityOptions?.enable &&\n        maxSpeed > 0 &&\n        ((!gravityOptions.inverse && velocity.y >= 0 && velocity.y >= maxSpeed) ||\n            (gravityOptions.inverse && velocity.y <= 0 && velocity.y <= -maxSpeed))) {\n        velocity.y = gravityFactor * maxSpeed;\n        if (moveSpeed) {\n            particle.velocity.y = velocity.y / moveSpeed;\n        }\n    }\n    const zIndexOptions = particle.options.zIndex, zVelocityFactor = (1 - particle.zIndexFactor) ** zIndexOptions.velocityRate;\n    velocity.multTo(zVelocityFactor);\n    const { position } = particle;\n    position.addTo(velocity);\n    if (moveOptions.vibrate) {\n        position.x += Math.sin(position.x * Math.cos(position.y));\n        position.y += Math.cos(position.y * Math.sin(position.x));\n    }\n}\nexport function spin(particle, moveSpeed) {\n    const container = particle.container;\n    if (!particle.spin) {\n        return;\n    }\n    const updateFunc = {\n        x: particle.spin.direction === \"clockwise\" ? Math.cos : Math.sin,\n        y: particle.spin.direction === \"clockwise\" ? Math.sin : Math.cos,\n    };\n    particle.position.x = particle.spin.center.x + particle.spin.radius * updateFunc.x(particle.spin.angle);\n    particle.position.y = particle.spin.center.y + particle.spin.radius * updateFunc.y(particle.spin.angle);\n    particle.spin.radius += particle.spin.acceleration;\n    const maxCanvasSize = Math.max(container.canvas.size.width, container.canvas.size.height);\n    if (particle.spin.radius > maxCanvasSize / 2) {\n        particle.spin.radius = maxCanvasSize / 2;\n        particle.spin.acceleration *= -1;\n    }\n    else if (particle.spin.radius < 0) {\n        particle.spin.radius = 0;\n        particle.spin.acceleration *= -1;\n    }\n    particle.spin.angle += (moveSpeed / 100) * (1 - particle.spin.radius / maxCanvasSize);\n}\nexport function applyPath(particle, delta) {\n    const particlesOptions = particle.options, pathOptions = particlesOptions.move.path, pathEnabled = pathOptions.enable;\n    if (!pathEnabled) {\n        return;\n    }\n    if (particle.lastPathTime <= particle.pathDelay) {\n        particle.lastPathTime += delta.value;\n        return;\n    }\n    const path = particle.pathGenerator?.generate(particle, delta);\n    if (path) {\n        particle.velocity.addTo(path);\n    }\n    if (pathOptions.clamp) {\n        particle.velocity.x = clamp(particle.velocity.x, -1, 1);\n        particle.velocity.y = clamp(particle.velocity.y, -1, 1);\n    }\n    particle.lastPathTime -= particle.pathDelay;\n}\nexport function getProximitySpeedFactor(particle) {\n    return particle.slow.inRange ? particle.slow.factor : 1;\n}\n",
+      "start": 1702544652559,
+      "end": 1702544652692,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1702544652692,
+      "end": 1702544652692,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1702544652692,
+      "end": 1702544652692,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1702544652692,
+      "end": 1702544652692,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1702544652692,
+      "end": 1702544652692,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1702544652692,
+      "end": 1702544652692,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1702544652692,
+      "end": 1702544652692,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1702544652692,
+      "end": 1702544652692,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1702544652693,
+      "end": 1702544652693,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1702544652693,
+      "end": 1702544652693,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1702544652693,
+      "end": 1702544652693,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1702544652693,
+      "end": 1702544652693,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1702544652693,
+      "end": 1702544652693,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1702544652693,
+      "end": 1702544652694,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1702544652694,
+      "end": 1702544652694,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1702544652694,
+      "end": 1702544652694,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1702544652694,
+      "end": 1702544652694,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1702544652694,
+      "end": 1702544652694,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1702544652694,
+      "end": 1702544652694,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1702544652694,
+      "end": 1702544652694,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1702544652694,
+      "end": 1702544652694,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1702544652694,
+      "end": 1702544652704,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1702544652704,
+      "end": 1702544652704,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1702544652704,
+      "end": 1702544652704,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1702544652704,
+      "end": 1702544652704,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1702544652704,
+      "end": 1702544652704,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1702544652704,
+      "end": 1702544652704,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1702544652704,
+      "end": 1702544652704,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1702544652704,
+      "end": 1702544652704,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1702544652704,
+      "end": 1702544652704,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1702544652704,
+      "end": 1702544652704,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1702544652704,
+      "end": 1702544652704,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1702544652704,
+      "end": 1702544652704,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1702544652704,
+      "end": 1702544652704,
+      "order": "normal"
+    }
+  ]
+}

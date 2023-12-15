@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/Users/user/Desktop/portfolio/node_modules/tsparticles-plugin-emitters/esm/index.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { executeOnSingleOrMultiple, isArray, isInArray, } from \"tsparticles-engine\";\nimport { CircleShape } from \"./Shapes/Circle/CircleShape\";\nimport { Emitter } from \"./Options/Classes/Emitter\";\nimport { Emitters } from \"./Emitters\";\nimport { ShapeManager } from \"./ShapeManager\";\nimport { SquareShape } from \"./Shapes/Square/SquareShape\";\nclass EmittersPlugin {\n    constructor(engine) {\n        this._engine = engine;\n        this.id = \"emitters\";\n    }\n    getPlugin(container) {\n        return new Emitters(this._engine, container);\n    }\n    loadOptions(options, source) {\n        if (!this.needsPlugin(options) && !this.needsPlugin(source)) {\n            return;\n        }\n        if (source?.emitters) {\n            options.emitters = executeOnSingleOrMultiple(source.emitters, (emitter) => {\n                const tmp = new Emitter();\n                tmp.load(emitter);\n                return tmp;\n            });\n        }\n        const interactivityEmitters = source?.interactivity?.modes?.emitters;\n        if (interactivityEmitters) {\n            if (isArray(interactivityEmitters)) {\n                options.interactivity.modes.emitters = {\n                    random: {\n                        count: 1,\n                        enable: true,\n                    },\n                    value: interactivityEmitters.map((s) => {\n                        const tmp = new Emitter();\n                        tmp.load(s);\n                        return tmp;\n                    }),\n                };\n            }\n            else {\n                const emitterMode = interactivityEmitters;\n                if (emitterMode.value !== undefined) {\n                    if (isArray(emitterMode.value)) {\n                        options.interactivity.modes.emitters = {\n                            random: {\n                                count: emitterMode.random.count ?? 1,\n                                enable: emitterMode.random.enable ?? false,\n                            },\n                            value: emitterMode.value.map((s) => {\n                                const tmp = new Emitter();\n                                tmp.load(s);\n                                return tmp;\n                            }),\n                        };\n                    }\n                    else {\n                        const tmp = new Emitter();\n                        tmp.load(emitterMode.value);\n                        options.interactivity.modes.emitters = {\n                            random: {\n                                count: emitterMode.random.count ?? 1,\n                                enable: emitterMode.random.enable ?? false,\n                            },\n                            value: tmp,\n                        };\n                    }\n                }\n                else {\n                    const emitterOptions = (options.interactivity.modes.emitters = {\n                        random: {\n                            count: 1,\n                            enable: false,\n                        },\n                        value: new Emitter(),\n                    });\n                    emitterOptions.value.load(interactivityEmitters);\n                }\n            }\n        }\n    }\n    needsPlugin(options) {\n        if (!options) {\n            return false;\n        }\n        const emitters = options.emitters;\n        return ((isArray(emitters) && !!emitters.length) ||\n            emitters !== undefined ||\n            (!!options.interactivity?.events?.onClick?.mode &&\n                isInArray(\"emitter\", options.interactivity.events.onClick.mode)));\n    }\n}\nexport async function loadEmittersPlugin(engine, refresh = true) {\n    if (!engine.emitterShapeManager) {\n        engine.emitterShapeManager = new ShapeManager(engine);\n    }\n    if (!engine.addEmitterShape) {\n        engine.addEmitterShape = (name, shape) => {\n            engine.emitterShapeManager?.addShape(name, shape);\n        };\n    }\n    const plugin = new EmittersPlugin(engine);\n    await engine.addPlugin(plugin, refresh);\n    engine.addEmitterShape(\"circle\", new CircleShape());\n    engine.addEmitterShape(\"square\", new SquareShape());\n}\nexport * from \"./EmitterContainer\";\nexport * from \"./EmittersEngine\";\nexport * from \"./Enums/EmitterClickMode\";\nexport * from \"./Enums/EmitterShapeType\";\n",
+      "start": 1702544651723,
+      "end": 1702544651838,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1702544651839,
+      "end": 1702544651839,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1702544651839,
+      "end": 1702544651839,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1702544651839,
+      "end": 1702544651839,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1702544651839,
+      "end": 1702544651839,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1702544651839,
+      "end": 1702544651839,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1702544651839,
+      "end": 1702544651839,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1702544651839,
+      "end": 1702544651839,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1702544651839,
+      "end": 1702544651839,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1702544651839,
+      "end": 1702544651839,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1702544651839,
+      "end": 1702544651839,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1702544651839,
+      "end": 1702544651839,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1702544651839,
+      "end": 1702544651839,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1702544651839,
+      "end": 1702544651839,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1702544651839,
+      "end": 1702544651839,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1702544651839,
+      "end": 1702544651839,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1702544651839,
+      "end": 1702544651840,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1702544651840,
+      "end": 1702544651840,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1702544651840,
+      "end": 1702544651840,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1702544651840,
+      "end": 1702544651840,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1702544651840,
+      "end": 1702544651840,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1702544651840,
+      "end": 1702544651840,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1702544651840,
+      "end": 1702544651840,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1702544651840,
+      "end": 1702544651840,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1702544651841,
+      "end": 1702544651841,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1702544651841,
+      "end": 1702544651841,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1702544651841,
+      "end": 1702544651841,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1702544651841,
+      "end": 1702544651841,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1702544651841,
+      "end": 1702544651841,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1702544651841,
+      "end": 1702544651841,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1702544651841,
+      "end": 1702544651841,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1702544651841,
+      "end": 1702544651841,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1702544651841,
+      "end": 1702544651841,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1702544651841,
+      "end": 1702544651842,
+      "order": "normal"
+    }
+  ]
+}

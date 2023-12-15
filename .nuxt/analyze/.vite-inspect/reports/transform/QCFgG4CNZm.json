@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/Users/user/Desktop/portfolio/config/particlesConfig.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "const particlesConfig = {\r\n    particles: {\r\n        number: {\r\n            value: 70,\r\n            density: {\r\n                enable: true,\r\n                value_area: 800,\r\n            },\r\n        },\r\n        color: {\r\n            value: \"#0DFC4B\",\r\n        },\r\n        shape: {\r\n            type: \"circle\",\r\n            stroke: {\r\n                width: 0,\r\n                color: \"#000000\",\r\n            },\r\n            polygon: {\r\n                nb_sides: 5,\r\n            },\r\n            image: {\r\n                src: \"img/github.svg\",\r\n                width: 100,\r\n                height: 100,\r\n            },\r\n        },\r\n        opacity: {\r\n            value: .5,\r\n            random: false,\r\n            anim: {\r\n                enable: false,\r\n                speed: 1,\r\n                opacity_min: 0.1,\r\n                sync: false,\r\n            },\r\n        },\r\n        size: {\r\n            value: 3,\r\n            random: true,\r\n            anim: {\r\n                enable: false,\r\n                speed: 40,\r\n                size_min: 0.1,\r\n                sync: false,\r\n            },\r\n        },\r\n        line_linked: {\r\n            enable: true,\r\n            distance: 150,\r\n            color: \"#0DFC4B\",\r\n            opacity: 0.1,\r\n            width: 1,\r\n        },\r\n        move: {\r\n            enable: true,\r\n            speed: 2,\r\n            direction: \"none\",\r\n            random: false,\r\n            straight: false,\r\n            out_mode: \"out\",\r\n            bounce: false,\r\n            attract: {\r\n                enable: false,\r\n                rotateX: 600,\r\n                rotateY: 1200,\r\n            },\r\n        },\r\n    },\r\n    interactivity: {\r\n        detect_on: \"canvas\",\r\n        events: {\r\n            resize: true,\r\n        },\r\n        modes: {\r\n            grab: {\r\n                distance: 400,\r\n                line_linked: {\r\n                    opacity: 1,\r\n                },\r\n            },\r\n            bubble: {\r\n                distance: 400,\r\n                size: 40,\r\n                duration: 2,\r\n                opacity: 8,\r\n                speed: 3,\r\n            },\r\n            repulse: {\r\n                distance: 100,\r\n                duration: 0.4,\r\n            },\r\n            push: {\r\n                particles_nb: 4,\r\n            },\r\n            remove: {\r\n                particles_nb: 2,\r\n            },\r\n        },\r\n    },\r\n    retina_detect: true,\r\n};\r\n\r\nexport default particlesConfig;",
+      "start": 1702544650866,
+      "end": 1702544650867,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1702544650867,
+      "end": 1702544650867,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1702544650867,
+      "end": 1702544650867,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1702544650867,
+      "end": 1702544650867,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1702544650867,
+      "end": 1702544650867,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1702544650867,
+      "end": 1702544650867,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1702544650867,
+      "end": 1702544650867,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1702544650867,
+      "end": 1702544650867,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1702544650867,
+      "end": 1702544650867,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1702544650867,
+      "end": 1702544650867,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1702544650867,
+      "end": 1702544650867,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1702544650867,
+      "end": 1702544650867,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1702544650867,
+      "end": 1702544650867,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1702544650868,
+      "end": 1702544650868,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1702544650868,
+      "end": 1702544650868,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1702544650868,
+      "end": 1702544650868,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1702544650868,
+      "end": 1702544650868,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1702544650868,
+      "end": 1702544650868,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1702544650868,
+      "end": 1702544650868,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1702544650868,
+      "end": 1702544650868,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1702544650868,
+      "end": 1702544650868,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1702544650868,
+      "end": 1702544650868,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1702544650868,
+      "end": 1702544650868,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1702544650868,
+      "end": 1702544650868,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1702544650868,
+      "end": 1702544650868,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1702544650868,
+      "end": 1702544650870,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1702544650870,
+      "end": 1702544650870,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1702544650870,
+      "end": 1702544650870,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1702544650870,
+      "end": 1702544650870,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1702544650870,
+      "end": 1702544650870,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1702544650870,
+      "end": 1702544650870,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1702544650870,
+      "end": 1702544650870,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1702544650870,
+      "end": 1702544650870,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1702544650870,
+      "end": 1702544650870,
+      "order": "normal"
+    }
+  ]
+}

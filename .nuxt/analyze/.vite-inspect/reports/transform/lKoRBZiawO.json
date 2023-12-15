@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/Users/user/Desktop/portfolio/node_modules/tsparticles-engine/esm/Utils/RgbColorManager.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { getRangeValue, parseAlpha } from \"./NumberUtils\";\nexport class RgbColorManager {\n    constructor() {\n        this.key = \"rgb\";\n        this.stringPrefix = \"rgb\";\n    }\n    handleColor(color) {\n        const colorValue = color.value, rgbColor = colorValue.rgb ?? color.value;\n        if (rgbColor.r !== undefined) {\n            return rgbColor;\n        }\n    }\n    handleRangeColor(color) {\n        const colorValue = color.value, rgbColor = colorValue.rgb ?? color.value;\n        if (rgbColor.r !== undefined) {\n            return {\n                r: getRangeValue(rgbColor.r),\n                g: getRangeValue(rgbColor.g),\n                b: getRangeValue(rgbColor.b),\n            };\n        }\n    }\n    parseString(input) {\n        if (!input.startsWith(this.stringPrefix)) {\n            return;\n        }\n        const regex = /rgba?\\(\\s*(\\d+)\\s*,\\s*(\\d+)\\s*,\\s*(\\d+)\\s*(,\\s*([\\d.%]+)\\s*)?\\)/i, result = regex.exec(input);\n        return result\n            ? {\n                a: result.length > 4 ? parseAlpha(result[5]) : 1,\n                b: parseInt(result[3], 10),\n                g: parseInt(result[2], 10),\n                r: parseInt(result[1], 10),\n            }\n            : undefined;\n    }\n}\n",
+      "start": 1702544650943,
+      "end": 1702544651212,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1702544651212,
+      "end": 1702544651212,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1702544651212,
+      "end": 1702544651213,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1702544651213,
+      "end": 1702544651213,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1702544651213,
+      "end": 1702544651213,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1702544651213,
+      "end": 1702544651213,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1702544651213,
+      "end": 1702544651213,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1702544651213,
+      "end": 1702544651213,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1702544651213,
+      "end": 1702544651213,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1702544651213,
+      "end": 1702544651213,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1702544651213,
+      "end": 1702544651213,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1702544651213,
+      "end": 1702544651213,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1702544651213,
+      "end": 1702544651213,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1702544651213,
+      "end": 1702544651213,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1702544651213,
+      "end": 1702544651213,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1702544651213,
+      "end": 1702544651213,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1702544651213,
+      "end": 1702544651213,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1702544651213,
+      "end": 1702544651213,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1702544651213,
+      "end": 1702544651213,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1702544651213,
+      "end": 1702544651213,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1702544651213,
+      "end": 1702544651213,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1702544651213,
+      "end": 1702544651214,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1702544651214,
+      "end": 1702544651214,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1702544651214,
+      "end": 1702544651214,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1702544651214,
+      "end": 1702544651214,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1702544651214,
+      "end": 1702544651214,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1702544651214,
+      "end": 1702544651214,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1702544651214,
+      "end": 1702544651214,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1702544651214,
+      "end": 1702544651214,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1702544651214,
+      "end": 1702544651214,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1702544651214,
+      "end": 1702544651214,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1702544651214,
+      "end": 1702544651214,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1702544651214,
+      "end": 1702544651214,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1702544651214,
+      "end": 1702544651214,
+      "order": "normal"
+    }
+  ]
+}

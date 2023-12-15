@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/Users/user/Desktop/portfolio/node_modules/tsparticles-shape-image/esm/index.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { downloadSvgImage, loadGifImage, loadImage } from \"./Utils\";\nimport { ImageDrawer } from \"./ImageDrawer\";\nimport { ImagePreloaderPlugin } from \"./ImagePreloader\";\nimport { errorPrefix } from \"tsparticles-engine\";\nfunction addLoadImageToEngine(engine) {\n    if (engine.loadImage) {\n        return;\n    }\n    engine.loadImage = async (data) => {\n        if (!data.name && !data.src) {\n            throw new Error(`${errorPrefix} no image source provided`);\n        }\n        if (!engine.images) {\n            engine.images = [];\n        }\n        if (engine.images.find((t) => t.name === data.name || t.source === data.src)) {\n            return;\n        }\n        try {\n            const image = {\n                gif: data.gif ?? false,\n                name: data.name ?? data.src,\n                source: data.src,\n                type: data.src.substring(data.src.length - 3),\n                error: false,\n                loading: true,\n                replaceColor: data.replaceColor,\n                ratio: data.width && data.height ? data.width / data.height : undefined,\n            };\n            engine.images.push(image);\n            const imageFunc = data.gif ? loadGifImage : data.replaceColor ? downloadSvgImage : loadImage;\n            await imageFunc(image);\n        }\n        catch {\n            throw new Error(`${errorPrefix} ${data.name ?? data.src} not found`);\n        }\n    };\n}\nexport async function loadImageShape(engine, refresh = true) {\n    addLoadImageToEngine(engine);\n    const preloader = new ImagePreloaderPlugin(engine);\n    await engine.addPlugin(preloader, refresh);\n    await engine.addShape([\"image\", \"images\"], new ImageDrawer(engine), refresh);\n}\n",
+      "start": 1702544651832,
+      "end": 1702544651946,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1702544651946,
+      "end": 1702544651946,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1702544651946,
+      "end": 1702544651946,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1702544651946,
+      "end": 1702544651946,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1702544651946,
+      "end": 1702544651946,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1702544651946,
+      "end": 1702544651946,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1702544651946,
+      "end": 1702544651946,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1702544651946,
+      "end": 1702544651946,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1702544651947,
+      "end": 1702544651947,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1702544651947,
+      "end": 1702544651947,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1702544651947,
+      "end": 1702544651947,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1702544651947,
+      "end": 1702544651947,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1702544651947,
+      "end": 1702544651947,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1702544651947,
+      "end": 1702544651947,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1702544651947,
+      "end": 1702544651947,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1702544651947,
+      "end": 1702544651947,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1702544651947,
+      "end": 1702544651947,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1702544651947,
+      "end": 1702544651947,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1702544651947,
+      "end": 1702544651947,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1702544651947,
+      "end": 1702544651947,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1702544651947,
+      "end": 1702544651947,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1702544651947,
+      "end": 1702544651948,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1702544651948,
+      "end": 1702544651948,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1702544651948,
+      "end": 1702544651948,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1702544651948,
+      "end": 1702544651948,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1702544651948,
+      "end": 1702544651948,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1702544651948,
+      "end": 1702544651948,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1702544651948,
+      "end": 1702544651948,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1702544651948,
+      "end": 1702544651948,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1702544651948,
+      "end": 1702544651948,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1702544651948,
+      "end": 1702544651948,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1702544651948,
+      "end": 1702544651948,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1702544651948,
+      "end": 1702544651948,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1702544651948,
+      "end": 1702544651949,
+      "order": "normal"
+    }
+  ]
+}

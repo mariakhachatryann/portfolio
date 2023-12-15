@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/user/Desktop/portfolio/components/MobileSocialLinks.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\r\n    <div class=\"flex mt-4 desktop:hidden\">\r\n        <ul class=\"flex gap-2 flex-wrap justify-center\">\r\n            <li v-for=\"link in links\" :key=\"link.id\" class=\"flex items-center gap-2 w-28 h-9 px-4 bg-gradient-to-t from-green-400/50 to-primary-color/50 rounded-md\" >\r\n                <a href={href} class=\"flex gap-3 items-center w-full text-white text-sm\" download={download} target=\"_blank\" rel=\"noreferrer\">\r\n                    <FaLinkedin size=\"20\" v-if=\"link.label === 'LinkedIn'\" />\r\n                    <FaGithub size=\"20\" v-if=\"link.label === 'GitHub'\" />\r\n                    <HiMail size=\"20\" v-if=\"link.label === 'Mail'\" />\r\n                    <BsFillPersonLinesFill size=\"20\" v-if=\"link.label === 'Resume'\" />\r\n                    {{ link.label }}\r\n\r\n                </a>\r\n            </li>\r\n\r\n        </ul>\r\n    </div>\r\n</template>\r\n\r\n<script setup>\r\nimport { FaLinkedin, FaGithub } from \"vue3-icons/fa\";\r\nimport { HiMail } from \"vue3-icons/hi\";\r\nimport { BsFillPersonLinesFill } from \"vue3-icons/bs\";\r\nconst links = [\r\n    {\r\n        id: 1,\r\n        label: \"LinkedIn\",\r\n        href: \"https://www.linkedin.com/in/maria-khachatryan1606/\",\r\n    },\r\n    {\r\n        id: 2,\r\n        label: \"GitHub\",\r\n        href: \"https://github.com/mariakhachatryann\"\r\n    },\r\n    {\r\n        id: 3,\r\n        label: \"Mail\",\r\n        href: \"mailto:mariakhachatryan23@gmail.com\"\r\n    },\r\n    {\r\n        id: 4,\r\n        label: \"Resume\",\r\n        href: '/MariaCv.pdf',\r\n        download: 'MariaKhachatryancv'\r\n    }\r\n]\r\n</script>",
+      "start": 1702544647522,
+      "end": 1702544648058,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1702544648058,
+      "end": 1702544648058,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1702544648058,
+      "end": 1702544648058,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1702544648058,
+      "end": 1702544648058,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1702544648058,
+      "end": 1702544648058,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1702544648058,
+      "end": 1702544648058,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1702544648058,
+      "end": 1702544648058,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1702544648059,
+      "end": 1702544648059,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "import { renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, unref as _unref, createBlock as _createBlock, createCommentVNode as _createCommentVNode, toDisplayString as _toDisplayString, createTextVNode as _createTextVNode, createElementVNode as _createElementVNode } from \"vue\"\n\nconst _hoisted_1 = { class: \"flex mt-4 desktop:hidden\" }\nconst _hoisted_2 = { class: \"flex gap-2 flex-wrap justify-center\" }\nconst _hoisted_3 = {\n  href: \"{href}\",\n  class: \"flex gap-3 items-center w-full text-white text-sm\",\n  download: \"{download}\",\n  target: \"_blank\",\n  rel: \"noreferrer\"\n}\n\nimport { FaLinkedin, FaGithub } from \"vue3-icons/fa\";\r\nimport { HiMail } from \"vue3-icons/hi\";\r\nimport { BsFillPersonLinesFill } from \"vue3-icons/bs\";\r\n\nconst _sfc_main = {\n  __name: 'MobileSocialLinks',\n  setup(__props) {\n\r\nconst links = [\r\n    {\r\n        id: 1,\r\n        label: \"LinkedIn\",\r\n        href: \"https://www.linkedin.com/in/maria-khachatryan1606/\",\r\n    },\r\n    {\r\n        id: 2,\r\n        label: \"GitHub\",\r\n        href: \"https://github.com/mariakhachatryann\"\r\n    },\r\n    {\r\n        id: 3,\r\n        label: \"Mail\",\r\n        href: \"mailto:mariakhachatryan23@gmail.com\"\r\n    },\r\n    {\r\n        id: 4,\r\n        label: \"Resume\",\r\n        href: '/MariaCv.pdf',\r\n        download: 'MariaKhachatryancv'\r\n    }\r\n]\r\n\nreturn (_ctx, _cache) => {\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _createElementVNode(\"ul\", _hoisted_2, [\n      (_openBlock(), _createElementBlock(_Fragment, null, _renderList(links, (link) => {\n        return _createElementVNode(\"li\", {\n          key: link.id,\n          class: \"flex items-center gap-2 w-28 h-9 px-4 bg-gradient-to-t from-green-400/50 to-primary-color/50 rounded-md\"\n        }, [\n          _createElementVNode(\"a\", _hoisted_3, [\n            (link.label === 'LinkedIn')\n              ? (_openBlock(), _createBlock(_unref(FaLinkedin), {\n                  key: 0,\n                  size: \"20\"\n                }))\n              : _createCommentVNode(\"\", true),\n            (link.label === 'GitHub')\n              ? (_openBlock(), _createBlock(_unref(FaGithub), {\n                  key: 1,\n                  size: \"20\"\n                }))\n              : _createCommentVNode(\"\", true),\n            (link.label === 'Mail')\n              ? (_openBlock(), _createBlock(_unref(HiMail), {\n                  key: 2,\n                  size: \"20\"\n                }))\n              : _createCommentVNode(\"\", true),\n            (link.label === 'Resume')\n              ? (_openBlock(), _createBlock(_unref(BsFillPersonLinesFill), {\n                  key: 3,\n                  size: \"20\"\n                }))\n              : _createCommentVNode(\"\", true),\n            _createTextVNode(\" \" + _toDisplayString(link.label), 1)\n          ])\n        ])\n      }), 64))\n    ])\n  ]))\n}\n}\n\n}\n\n\n\nexport default _sfc_main",
+      "start": 1702544648059,
+      "end": 1702544648064,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1702544648064,
+      "end": 1702544648064,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1702544648064,
+      "end": 1702544648064,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1702544648064,
+      "end": 1702544648064,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1702544648064,
+      "end": 1702544648064,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1702544648064,
+      "end": 1702544648064,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1702544648064,
+      "end": 1702544648064,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1702544648064,
+      "end": 1702544648064,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1702544648065,
+      "end": 1702544648065,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1702544648065,
+      "end": 1702544648065,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1702544648065,
+      "end": 1702544648065,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1702544648065,
+      "end": 1702544648065,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1702544648065,
+      "end": 1702544648065,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1702544648065,
+      "end": 1702544648065,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1702544648065,
+      "end": 1702544648065,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1702544648065,
+      "end": 1702544648065,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1702544648065,
+      "end": 1702544648065,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1702544648065,
+      "end": 1702544648067,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1702544648067,
+      "end": 1702544648067,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1702544648067,
+      "end": 1702544648067,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1702544648067,
+      "end": 1702544648067,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1702544648067,
+      "end": 1702544648067,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1702544648067,
+      "end": 1702544648067,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1702544648067,
+      "end": 1702544648067,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1702544648067,
+      "end": 1702544648067,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1702544648067,
+      "end": 1702544648067,
+      "order": "normal"
+    }
+  ]
+}

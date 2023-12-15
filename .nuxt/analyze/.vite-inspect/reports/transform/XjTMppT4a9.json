@@ -1,0 +1,221 @@
+{
+  "resolvedId": "C:/Users/user/Desktop/portfolio/node_modules/nuxt-particles/dist/runtime/components/NuxtParticles.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = [\"id\"]\n\nimport { onMounted, ref, onUnmounted } from 'vue'\nimport { tsParticles } from 'tsparticles-engine'\nimport {useRuntimeConfig, useState} from '#app'\nimport type {\n  ISourceOptions as ParticlesOptions,\n  Container as ParticlesContainer\n} from 'tsparticles-engine'\nimport {loadParticles} from '../lib/loaders'\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'NuxtParticles',\n  props: {\n    id: {},\n    options: {},\n    url: {}\n  },\n  emits: [\"load\"],\n  setup(__props: any, { emit: __emit }) {\n\nconst particlesLoaded = useState('__nuxt_particles_loaded', () => false)\nconst container = ref<ParticlesContainer | undefined>(undefined)\nconst { mode, lazy } = useRuntimeConfig().public.particles\n\nconst props = __props\n\nconst emit = __emit\n\nonMounted(async () => {\n  if(lazy && mode !== 'custom' && !particlesLoaded.value) {\n    tsParticles.init()\n    await loadParticles(tsParticles, mode)\n    particlesLoaded.value = true\n  }\n  const particlesContainer = await tsParticles.load({\n    id: props.id,\n    options: props.options,\n    url: props.url\n  })\n\n  if(particlesContainer) {\n    emit('load', particlesContainer)\n    container.value = particlesContainer\n  }\n})\n\nonUnmounted(() => {\n  if (!container.value) {\n    return\n  }\n  container.value.destroy()\n})\n\nreturn (_ctx: any,_cache: any) => {\n  return (_openBlock(), _createElementBlock(\"div\", { id: _ctx.id }, null, 8, _hoisted_1))\n}\n}\n\n})",
+      "start": 1702544650897,
+      "end": 1702544650897
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1702544650897,
+      "end": 1702544650897,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1702544650897,
+      "end": 1702544650897,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1702544650897,
+      "end": 1702544650897,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1702544650897,
+      "end": 1702544650897,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\";\nconst _hoisted_1 = [\"id\"];\nimport { onMounted, ref, onUnmounted } from \"vue\";\nimport { tsParticles } from \"tsparticles-engine\";\nimport { useRuntimeConfig, useState } from \"#app\";\nimport { loadParticles } from \"../lib/loaders\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"NuxtParticles\",\n  props: {\n    id: {},\n    options: {},\n    url: {}\n  },\n  emits: [\"load\"],\n  setup(__props, { emit: __emit }) {\n    const particlesLoaded = useState(\"__nuxt_particles_loaded\", () => false);\n    const container = ref(void 0);\n    const { mode, lazy } = useRuntimeConfig().public.particles;\n    const props = __props;\n    const emit = __emit;\n    onMounted(async () => {\n      if (lazy && mode !== \"custom\" && !particlesLoaded.value) {\n        tsParticles.init();\n        await loadParticles(tsParticles, mode);\n        particlesLoaded.value = true;\n      }\n      const particlesContainer = await tsParticles.load({\n        id: props.id,\n        options: props.options,\n        url: props.url\n      });\n      if (particlesContainer) {\n        emit(\"load\", particlesContainer);\n        container.value = particlesContainer;\n      }\n    });\n    onUnmounted(() => {\n      if (!container.value) {\n        return;\n      }\n      container.value.destroy();\n    });\n    return (_ctx, _cache) => {\n      return _openBlock(), _createElementBlock(\"div\", { id: _ctx.id }, null, 8, _hoisted_1);\n    };\n  }\n});\n",
+      "start": 1702544650897,
+      "end": 1702544650901,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "C:/Users/user/Desktop/portfolio/node_modules/nuxt-particles/dist/runtime/components/NuxtParticles.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = [\"id\"]\n\nimport { onMounted, ref, onUnmounted } from 'vue'\nimport { tsParticles } from 'tsparticles-engine'\nimport {useRuntimeConfig, useState} from '#app'\nimport type {\n  ISourceOptions as ParticlesOptions,\n  Container as ParticlesContainer\n} from 'tsparticles-engine'\nimport {loadParticles} from '../lib/loaders'\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'NuxtParticles',\n  props: {\n    id: {},\n    options: {},\n    url: {}\n  },\n  emits: [\"load\"],\n  setup(__props: any, { emit: __emit }) {\n\nconst particlesLoaded = useState('__nuxt_particles_loaded', () => false)\nconst container = ref<ParticlesContainer | undefined>(undefined)\nconst { mode, lazy } = useRuntimeConfig().public.particles\n\nconst props = __props\n\nconst emit = __emit\n\nonMounted(async () => {\n  if(lazy && mode !== 'custom' && !particlesLoaded.value) {\n    tsParticles.init()\n    await loadParticles(tsParticles, mode)\n    particlesLoaded.value = true\n  }\n  const particlesContainer = await tsParticles.load({\n    id: props.id,\n    options: props.options,\n    url: props.url\n  })\n\n  if(particlesContainer) {\n    emit('load', particlesContainer)\n    container.value = particlesContainer\n  }\n})\n\nonUnmounted(() => {\n  if (!container.value) {\n    return\n  }\n  container.value.destroy()\n})\n\nreturn (_ctx: any,_cache: any) => {\n  return (_openBlock(), _createElementBlock(\"div\", { id: _ctx.id }, null, 8, _hoisted_1))\n}\n}\n\n})"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,aAAa,YAAY,sBAAsB,2BAA2B;AAEnF,MAAM,aAAa,CAAC,IAAI;AAExB,SAAS,WAAW,KAAK,mBAAmB;AAC5C,SAAS,mBAAmB;AAC5B,SAAQ,kBAAkB,gBAAe;AAKzC,SAAQ,qBAAoB;AAG5B,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,OAAO;AAAA,IACL,IAAI,CAAC;AAAA,IACL,SAAS,CAAC;AAAA,IACV,KAAK,CAAC;AAAA,EACR;AAAA,EACA,OAAO,CAAC,MAAM;AAAA,EACd,MAAM,SAAc,EAAE,MAAM,OAAO,GAAG;AAExC,UAAM,kBAAkB,SAAS,2BAA2B,MAAM,KAAK;AACvE,UAAM,YAAY,IAAoC,MAAS;AAC/D,UAAM,EAAE,MAAM,KAAK,IAAI,iBAAiB,EAAE,OAAO;AAEjD,UAAM,QAAQ;AAEd,UAAM,OAAO;AAEb,cAAU,YAAY;AACpB,UAAG,QAAQ,SAAS,YAAY,CAAC,gBAAgB,OAAO;AACtD,oBAAY,KAAK;AACjB,cAAM,cAAc,aAAa,IAAI;AACrC,wBAAgB,QAAQ;AAAA,MAC1B;AACA,YAAM,qBAAqB,MAAM,YAAY,KAAK;AAAA,QAChD,IAAI,MAAM;AAAA,QACV,SAAS,MAAM;AAAA,QACf,KAAK,MAAM;AAAA,MACb,CAAC;AAED,UAAG,oBAAoB;AACrB,aAAK,QAAQ,kBAAkB;AAC/B,kBAAU,QAAQ;AAAA,MACpB;AAAA,IACF,CAAC;AAED,gBAAY,MAAM;AAChB,UAAI,CAAC,UAAU,OAAO;AACpB;AAAA,MACF;AACA,gBAAU,MAAM,QAAQ;AAAA,IAC1B,CAAC;AAED,WAAO,CAAC,MAAU,WAAgB;AAChC,aAAQ,WAAW,GAAG,oBAAoB,OAAO,EAAE,IAAI,KAAK,GAAG,GAAG,MAAM,GAAG,UAAU;AAAA,IACvF;AAAA,EACA;AAEA,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1702544650901,
+      "end": 1702544650901,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1702544650901,
+      "end": 1702544650901,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1702544650901,
+      "end": 1702544650901,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1702544650901,
+      "end": 1702544650901,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1702544650901,
+      "end": 1702544650901,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1702544650901,
+      "end": 1702544650901,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1702544650901,
+      "end": 1702544650901,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1702544650901,
+      "end": 1702544650901,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1702544650901,
+      "end": 1702544650901,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1702544650901,
+      "end": 1702544650901,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1702544650901,
+      "end": 1702544650901,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1702544650901,
+      "end": 1702544650901,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1702544650901,
+      "end": 1702544650901,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1702544650901,
+      "end": 1702544650901,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1702544650901,
+      "end": 1702544650901,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1702544650901,
+      "end": 1702544650901,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1702544650901,
+      "end": 1702544650901,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1702544650901,
+      "end": 1702544650901,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1702544650902,
+      "end": 1702544650906,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1702544650906,
+      "end": 1702544650906,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1702544650906,
+      "end": 1702544650907,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1702544650907,
+      "end": 1702544650907,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1702544650907,
+      "end": 1702544650907,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1702544650907,
+      "end": 1702544650907,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1702544650907,
+      "end": 1702544650907,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1702544650907,
+      "end": 1702544650907,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1702544650907,
+      "end": 1702544650907,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1702544650907,
+      "end": 1702544650907,
+      "order": "normal"
+    }
+  ]
+}
