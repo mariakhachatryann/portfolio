@@ -7,7 +7,7 @@
                     I"m Maria Khachatryan</h1>
                 <h2
                     class="rounded-md bg-primary-color/20 max-w-max px-6 inline text-xl md:text-3xl lg:text-4xl font-semibold text-white">
-                    Front-End Developer</h2>
+                    Front End Developer</h2>
                 <p class="text-gray-300 py-4 max-x-md text-justify">
                     specialized with Vue.js / Nuxt, I am focused on creating visually appealing and user-friendly
                     websites. I love creating websites that not only catch the eye but also make navigating a
