@@ -2,7 +2,7 @@
     <div class="flex mt-4 desktop:hidden">
         <ul class="flex gap-2 flex-wrap justify-center">
             <li v-for="link in links" :key="link.id" class="flex items-center gap-2 w-28 h-9 px-4 bg-gradient-to-t from-green-400/50 to-primary-color/50 rounded-md" >
-                <a href={href} class="flex gap-3 items-center w-full text-white text-sm" download={download} target="_blank" rel="noreferrer">
+                <a :href="link.href" class="flex gap-3 items-center w-full text-white text-sm" :download="link.download" target="_blank" rel="noreferrer">
                     <FaLinkedin size="20" v-if="link.label === 'LinkedIn'" />
                     <FaGithub size="20" v-if="link.label === 'GitHub'" />
                     <HiMail size="20" v-if="link.label === 'Mail'" />

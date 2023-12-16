@@ -11,6 +11,7 @@ export default {
     theme: {
         extend: {
             screens: {
+                md: "790px",
                 desktop: "1130px",
             },
             colors: {
