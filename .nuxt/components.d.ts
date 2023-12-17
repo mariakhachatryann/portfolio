@@ -2,6 +2,7 @@
 declare module 'vue' {
   export interface GlobalComponents {
     'About': typeof import("../components/About.vue")['default']
+    'Certificates': typeof import("../components/Certificates.vue")['default']
     'Contact': typeof import("../components/Contact.vue")['default']
     'Footer': typeof import("../components/Footer.vue")['default']
     'Main': typeof import("../components/Main.vue")['default']
@@ -35,6 +36,7 @@ declare module 'vue' {
     'Html': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Html']
     'Body': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
     'LazyAbout': typeof import("../components/About.vue")['default']
+    'LazyCertificates': typeof import("../components/Certificates.vue")['default']
     'LazyContact': typeof import("../components/Contact.vue")['default']
     'LazyFooter': typeof import("../components/Footer.vue")['default']
     'LazyMain': typeof import("../components/Main.vue")['default']
@@ -71,6 +73,7 @@ declare module 'vue' {
 }
 
 export const About: typeof import("../components/About.vue")['default']
+export const Certificates: typeof import("../components/Certificates.vue")['default']
 export const Contact: typeof import("../components/Contact.vue")['default']
 export const Footer: typeof import("../components/Footer.vue")['default']
 export const Main: typeof import("../components/Main.vue")['default']
@@ -104,6 +107,7 @@ export const Head: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Html']
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 export const LazyAbout: typeof import("../components/About.vue")['default']
+export const LazyCertificates: typeof import("../components/Certificates.vue")['default']
 export const LazyContact: typeof import("../components/Contact.vue")['default']
 export const LazyFooter: typeof import("../components/Footer.vue")['default']
 export const LazyMain: typeof import("../components/Main.vue")['default']
