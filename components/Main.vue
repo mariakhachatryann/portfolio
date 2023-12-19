@@ -4,7 +4,7 @@
             class="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 py-16 md:py-0 md:flex-row md:gap-8">
             <div class="flex flex-col justify-center items-center h-[85%] md:h-full order-2 md:order-1 md:items-start">
                 <h1 class="text-4xl col-span-1 md:text-[52px] text-center font-bold text-white mb-2 mt-3 md:mt-0 md:mb-4">
-                    I"m Maria Khachatryan</h1>
+                    I'm Maria Khachatryan</h1>
                 <h2
                     class="rounded-md bg-primary-color/20 max-w-max px-6 inline text-xl md:text-3xl lg:text-4xl font-semibold text-white">
                     Front End Developer</h2>
