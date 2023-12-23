@@ -34,8 +34,7 @@ const SelectedProject = ref({})
 
 const handleModalInfo = (project) => {
     modalIsOpen.value = true;
-    SelectedProject.value = project
-    console.log(SelectedProject.value);
+    SelectedProject.value = project;
 };
 
 const closeModal = () => {
