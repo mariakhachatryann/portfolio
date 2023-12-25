@@ -3,10 +3,10 @@
         <div
             class="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 py-16 md:py-0 md:flex-row md:gap-8">
             <div class="flex flex-col justify-center items-center h-[85%] md:h-full order-2 md:order-1 md:items-start">
-                <h1 class="text-4xl col-span-1 md:text-[52px] text-center font-bold text-white mb-2 mt-3 md:mt-0 md:mb-4">
+                <h1 class="text-4xl text-nowrap	 md:text-[52px] font-bold text-white mb-2 mt-3 md:mt-0 md:mb-4">
                     I'm Maria Khachatryan</h1>
                 <h2
-                    class="rounded-md bg-primary-color/20 max-w-max px-6 inline text-xl md:text-3xl lg:text-4xl font-semibold text-white">
+                    class="rounded-md mx-none bg-primary-color/20 max-w-max px-6 inline text-xl md:text-3xl lg:text-4xl font-semibold text-white">
                     Front End Developer</h2>
                 <p class="text-gray-300 py-4 max-x-md text-justify">
                     specialized with Vue.js / Nuxt, I am focused on creating visually appealing and user-friendly
@@ -16,7 +16,7 @@
                 </p>
 
                 <div class="hidden desktop:flex">
-                    <div
+                    <div @click="linkScroll('About')"
                         class="group  text-black font-semibold w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-t from-green-400 to-primary-color cursor-pointer mx-auto md:mx-0">
                         About me
                         <span class="group-hover:rotate-90 duration-300 ">
@@ -38,6 +38,6 @@
 </template>
 
 <script setup>
-import { AiOutlineArrowRight } from "vue3-icons/ai"
-
+import { AiOutlineArrowRight } from "vue3-icons/ai";
+const { linkScroll } = useUtils();
 </script>

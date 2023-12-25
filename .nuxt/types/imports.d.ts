@@ -316,6 +316,7 @@ declare global {
   const useTransitionState: typeof import('../../node_modules/vue')['useTransitionState']
   const useUrlSearchParams: typeof import('../../node_modules/@vueuse/core')['useUrlSearchParams']
   const useUserMedia: typeof import('../../node_modules/@vueuse/core')['useUserMedia']
+  const useUtils: typeof import('../../composables/useUtils')['useUtils']
   const useVModel: typeof import('../../node_modules/@vueuse/core')['useVModel']
   const useVModels: typeof import('../../node_modules/@vueuse/core')['useVModels']
   const useVibrate: typeof import('../../node_modules/@vueuse/core')['useVibrate']
@@ -676,6 +677,7 @@ declare module 'vue' {
     readonly useTransitionState: UnwrapRef<typeof import('../../node_modules/vue')['useTransitionState']>
     readonly useUrlSearchParams: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useUrlSearchParams']>
     readonly useUserMedia: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useUserMedia']>
+    readonly useUtils: UnwrapRef<typeof import('../../composables/useUtils')['useUtils']>
     readonly useVModel: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useVModel']>
     readonly useVModels: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useVModels']>
     readonly useVibrate: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useVibrate']>
@@ -1029,6 +1031,7 @@ declare module '@vue/runtime-core' {
     readonly useTransitionState: UnwrapRef<typeof import('../../node_modules/vue')['useTransitionState']>
     readonly useUrlSearchParams: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useUrlSearchParams']>
     readonly useUserMedia: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useUserMedia']>
+    readonly useUtils: UnwrapRef<typeof import('../../composables/useUtils')['useUtils']>
     readonly useVModel: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useVModel']>
     readonly useVModels: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useVModels']>
     readonly useVibrate: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useVibrate']>

@@ -12,7 +12,7 @@
             </li>
         </ul>
     </div>
-    <div :class="{'block': enableBtn, 'hidden': !enableBtn}" @click="moveToTop" class="rounded-full cursor-pointer bg-gradient-to-t from-green-400 to-primary-color p-4 right-10 bottom-[12%] fixed z-30">
+    <div :class="{'block': enableBtn, 'hidden': !enableBtn}" @click="linkScroll('Home')" class="rounded-full cursor-pointer bg-gradient-to-t from-green-400 to-primary-color p-4 right-10 bottom-[12%] fixed z-30">
         <BsArrowUp size="30" />
     </div>
 </template>
@@ -21,6 +21,8 @@
 import { FaLinkedin, FaGithub } from "vue3-icons/fa";
 import { HiMail } from "vue3-icons/hi";
 import { BsFillPersonLinesFill, BsArrowUp } from "vue3-icons/bs";
+
+const { linkScroll } = useUtils(); 
 
 const links = [
     {
@@ -50,13 +52,6 @@ let enableBtn = ref(false);
 
 const checkScrollPosition = () => {
   enableBtn.value = window.scrollY > 100;
-};
-
-const moveToTop = () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth',
-    });
 };
 
 onMounted(() => {

@@ -9,19 +9,17 @@
             </div>
 
             <div class="w-full grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-8 text-center py-8 sm:px-0">
-                <div v-for="tech in technologies" :key="tech.id" class="flex flex-col justify-between shadow-md hover:scale-105 duration-500 py-2
+                <div v-for="tech in technologies.slice(0, sliceNum)" :key="tech.id" class="flex flex-col justify-between shadow-md hover:scale-105 duration-500 py-2
                     rounded-lg" :class="tech.style">
                     <img class="w-20 h-[112px] mx-auto py-2 md:py-4" :src="tech.src" alt="" />
                     <p class="mt-4 md:mt-2">{{ tech.title }}</p>
                 </div>
 
             </div>
+            <button @click="showAll" class="text-black font-semibold w-fit px-6 py-2 mx-auto rounded-md bg-gradient-to-t from-green-400 to-primary-color cursor-pointer hover:scale-110 duration-300">
+                {{ isShowed ? 'Show less' : 'Show more' }}
+            </button>
         </div>
-
-        <!-- <ScrollLink to="Education" smooth duration={500}
-            class="absolute bottom-2 -left-full md:left-1/2 md:-translate-x-1/2 cursor-pointer hover:text-primary-color">
-            <i class="bx bx-chevron-down text-7xl text-gray-400 animate-bounce font hover:text-primary-color"></i>
-        </ScrollLink> -->
     </section>
 </template>
 
@@ -38,6 +36,14 @@ import github from "~/assets/logo/github.png";
 import npm from "~/assets/logo/npm.png";
 import pinia from "~/assets/logo/pinia.svg";
 import webpack from "~/assets/logo/webpack.png";
+import json from "~/assets/logo/json-logo.png";
+import gulp from "~/assets/logo/gulp.jpg";;
+import axios from "~/assets/logo/axios.svg";
+import sass from "~/assets/logo/sass.svg";
+import vite from "~/assets/logo/vite.png";
+
+let sliceNum = ref(12);
+let isShowed = ref(false);
 
 const technologies = ref([
     {
@@ -108,9 +114,51 @@ const technologies = ref([
     },
     {
         id: 12,
+        src: vite,
+        title: "Vite",
+        style: "shadow-purple-500"
+    },
+    {
+        id: 13,
+        src: json,
+        title: "JSON",
+        style: "shadow-white"
+    },
+    {
+        id: 14,
+        src: sass,
+        title: "Sass",
+        style: "shadow-pink-500"
+    },
+    {
+        id: 15,
+        src: vue,
+        title: "VUEX",
+        style: "shadow-emerald-500"
+    },
+    {
+        id: 16,
         src: webpack,
         title: "Webpack",
         style: "shadow-blue-500"
+    },
+    {
+        id: 17,
+        src: gulp,
+        title: "Gulp",
+        style: "shadow-red-500"
+    },
+    {
+        id: 18,
+        src: axios,
+        title: "Axios",
+        style: "shadow-blue-800"
     }
 ]);
+
+function showAll() {
+    isShowed.value = !isShowed.value;
+    sliceNum.value = isShowed.value ? technologies.value.length : 12
+}
+
 </script>
