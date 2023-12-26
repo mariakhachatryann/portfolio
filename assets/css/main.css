@@ -24,6 +24,14 @@
             width: auto !important;
         }
     }
-    
+}
 
+::-webkit-scrollbar {
+    width: 8px;
+    background: #918f8f;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(87, 230, 125);
+    width: 8px;
 }

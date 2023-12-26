@@ -15,6 +15,8 @@ useHead({
 let isLoading = ref(true);
 
 onMounted(() => {
-    isLoading.value = false
+    setTimeout(() => {
+        isLoading.value = false
+    }, 3000)
 })
 </script>
