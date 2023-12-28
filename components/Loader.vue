@@ -1,8 +1,6 @@
 <template>
-    <div class="w-full h-screen flex justify-center items-center">
-        <div class="loader">
-            <NuxtImg class="w-20 h-20 rounded-full absolute" src="/logo/mkh.jpg"></NuxtImg>
-        </div>
+    <div class="loader">
+        <NuxtImg class="w-20 h-20 rounded-full absolute" src="/logo/mkh.jpg"></NuxtImg>
     </div>
 </template>
 

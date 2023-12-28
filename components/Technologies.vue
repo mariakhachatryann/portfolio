@@ -1,5 +1,5 @@
 <template>
-    <section name="Technologies" class="relative w-full md:h-screen h-unset">
+    <section name="Technologies" class="relative w-full">
         <div class="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
             <div>
                 <h2 class="text-4xl font-bold inline pb-1 border-b-4 border-primary-color/40 sm:text-5xl">
@@ -16,7 +16,9 @@
                 </div>
 
             </div>
-            <Loader v-if="isLoading" />
+            <div v-if="isLoading" class="w-full my-5 flex justify-center items-center">
+                <Loader  />
+            </div>
             <button v-if="!isLoading" @click="showAll" class="text-black font-semibold w-fit px-6 py-2 mx-auto rounded-md bg-gradient-to-t from-green-400 to-primary-color cursor-pointer hover:scale-110 duration-300">
                 {{ isShowed ? 'Show less' : 'Show more' }}
             </button>

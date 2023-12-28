@@ -30,6 +30,7 @@
     "@splidejs/splide-extension-auto-scroll": "^0.5.3",
     "@splidejs/vue-splide": "^0.6.12",
     "nuxt-swiper": "^1.2.2",
+    "sweetalert2": "^11.10.2",
     "vue3-icons": "^0.1.12"
   }
 }

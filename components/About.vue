@@ -1,5 +1,5 @@
 <template>
-    <section name="About" class='relative w-full md:h-screen text-white h-unset'>
+    <section name="About" class='relative w-full text-white'>
         <div class='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full text-lg'>
 
             <div class='pb-8'>
@@ -7,51 +7,61 @@
             </div>
 
             <!-- <p class="mb-4 py-6">
-                I am a motivated, responsible and hardworking individual who is always looking for new challenges. I quickly perceive new information, have a desire to
-                learn, ability to solve problems and creative thinking․ I am confident that I can quickly adapt to new technologies, trends and team.
+                I am a motivated, responsible and hardworking individual who is always looking for new challenges.
             </p> -->
             <p class="mb-4 py-6">
                 👋 Hi there! I'm a motivated and hardworking front-end developer with a focus on Vue.js and Nuxt.js.
+                I quickly perceive new information, have a desire to
+                learn, ability to solve problems and creative thinking․ I am confident that I can quickly adapt to new technologies, trends and team.
                 I enjoy turning cool ideas into awesome digital stuff using neat code.
                 <br />
                 <br />
-                🚀 My journey into web development began years ago, and since then, I've been creating easy-to-use designs, speeding up websites, and making them work well on any device. I love diving
-                into the intricacies of Vue(Nuxt), leveraging its powerful features to build dynamic and interactive
-                applications.
 
-                <br />
-                <br />
-                💡 What sets me apart is my dedication to staying updated with the latest trends and technologies in the
-                world of front-end development. I'm committed to delivering solutions that not only meet but exceed user
-                expectations.
-                <br />
-                <br />
-                🛠️ Proficient in HTML, CSS, JavaScript, and Vue.js/Nuxt.js, I'm adept at translating design concepts into
+
+                🚀 Proficient in HTML, CSS, JavaScript, and Vue.js/Nuxt.js, I'm adept at translating design concepts into
                 functional interfaces. I believe in writing clean, maintainable code that prioritizes
                 readability and scalability.
                 <br />
                 <br />
-                🌟 I'm passionate about collaborating with multidisciplinary teams, where my technical expertise merges
-                seamlessly with creative visions to bring projects to life. I thrive in an environment that encourages
-                innovation, problem-solving, and continuous learning.
+                <!-- My journey into web development started with curiosity and a desire to blend creativity with technology.
+                As I dive deeper into the world of Vue/Nuxt, I'm continually amazed by the endless
+                possibilities and the power of code to shape the digital landscape. -->
+
+                💡 I thrive on learning and adapting, constantly seeking new challenges to expand my skill set. Whether it's
+                mastering responsive design principles or diving into the latest frameworks, I'm always eager to grow and
+                evolve in this dynamic field.
+
+
+
                 <br />
                 <br />
+                🌟 I'm deeply committed to my work, ensuring every task is approached with responsibility and dedication. My
+                ability to quickly grasp new concepts allows me to adapt and learn on the go, consistently enhancing my
+                skills to deliver high-quality results.
             </p>
 
-            <p>📫 Let's connect! Whether it's discussing a project, exploring new opportunities, or just geeking out about
-                the latest in web development, I'm always open to meaningful conversations.
+            <p>📫 Let's connect and create something amazing ! Feel free to reach out—I'm excited to collaborate and
+                contribute to innovative web experiences.
+
+
             </p>
 
-            <!-- <NuxtLink to="#"
-                class='text-black font-semibold text-[16px] w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-t from-green-400 to-primary-color cursor-pointer mx-auto md:mx-0 self-end mt-8 hover:scale-110 duration-300'>
-                See more
-                <span class=''>
-                    <AiOutlineArrowRight size=25 class='ml-1' />
-            </span>
-        </NuxtLink> -->
+            <br />
+            <br />
+            <NuxtLink to="/about">
 
-    </div>
-</section></template>
+                <div class="flex justify-end mr-4">
+                    <div
+                        class="hover:underline hover:underline-offset-4 hover:text-primary-color/60 cursor-pointer text-gray-300 flex items-center">
+                        See more about me
+                        <AiOutlineArrowRight class="ml-2" />
+                    </div>
+                </div>
+            </NuxtLink>
+
+        </div>
+    </section>
+</template>
 
 <script setup>
 import { AiOutlineArrowRight } from "vue3-icons/ai";

@@ -1,5 +1,5 @@
 export const useUtils = () => {
-    const linkScroll = (elm: any) => {
+    const linkScroll = async (elm: any) => {
         const elem = document.querySelector(`[name='${elm}']`);
         if (elem) {
             elem.scrollIntoView({ behavior: 'smooth' });
