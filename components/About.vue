@@ -1,14 +1,10 @@
 <template>
-    <section name="About" class='relative w-full text-white'>
-        <div class='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full text-lg'>
+    <section name="About" class="relative w-full text-white">
+        <div class="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full text-lg">
 
-            <div class='pb-8'>
-                <h2 class='text-4xl sm:text-5xl font-bold inline border-b-4 border-primary-color/40'>About me</h2>
+            <div class="pb-8">
+                <h2 class="text-4xl sm:text-5xl font-bold inline border-b-4 border-primary-color/40">About me</h2>
             </div>
-
-            <!-- <p class="mb-4 py-6">
-                I am a motivated, responsible and hardworking individual who is always looking for new challenges.
-            </p> -->
             <p class="mb-4 py-6">
                 👋 Hi there! I'm a motivated and hardworking front-end developer with a focus on Vue.js and Nuxt.js.
                 I quickly perceive new information, have a desire to
@@ -16,23 +12,14 @@
                 I enjoy turning cool ideas into awesome digital stuff using neat code.
                 <br />
                 <br />
-
-
                 🚀 Proficient in HTML, CSS, JavaScript, and Vue.js/Nuxt.js, I'm adept at translating design concepts into
                 functional interfaces. I believe in writing clean, maintainable code that prioritizes
                 readability and scalability.
                 <br />
                 <br />
-                <!-- My journey into web development started with curiosity and a desire to blend creativity with technology.
-                As I dive deeper into the world of Vue/Nuxt, I'm continually amazed by the endless
-                possibilities and the power of code to shape the digital landscape. -->
-
                 💡 I thrive on learning and adapting, constantly seeking new challenges to expand my skill set. Whether it's
                 mastering responsive design principles or diving into the latest frameworks, I'm always eager to grow and
                 evolve in this dynamic field.
-
-
-
                 <br />
                 <br />
                 🌟 I'm deeply committed to my work, ensuring every task is approached with responsibility and dedication. My
@@ -40,10 +27,9 @@
                 skills to deliver high-quality results.
             </p>
 
-            <p>📫 Let's connect and create something amazing ! Feel free to reach out—I'm excited to collaborate and
+            <p>
+                📫 Let's connect and create something amazing ! Feel free to reach out—I'm excited to collaborate and
                 contribute to innovative web experiences.
-
-
             </p>
 
             <br />
@@ -58,7 +44,6 @@
                     </div>
                 </div>
             </NuxtLink>
-
         </div>
     </section>
 </template>

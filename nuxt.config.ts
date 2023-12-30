@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-    modules: [ "nuxt-particles", "@vueuse/nuxt", "@nuxt/image" ],
+    modules: [ "nuxt-particles", "@vueuse/nuxt", "@nuxt/image", "@pinia/nuxt" ],
     css: [ "~/assets/css/main.css" ],
     postcss: {
         plugins: {
@@ -8,6 +8,6 @@ export default defineNuxtConfig({
         },
     },
     image: {
-        dir: 'assets'
+        dir: "assets"
     }
 })

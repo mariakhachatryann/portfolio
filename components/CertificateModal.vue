@@ -17,7 +17,7 @@ import { onClickOutside } from '@vueuse/core'
 const props = defineProps(["selectedImage"]);
 const emit = defineEmits(["handleCloseButton"]);
 
-function handleCloseButton() {
+const handleCloseButton = () => {
     emit("handleCloseButton");
 }
 let modal = ref(null);

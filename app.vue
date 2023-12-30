@@ -3,11 +3,12 @@
         <div v-if="isLoading" class="w-full h-screen flex justify-center items-center">
             <Loader />
         </div>
-        <Particles />
-        <Nav v-if="!isLoading" />
-        <NuxtPage v-if="!isLoading" />
-        <Footer v-if="!isLoading" />
-        <SocialLinks v-if="!isLoading" />
+        <div v-if="!isLoading">
+            <Nav />
+            <NuxtPage />
+            <Footer />
+            <SocialLinks />
+        </div>
     </NuxtLayout>
 </template>
 
@@ -17,7 +18,6 @@ useHead({
 })
 
 let isLoading = ref(true);
-
 onMounted(() => {
     setTimeout(() => {
         isLoading.value = false

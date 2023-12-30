@@ -9,25 +9,15 @@
             </div>
 
             <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8 mb-6">
-                <ProjectCard v-for="project in projects" :key="project.id" :project="project"
-                    @handleModalInfo="handleModalInfo" />
+                <ProjectCard v-for="project in projects" :key="project.id" :project="project" @handleModalInfo="handleModalInfo" />
             </div>
-
-            <!-- <div class="flex justify-end mr-4">
-                <Link to="projects"
-                    class="hover:underline hover:underline-offset-4 hover:text-primary-color/60 cursor-pointer text-gray-300 flex items-center">
-                See more projects
-                <MdOutlineKeyboardArrowRight size={20} />
-                </Link>
-            </div> -->
         </div>
         <ModalInfo v-if="modalIsOpen" :SelectedProject="SelectedProject" @handle-click-close-button="closeModal" />
-
     </section>
 </template>
 
 <script setup>
-import projects from '~/config/projects.js';
+const { projects } = usePortfolioStore();
 
 const modalIsOpen = ref(false);
 const SelectedProject = ref({})
@@ -40,6 +30,4 @@ const handleModalInfo = (project) => {
 const closeModal = () => {
     modalIsOpen.value = false;
 };
-
-
 </script>

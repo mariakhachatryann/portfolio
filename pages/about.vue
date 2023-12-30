@@ -1,19 +1,12 @@
 <template>
     <section name="About" class="relative w-full h-full mb-10">
-
-        <div
-            class="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 py-16 md:py-24 lg:py-0 lg:flex-row lg:gap-8">
-
+        <div class="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 py-16 md:py-24 lg:py-0 lg:flex-row lg:gap-8">
             <div class="flex flex-col justify-center items-center mt-24 h-[85%] md:h-full">
-
                 <h1 class="text-4xl md:text-5xl font-bold text-white mb-2 md:mb-4">About me and my journey</h1>
-
                 <div class="flex items-center bg-primary-color/20 rounded-md py-2 px-4">
-                    <img class="h-[30px] w-[30px] mr-2 rounded-full" src="../assets/arm.svg.png" alt="" />
-                    <h2 class="text-lg sm:text-xl md:text-2xl md:py-1 font-semibold text-white">Armenian - 18 years old
-                    </h2>
+                    <NuxtImg class="h-[30px] w-[30px] mr-2 rounded-full" src="/logo/arm.png" alt="" />
+                    <h2 class="text-lg sm:text-xl md:text-2xl md:py-1 font-semibold text-white">Armenian - 18 years old</h2>
                 </div>
-
                 <p class="text-md md:text-lg text-gray-300 py-4 max-x-md text-justify">
                     My journey with HTML and CSS started unexpectedly with curiosity and a desire to blend creativity with
                     technology.I stumbled upon tutorials on YouTube and was instantly
@@ -42,10 +35,12 @@
                     Nuxt felt like discovering a shortcut to efficient and scalable web development. It empowered me to
                     build robust applications while maintaining the flexibility and simplicity that initially drew me to
                     Vue.
-            </p>
+                </p>
 
-            <p class="text-md md:text-lg text-gray-300 max-x-md text-justify">Check out 
-                <a href="https://github.com/mariakhachatryann" class="underline underline-offset-4 ">my github</a> profile to see my projects</p>
+                <p class="text-md md:text-lg text-gray-300 max-x-md text-justify">Check out 
+                    <a href="https://github.com/mariakhachatryann" class="underline underline-offset-4 ">my github</a> profile to see my projects
+                </p>
+            </div>
         </div>
-    </div>
-</section></template>
+    </section>
+</template>

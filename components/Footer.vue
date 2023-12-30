@@ -1,10 +1,8 @@
 <template>
     <footer class="relative mt-auto flex flex-col items-center text-gray-300 pb-6 gap-2 md:flex-row md:justify-evenly">
-
         <div class="flex gap-x-4 md:order-last">
             <a class="text-4xl hover:text-primary-color hover:animate-bounce" target="_blank"
                 href="https://github.com/mariakhachatryann">
-                <!-- <i class="bx bxl-github"></i> -->
                 <FaGithub />
             </a>
 
@@ -26,5 +24,4 @@
 
 <script setup>
 import { FaLinkedin, FaGithub, FaQuestion } from "vue3-icons/fa";
-
 </script>

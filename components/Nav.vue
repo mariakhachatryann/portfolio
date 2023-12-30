@@ -1,6 +1,5 @@
 <template>
-    <header
-        class="fixed top-0 flex bg-neutral-900/60 justify-between h-20 items-center py-4 px-4 md:px-6 text-white mx-auto lg:px-24 md:py-0 w-full z-30 transition-colors duration-700">
+    <header class="fixed top-0 flex bg-neutral-900/60 justify-between h-20 items-center py-4 px-4 md:px-6 text-white mx-auto lg:px-24 md:py-0 w-full z-30 transition-colors duration-700">
         <div class="flex flex-row gap-4 items-center">
             <NuxtLink to="/">
                 <h1
@@ -38,9 +37,7 @@
             </template>
         </div>
 
-        <ul 
-            v-if="isShowNav && checkRoute"
-            class="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black via-black to-green-950 opacity-90">
+        <ul v-if="isShowNav && checkRoute" class="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black via-black to-green-950 opacity-90">
             <li v-for="linkItem in links" @click="scrollFunc(linkItem.link)" :key="linkItem.id" class="px-4 cursor-pointer py-6 text-4xl opacity-100">
                 {{ linkItem.link }}
             </li>
@@ -91,7 +88,6 @@ const handleScroll = () => {
     }
 }
 
-console.log(router.currentRoute.value.fullPath);
 const checkRoute = computed(() => {
     if (router.currentRoute.value.fullPath !== "/") {
         return false
@@ -107,7 +103,7 @@ onUnmounted(() => {
     window.removeEventListener('scroll', handleScroll)
 });
 
-function scrollFunc(link) {
+const scrollFunc = (link) => {
     linkScroll(link);
     isShowNav.value = false
 }

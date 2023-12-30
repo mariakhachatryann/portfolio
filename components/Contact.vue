@@ -9,20 +9,15 @@
             <div class="flex justify-center items-center">
                 <form @submit.prevent="handleSubmit($event)" class="flex flex-col w-full md:w-1/2">
                     <input type="text" name="name" placeholder="Enter your name"
-                        class="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none focus:border-primary-color"
-                        required />
+                        class="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none focus:border-primary-color" required />
 
                     <input type="email" name="email" placeholder="Enter your email"
-                        class="my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none focus:border-primary-color"
-                        required />
+                        class="my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none focus:border-primary-color" required />
 
                     <textarea name="message" rows="10" placeholder="Enter your message"
-                        class="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none focus:border-primary-color"
-                        required></textarea>
+                        class="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none focus:border-primary-color" required></textarea>
 
-                    <button
-                        class="text-black font-semibold bg-gradient-to-t from-green-400 to-primary-color px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300">Contact me
-                        </button>
+                    <button class="text-black font-semibold bg-gradient-to-t from-green-400 to-primary-color px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300">Contact me</button>
                 </form>
             </div>
         </div>
@@ -31,7 +26,8 @@
 
 <script setup>
 import Swal from "sweetalert2";
-function handleSubmit(event) {
+
+const handleSubmit = (event) => {
     const formData = Object.fromEntries(new FormData(event.target));
     console.log(formData);
 
@@ -54,21 +50,9 @@ function handleSubmit(event) {
             `
         })
     }).catch(() => {
-        // Swal.fire({
-        //     icon: 'error',
-        //     iconColor: '#0DFC4B',
-        //     title: 'Something went wrong',
-        //     showConfirmButton: true,
-        //     background: '#191a19',
-        //     color: '#fff',
-        //     confirmButtonColor: '#4ade80',
-        //     backdrop: `
-        //         rgba(54, 55, 54,0.4)
-        //     `
-        // })
         console.log("error");
     })
-
+    
     event.target.reset();
 }
 </script>

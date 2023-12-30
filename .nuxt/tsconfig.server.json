@@ -59,6 +59,9 @@
       ],
       "#image/*": [
         "../node_modules/@nuxt/image/dist/runtime/*"
+      ],
+      "pinia": [
+        "../node_modules/pinia/dist/pinia"
       ]
     }
   },
@@ -67,6 +70,7 @@
     "../node_modules/nuxt-particles/runtime/server",
     "../node_modules/@vueuse/nuxt/runtime/server",
     "../node_modules/@nuxt/image/runtime/server",
+    "../node_modules/@pinia/nuxt/runtime/server",
     "../node_modules/@nuxt/devtools/runtime/server",
     "../node_modules/@nuxt/telemetry/runtime/server",
     "./types/nitro.d.ts",

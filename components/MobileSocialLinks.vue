@@ -8,10 +8,8 @@
                     <HiMail size="20" v-if="link.label === 'Mail'" />
                     <BsFillPersonLinesFill size="20" v-if="link.label === 'Resume'" />
                     {{ link.label }}
-
                 </a>
             </li>
-
         </ul>
     </div>
 </template>
@@ -20,6 +18,7 @@
 import { FaLinkedin, FaGithub } from "vue3-icons/fa";
 import { HiMail } from "vue3-icons/hi";
 import { BsFillPersonLinesFill } from "vue3-icons/bs";
+
 const links = [
     {
         id: 1,

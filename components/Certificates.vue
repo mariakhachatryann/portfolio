@@ -1,7 +1,6 @@
 <template>
     <section name="Education" class="relative w-full my-10 text-white overflow-hidden">
         <div class="max-w-screen-lg p-4 md:mx-auto mx-4 flex flex-col justify-center w-full h-full">
-
             <div class="mb-2">
                 <h2 class="text-4xl font-bold inline border-b-4 border-primary-color/40 sm:text-5xl pb-1">Education</h2>
                 <p class="py-6">Check out some of my certificates</p>
@@ -26,16 +25,7 @@ import Splide from "@splidejs/splide";
 import "@splidejs/splide/css";
 import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 
-const certificates = ref([
-    { id: 1, img: "certificates/html-cert.png" },
-    { id: 2, img: "certificates/js-cert-sam.png" },
-    { id: 3, img: "certificates/css-cert.png" },
-    { id: 4, img: "certificates/git-cert.jpg", otherSize: true },
-    { id: 5, img: "certificates/js-cert.png" },
-    { id: 6, img: "certificates/responsive-cert.png" },
-    { id: 7, img: "certificates/jsInter-cert.png" },
-    { id: 8, img: "certificates/web-dev-cert.png" }
-]);
+const { certificates } = usePortfolioStore();
 
 const splideOptions = {
     type: "loop",
@@ -75,7 +65,7 @@ const destroySplide = () => {
 let selectedImage = ref(null);
 let modalIsOpen = ref(false);
 
-function setSelectedImage(img) {
+const setSelectedImage = (img) => {
     modalIsOpen.value = true;
     selectedImage.value = img
 }
