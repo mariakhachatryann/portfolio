@@ -13,6 +13,7 @@ export default {
             screens: {
                 md: "790px",
                 desktop: "1130px",
+                mini: { "max": "420px" }
             },
             colors: {
                 "primary-color": "#0DFC4B",
