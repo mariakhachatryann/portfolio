@@ -13,8 +13,9 @@
 </template>
 
 <script setup>
-useHead({
-    title: "Maria Khachatryan | Front End Developer"
+useSeoMeta({
+    title: "Maria Khachatryan | Front End Developer",
+    description: "I'm Maria Khachatryan, Front End Developer (Vue/Nuxt). Welcome to my portfolio, I'm excited to share my work with you and dive into the world of user-friendly web applications! "
 })
 
 let isLoading = ref(true);
