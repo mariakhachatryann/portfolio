@@ -1,0 +1,215 @@
+{
+  "resolvedId": "C:/Users/user/Desktop/portfolio/components/Loader.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\r\n    <div class=\"loader\">\r\n        <NuxtImg class=\"w-20 h-20 rounded-full absolute\" src=\"/logo/mkh.jpg\"></NuxtImg>\r\n    </div>\r\n</template>\r\n\r\n<style scoped>\r\n.loader {\r\n    border: 4px solid #0DFC4B;\r\n    border-radius: 50%;\r\n    border-top: 4px solid #f000;\r\n    width: 88px;\r\n    height: 88px;\r\n    -webkit-animation: spin 2s linear infinite;\r\n    /* Safari */\r\n    animation: spin 2s linear infinite;\r\n}\r\n\r\n/* Safari */\r\n@-webkit-keyframes spin {\r\n    0% {\r\n        -webkit-transform: rotate(0deg);\r\n    }\r\n\r\n    100% {\r\n        -webkit-transform: rotate(360deg);\r\n    }\r\n}\r\n\r\n@keyframes spin {\r\n    0% {\r\n        transform: rotate(0deg);\r\n    }\r\n\r\n    100% {\r\n        transform: rotate(360deg);\r\n    }\r\n}</style>",
+      "start": 1703957079500,
+      "end": 1703957080136,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1703957080136,
+      "end": 1703957080136,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1703957080136,
+      "end": 1703957080136,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1703957080137,
+      "end": 1703957080137,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1703957080137,
+      "end": 1703957080137,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1703957080137,
+      "end": 1703957080137,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1703957080137,
+      "end": 1703957080137,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1703957080137,
+      "end": 1703957080137,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "const _sfc_main = {}\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, openBlock as _openBlock, createElementBlock as _createElementBlock, pushScopeId as _pushScopeId, popScopeId as _popScopeId } from \"vue\"\n\nconst _withScopeId = n => (_pushScopeId(\"data-v-63333af8\"),n=n(),_popScopeId(),n)\nconst _hoisted_1 = { class: \"loader\" }\n\nfunction _sfc_render(_ctx, _cache) {\n  const _component_NuxtImg = _resolveComponent(\"NuxtImg\")\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _createVNode(_component_NuxtImg, {\n      class: \"w-20 h-20 rounded-full absolute\",\n      src: \"/logo/mkh.jpg\"\n    })\n  ]))\n}\n\nimport \"C:/Users/user/Desktop/portfolio/components/Loader.vue?vue&type=style&index=0&scoped=63333af8&lang.css\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render],['__scopeId',\"data-v-63333af8\"]])",
+      "start": 1703957080137,
+      "end": 1703957080139,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1703957080139,
+      "end": 1703957080139,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1703957080139,
+      "end": 1703957080139,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1703957080139,
+      "end": 1703957080139,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1703957080139,
+      "end": 1703957080139,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1703957080140,
+      "end": 1703957080140,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1703957080140,
+      "end": 1703957080140,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1703957080140,
+      "end": 1703957080140,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1703957080140,
+      "end": 1703957080140,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1703957080140,
+      "end": 1703957080140,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1703957080140,
+      "end": 1703957080140,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1703957080140,
+      "end": 1703957080140,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1703957080140,
+      "end": 1703957080140,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1703957080140,
+      "end": 1703957080140,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1703957080140,
+      "end": 1703957080140,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1703957080140,
+      "end": 1703957080140,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1703957080140,
+      "end": 1703957080140,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1703957080140,
+      "end": 1703957080141,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1703957080141,
+      "end": 1703957080141,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1703957080141,
+      "end": 1703957080141,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1703957080141,
+      "end": 1703957080141,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1703957080141,
+      "end": 1703957080141,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "result": "import { default as __nuxt_component_0 } from \"C:/Users/user/Desktop/portfolio/node_modules/@nuxt/image/dist/runtime/components/nuxt-img\";\nconst _sfc_main = {}\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, openBlock as _openBlock, createElementBlock as _createElementBlock, pushScopeId as _pushScopeId, popScopeId as _popScopeId } from \"vue\"\n\nconst _withScopeId = n => (_pushScopeId(\"data-v-63333af8\"),n=n(),_popScopeId(),n)\nconst _hoisted_1 = { class: \"loader\" }\n\nfunction _sfc_render(_ctx, _cache) {\n  const _component_NuxtImg = __nuxt_component_0\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _createVNode(_component_NuxtImg, {\n      class: \"w-20 h-20 rounded-full absolute\",\n      src: \"/logo/mkh.jpg\"\n    })\n  ]))\n}\n\nimport \"C:/Users/user/Desktop/portfolio/components/Loader.vue?vue&type=style&index=0&scoped=63333af8&lang.css\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render],['__scopeId',\"data-v-63333af8\"]])",
+      "start": 1703957080141,
+      "end": 1703957080142,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1703957080142,
+      "end": 1703957080142,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1703957080142,
+      "end": 1703957080142,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1703957080142,
+      "end": 1703957080142,
+      "order": "normal"
+    }
+  ]
+}

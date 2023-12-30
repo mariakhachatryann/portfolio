@@ -1,0 +1,224 @@
+{
+  "resolvedId": "C:/Users/user/Desktop/portfolio/components/CertificateModal.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\r\n    <div class=\"fixed inset-0 flex items-center justify-center z-50 bg-black/60 duration-300\"\r\n        :class=\"props.selectedImage.img ? 'opacity-100' : 'opacity-0 pointer-events-none'\">\r\n        <div ref=\"modal\" class=\" bg-white/20 p-2 rounded-lg max-w-[800px] relative shadow-md shadow-gray-600 miniModal\">\r\n            <NuxtImg \r\n                class=\"rounded-md w-full object-contain miniModal\"\r\n                :class=\"props.selectedImage.otherSize ? 'h-[700px]' : 'h-full'\"\r\n                :src=\"props.selectedImage.img\"\r\n                alt=\"Selected Certificate\"> </NuxtImg>\r\n        </div>\r\n    </div>\r\n</template>\r\n\r\n<script setup>\r\nimport { onClickOutside } from '@vueuse/core'\r\n\r\nconst props = defineProps([\"selectedImage\"]);\r\nconst emit = defineEmits([\"handleCloseButton\"]);\r\n\r\nconst handleCloseButton = () => {\r\n    emit(\"handleCloseButton\");\r\n}\r\nlet modal = ref(null);\r\n\r\nonClickOutside(modal, handleCloseButton);\r\n</script>",
+      "start": 1703957080254,
+      "end": 1703957081840,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1703957081840,
+      "end": 1703957081840,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1703957081840,
+      "end": 1703957081840,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1703957081840,
+      "end": 1703957081840,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1703957081840,
+      "end": 1703957081840,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1703957081840,
+      "end": 1703957081840,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1703957081840,
+      "end": 1703957081840,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1703957081840,
+      "end": 1703957081840,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "import { resolveComponent as _resolveComponent, normalizeClass as _normalizeClass, createVNode as _createVNode, createElementVNode as _createElementVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nimport { onClickOutside } from '@vueuse/core'\r\n\r\n\nconst _sfc_main = {\n  __name: 'CertificateModal',\n  props: [\"selectedImage\"],\n  emits: [\"handleCloseButton\"],\n  setup(__props, { emit: __emit }) {\n\r\nconst props = __props;\r\nconst emit = __emit;\r\n\r\nconst handleCloseButton = () => {\r\n    emit(\"handleCloseButton\");\r\n}\r\nlet modal = ref(null);\r\n\r\nonClickOutside(modal, handleCloseButton);\r\n\nreturn (_ctx, _cache) => {\n  const _component_NuxtImg = _resolveComponent(\"NuxtImg\")\n\n  return (_openBlock(), _createElementBlock(\"div\", {\n    class: _normalizeClass([\"fixed inset-0 flex items-center justify-center z-50 bg-black/60 duration-300\", props.selectedImage.img ? 'opacity-100' : 'opacity-0 pointer-events-none'])\n  }, [\n    _createElementVNode(\"div\", {\n      ref_key: \"modal\",\n      ref: modal,\n      class: \"bg-white/20 p-2 rounded-lg max-w-[800px] relative shadow-md shadow-gray-600 miniModal\"\n    }, [\n      _createVNode(_component_NuxtImg, {\n        class: _normalizeClass([\"rounded-md w-full object-contain miniModal\", props.selectedImage.otherSize ? 'h-[700px]' : 'h-full']),\n        src: props.selectedImage.img,\n        alt: \"Selected Certificate\"\n      }, null, 8, [\"class\", \"src\"])\n    ], 512)\n  ], 2))\n}\n}\n\n}\n\n\n\nexport default _sfc_main",
+      "start": 1703957081840,
+      "end": 1703957081844,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1703957081844,
+      "end": 1703957081844,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1703957081844,
+      "end": 1703957081844,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1703957081844,
+      "end": 1703957081844,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1703957081844,
+      "end": 1703957081844,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1703957081844,
+      "end": 1703957081844,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1703957081844,
+      "end": 1703957081844,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1703957081844,
+      "end": 1703957081844,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1703957081844,
+      "end": 1703957081845,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1703957081845,
+      "end": 1703957081845,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1703957081845,
+      "end": 1703957081845,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1703957081845,
+      "end": 1703957081845,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1703957081845,
+      "end": 1703957081845,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1703957081845,
+      "end": 1703957081845,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1703957081845,
+      "end": 1703957081845,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1703957081845,
+      "end": 1703957081845,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1703957081845,
+      "end": 1703957081845,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "result": "import { ref } from 'vue';\nimport { resolveComponent as _resolveComponent, normalizeClass as _normalizeClass, createVNode as _createVNode, createElementVNode as _createElementVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nimport { onClickOutside } from '@vueuse/core'\r\n\r\n\nconst _sfc_main = {\n  __name: 'CertificateModal',\n  props: [\"selectedImage\"],\n  emits: [\"handleCloseButton\"],\n  setup(__props, { emit: __emit }) {\n\r\nconst props = __props;\r\nconst emit = __emit;\r\n\r\nconst handleCloseButton = () => {\r\n    emit(\"handleCloseButton\");\r\n}\r\nlet modal = ref(null);\r\n\r\nonClickOutside(modal, handleCloseButton);\r\n\nreturn (_ctx, _cache) => {\n  const _component_NuxtImg = _resolveComponent(\"NuxtImg\")\n\n  return (_openBlock(), _createElementBlock(\"div\", {\n    class: _normalizeClass([\"fixed inset-0 flex items-center justify-center z-50 bg-black/60 duration-300\", props.selectedImage.img ? 'opacity-100' : 'opacity-0 pointer-events-none'])\n  }, [\n    _createElementVNode(\"div\", {\n      ref_key: \"modal\",\n      ref: modal,\n      class: \"bg-white/20 p-2 rounded-lg max-w-[800px] relative shadow-md shadow-gray-600 miniModal\"\n    }, [\n      _createVNode(_component_NuxtImg, {\n        class: _normalizeClass([\"rounded-md w-full object-contain miniModal\", props.selectedImage.otherSize ? 'h-[700px]' : 'h-full']),\n        src: props.selectedImage.img,\n        alt: \"Selected Certificate\"\n      }, null, 8, [\"class\", \"src\"])\n    ], 512)\n  ], 2))\n}\n}\n\n}\n\n\n\nexport default _sfc_main",
+      "start": 1703957081845,
+      "end": 1703957081846,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1O;AACA,CAAC,CAAC,CAA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,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvI,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC;AACD,CAAC;AACD;AACA,CAAC;AACD;AACA;AACA;AACA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC"
+      }
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1703957081846,
+      "end": 1703957081846,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1703957081846,
+      "end": 1703957081846,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1703957081846,
+      "end": 1703957081846,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1703957081846,
+      "end": 1703957081846,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "result": "import { default as __nuxt_component_0 } from \"C:/Users/user/Desktop/portfolio/node_modules/@nuxt/image/dist/runtime/components/nuxt-img\";\nimport { ref } from 'vue';\nimport { resolveComponent as _resolveComponent, normalizeClass as _normalizeClass, createVNode as _createVNode, createElementVNode as _createElementVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nimport { onClickOutside } from '@vueuse/core'\r\n\r\n\nconst _sfc_main = {\n  __name: 'CertificateModal',\n  props: [\"selectedImage\"],\n  emits: [\"handleCloseButton\"],\n  setup(__props, { emit: __emit }) {\n\r\nconst props = __props;\r\nconst emit = __emit;\r\n\r\nconst handleCloseButton = () => {\r\n    emit(\"handleCloseButton\");\r\n}\r\nlet modal = ref(null);\r\n\r\nonClickOutside(modal, handleCloseButton);\r\n\nreturn (_ctx, _cache) => {\n  const _component_NuxtImg = __nuxt_component_0\n\n  return (_openBlock(), _createElementBlock(\"div\", {\n    class: _normalizeClass([\"fixed inset-0 flex items-center justify-center z-50 bg-black/60 duration-300\", props.selectedImage.img ? 'opacity-100' : 'opacity-0 pointer-events-none'])\n  }, [\n    _createElementVNode(\"div\", {\n      ref_key: \"modal\",\n      ref: modal,\n      class: \"bg-white/20 p-2 rounded-lg max-w-[800px] relative shadow-md shadow-gray-600 miniModal\"\n    }, [\n      _createVNode(_component_NuxtImg, {\n        class: _normalizeClass([\"rounded-md w-full object-contain miniModal\", props.selectedImage.otherSize ? 'h-[700px]' : 'h-full']),\n        src: props.selectedImage.img,\n        alt: \"Selected Certificate\"\n      }, null, 8, [\"class\", \"src\"])\n    ], 512)\n  ], 2))\n}\n}\n\n}\n\n\n\nexport default _sfc_main",
+      "start": 1703957081846,
+      "end": 1703957081847,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1703957081847,
+      "end": 1703957081847,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1703957081847,
+      "end": 1703957081847,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1703957081847,
+      "end": 1703957081847,
+      "order": "normal"
+    }
+  ]
+}

@@ -4,8 +4,8 @@
     {
       "name": "vite:vue",
       "result": "\n.spotlight{background:linear-gradient(45deg, #00DC82 0%, #36E4DA 50%, #0047E1 100%);filter:blur(20vh)}.bg-white{--tw-bg-opacity:1;background-color:rgba(255,255,255,var(--tw-bg-opacity))}.grid{display:-ms-grid;display:grid}.place-content-center{place-content:center}.font-sans{font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",Segoe UI Symbol,\"Noto Color Emoji\"}.font-medium{font-weight:500}.font-light{font-weight:300}.h-1\\/2{height:50%}.text-8xl{font-size:6rem;line-height:1}.text-xl{font-size:1.25rem;line-height:1.75rem}.leading-tight{line-height:1.25}.mb-8{margin-bottom:2rem}.mb-16{margin-bottom:4rem}.max-w-520px{max-width:520px}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.px-8{padding-left:2rem;padding-right:2rem}.fixed{position:fixed}.left-0{left:0}.right-0{right:0}.-bottom-1\\/2{bottom:-50%}.text-center{text-align:center}.text-black{--tw-text-opacity:1;color:rgba(0,0,0,var(--tw-text-opacity))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}@media (min-width: 640px){.sm\\:text-4xl{font-size:2.25rem;line-height:2.5rem}.sm\\:text-10xl{font-size:10rem;line-height:1}.sm\\:px-0{padding-left:0;padding-right:0}}@media (prefers-color-scheme: dark){.dark\\:bg-black{--tw-bg-opacity:1;background-color:rgba(0,0,0,var(--tw-bg-opacity))}.dark\\:text-white{--tw-text-opacity:1;color:rgba(255,255,255,var(--tw-text-opacity))}}\n",
-      "start": 1702665918904,
-      "end": 1702665918904,
+      "start": 1703957092670,
+      "end": 1703957092671,
       "sourcemaps": {
         "version": 3,
         "sources": [
@@ -22,39 +22,39 @@
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1702665918913,
-      "end": 1702665918913,
+      "start": 1703957092683,
+      "end": 1703957092683,
       "order": "pre"
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1702665918913,
-      "end": 1702665918913,
+      "start": 1703957092683,
+      "end": 1703957092683,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1702665918917,
-      "end": 1702665918917,
+      "start": 1703957092692,
+      "end": 1703957092692,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1702665918917,
-      "end": 1702665918917,
+      "start": 1703957092692,
+      "end": 1703957092693,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1702665918918,
-      "end": 1702665918919,
+      "start": 1703957092693,
+      "end": 1703957092694,
       "order": "pre"
     },
     {
       "name": "vite:css",
       "result": ".spotlight{background:linear-gradient(45deg,#00dc82,#36e4da 50%,#0047e1);filter:blur(20vh)}.bg-white{--tw-bg-opacity:1;background-color:rgba(255,255,255,var(--tw-bg-opacity))}.grid{display:grid}.place-content-center{place-content:center}.font-sans{font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji}.font-medium{font-weight:500}.font-light{font-weight:300}.h-1\\/2{height:50%}.text-8xl{font-size:6rem;line-height:1}.text-xl{font-size:1.25rem;line-height:1.75rem}.leading-tight{line-height:1.25}.mb-8{margin-bottom:2rem}.mb-16{margin-bottom:4rem}.max-w-520px{max-width:520px}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.px-8{padding-left:2rem;padding-right:2rem}.fixed{position:fixed}.left-0{left:0}.right-0{right:0}.-bottom-1\\/2{bottom:-50%}.text-center{text-align:center}.text-black{--tw-text-opacity:1;color:rgba(0,0,0,var(--tw-text-opacity))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}@media (min-width:640px){.sm\\:text-4xl{font-size:2.25rem;line-height:2.5rem}.sm\\:text-10xl{font-size:10rem;line-height:1}.sm\\:px-0{padding-left:0;padding-right:0}}@media (prefers-color-scheme:dark){.dark\\:bg-black{--tw-bg-opacity:1;background-color:rgba(0,0,0,var(--tw-bg-opacity))}.dark\\:text-white{--tw-text-opacity:1;color:rgba(255,255,255,var(--tw-text-opacity))}}",
-      "start": 1702665918919,
-      "end": 1702665918945,
+      "start": 1703957092694,
+      "end": 1703957092719,
       "order": "normal",
       "sourcemaps": {
         "file": "C:/Users/user/Desktop/portfolio/node_modules/@nuxt/ui-templates/dist/templates/error-500.vue",
@@ -71,27 +71,27 @@
     },
     {
       "name": "vite:esbuild",
-      "start": 1702665918945,
-      "end": 1702665918946,
+      "start": 1703957092720,
+      "end": 1703957092720,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1702665918950,
-      "end": 1702665918951,
+      "start": 1703957092727,
+      "end": 1703957092728,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1702665918952,
-      "end": 1702665918953,
+      "start": 1703957092729,
+      "end": 1703957092730,
       "order": "normal"
     },
     {
       "name": "vite:vue",
       "result": ".spotlight[data-v-df79c84d]{background:linear-gradient(45deg,#00dc82,#36e4da 50%,#0047e1);filter:blur(20vh)}.bg-white[data-v-df79c84d]{--tw-bg-opacity:1;background-color:rgba(255,255,255,var(--tw-bg-opacity))}.grid[data-v-df79c84d]{display:grid}.place-content-center[data-v-df79c84d]{place-content:center}.font-sans[data-v-df79c84d]{font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji}.font-medium[data-v-df79c84d]{font-weight:500}.font-light[data-v-df79c84d]{font-weight:300}.h-1\\/2[data-v-df79c84d]{height:50%}.text-8xl[data-v-df79c84d]{font-size:6rem;line-height:1}.text-xl[data-v-df79c84d]{font-size:1.25rem;line-height:1.75rem}.leading-tight[data-v-df79c84d]{line-height:1.25}.mb-8[data-v-df79c84d]{margin-bottom:2rem}.mb-16[data-v-df79c84d]{margin-bottom:4rem}.max-w-520px[data-v-df79c84d]{max-width:520px}.min-h-screen[data-v-df79c84d]{min-height:100vh}.overflow-hidden[data-v-df79c84d]{overflow:hidden}.px-8[data-v-df79c84d]{padding-left:2rem;padding-right:2rem}.fixed[data-v-df79c84d]{position:fixed}.left-0[data-v-df79c84d]{left:0}.right-0[data-v-df79c84d]{right:0}.-bottom-1\\/2[data-v-df79c84d]{bottom:-50%}.text-center[data-v-df79c84d]{text-align:center}.text-black[data-v-df79c84d]{--tw-text-opacity:1;color:rgba(0,0,0,var(--tw-text-opacity))}.antialiased[data-v-df79c84d]{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}@media (min-width:640px){.sm\\:text-4xl[data-v-df79c84d]{font-size:2.25rem;line-height:2.5rem}.sm\\:text-10xl[data-v-df79c84d]{font-size:10rem;line-height:1}.sm\\:px-0[data-v-df79c84d]{padding-left:0;padding-right:0}}@media (prefers-color-scheme:dark){.dark\\:bg-black[data-v-df79c84d]{--tw-bg-opacity:1;background-color:rgba(0,0,0,var(--tw-bg-opacity))}.dark\\:text-white[data-v-df79c84d]{--tw-text-opacity:1;color:rgba(255,255,255,var(--tw-text-opacity))}}",
-      "start": 1702665918954,
-      "end": 1702665918961,
+      "start": 1703957092731,
+      "end": 1703957092736,
       "order": "normal",
       "sourcemaps": {
         "file": "C:/Users/user/Desktop/portfolio/node_modules/@nuxt/ui-templates/dist/templates/error-500.vue",
@@ -108,69 +108,69 @@
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1702665918965,
-      "end": 1702665918965,
+      "start": 1703957092756,
+      "end": 1703957092756,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1702665918966,
-      "end": 1702665918966,
+      "start": 1703957092758,
+      "end": 1703957092758,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1702665918966,
-      "end": 1702665918966,
+      "start": 1703957092758,
+      "end": 1703957092758,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1702665918967,
-      "end": 1702665918971,
+      "start": 1703957092759,
+      "end": 1703957092759,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1702665918967,
-      "end": 1702665918971,
+      "start": 1703957092759,
+      "end": 1703957092759,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1702665918973,
-      "end": 1702665918974,
+      "start": 1703957092766,
+      "end": 1703957092766,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1702665918974,
-      "end": 1702665918974,
+      "start": 1703957092768,
+      "end": 1703957092769,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1702665918979,
-      "end": 1702665918979,
+      "start": 1703957092775,
+      "end": 1703957092775,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1702665918980,
-      "end": 1702665918980,
+      "start": 1703957092781,
+      "end": 1703957092782,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1702665918980,
-      "end": 1702665918980,
+      "start": 1703957092783,
+      "end": 1703957092783,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
       "result": "export default \".spotlight[data-v-df79c84d]{background:linear-gradient(45deg,#00dc82,#36e4da 50%,#0047e1);filter:blur(20vh)}.bg-white[data-v-df79c84d]{--tw-bg-opacity:1;background-color:rgba(255,255,255,var(--tw-bg-opacity))}.grid[data-v-df79c84d]{display:grid}.place-content-center[data-v-df79c84d]{place-content:center}.font-sans[data-v-df79c84d]{font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji}.font-medium[data-v-df79c84d]{font-weight:500}.font-light[data-v-df79c84d]{font-weight:300}.h-1\\\\/2[data-v-df79c84d]{height:50%}.text-8xl[data-v-df79c84d]{font-size:6rem;line-height:1}.text-xl[data-v-df79c84d]{font-size:1.25rem;line-height:1.75rem}.leading-tight[data-v-df79c84d]{line-height:1.25}.mb-8[data-v-df79c84d]{margin-bottom:2rem}.mb-16[data-v-df79c84d]{margin-bottom:4rem}.max-w-520px[data-v-df79c84d]{max-width:520px}.min-h-screen[data-v-df79c84d]{min-height:100vh}.overflow-hidden[data-v-df79c84d]{overflow:hidden}.px-8[data-v-df79c84d]{padding-left:2rem;padding-right:2rem}.fixed[data-v-df79c84d]{position:fixed}.left-0[data-v-df79c84d]{left:0}.right-0[data-v-df79c84d]{right:0}.-bottom-1\\\\/2[data-v-df79c84d]{bottom:-50%}.text-center[data-v-df79c84d]{text-align:center}.text-black[data-v-df79c84d]{--tw-text-opacity:1;color:rgba(0,0,0,var(--tw-text-opacity))}.antialiased[data-v-df79c84d]{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}@media (min-width:640px){.sm\\\\:text-4xl[data-v-df79c84d]{font-size:2.25rem;line-height:2.5rem}.sm\\\\:text-10xl[data-v-df79c84d]{font-size:10rem;line-height:1}.sm\\\\:px-0[data-v-df79c84d]{padding-left:0;padding-right:0}}@media (prefers-color-scheme:dark){.dark\\\\:bg-black[data-v-df79c84d]{--tw-bg-opacity:1;background-color:rgba(0,0,0,var(--tw-bg-opacity))}.dark\\\\:text-white[data-v-df79c84d]{--tw-text-opacity:1;color:rgba(255,255,255,var(--tw-text-opacity))}}\"",
-      "start": 1702665918981,
-      "end": 1702665918981,
+      "start": 1703957092784,
+      "end": 1703957092784,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -178,116 +178,116 @@
     },
     {
       "name": "vite:build-html",
-      "start": 1702665918982,
-      "end": 1702665918982,
+      "start": 1703957092784,
+      "end": 1703957092784,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1702665918983,
-      "end": 1702665918983,
+      "start": 1703957092785,
+      "end": 1703957092785,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1702665918983,
-      "end": 1702665918983,
+      "start": 1703957092786,
+      "end": 1703957092786,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1702665918986,
-      "end": 1702665918986,
+      "start": 1703957092791,
+      "end": 1703957092791,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1702665918986,
-      "end": 1702665918986,
+      "start": 1703957092796,
+      "end": 1703957092796,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1702665918987,
-      "end": 1702665918987,
+      "start": 1703957092796,
+      "end": 1703957092796,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1702665918987,
-      "end": 1702665918987,
+      "start": 1703957092797,
+      "end": 1703957092797,
       "order": "post"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1702665918987,
-      "end": 1702665918987,
+      "start": 1703957092797,
+      "end": 1703957092797,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1702665918987,
-      "end": 1702665918987,
+      "start": 1703957092798,
+      "end": 1703957092798,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1702665918987,
-      "end": 1702665918987,
+      "start": 1703957092798,
+      "end": 1703957092798,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1702665918988,
-      "end": 1702665918988,
+      "start": 1703957092798,
+      "end": 1703957092798,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1702665918988,
-      "end": 1702665918988,
+      "start": 1703957092798,
+      "end": 1703957092798,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1702665918989,
-      "end": 1702665918989,
+      "start": 1703957092801,
+      "end": 1703957092801,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1702665918989,
-      "end": 1702665918990,
+      "start": 1703957092801,
+      "end": 1703957092801,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-template",
-      "start": 1702665918990,
-      "end": 1702665918990,
+      "start": 1703957092801,
+      "end": 1703957092802,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1702665918990,
-      "end": 1702665918990,
+      "start": 1703957092802,
+      "end": 1703957092802,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1702665918990,
-      "end": 1702665918990,
+      "start": 1703957092802,
+      "end": 1703957092802,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1702665918990,
-      "end": 1702665918990,
+      "start": 1703957092802,
+      "end": 1703957092802,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1702665918991,
-      "end": 1702665918991,
+      "start": 1703957092803,
+      "end": 1703957092803,
       "order": "normal"
     }
   ]

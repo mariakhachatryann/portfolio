@@ -3,58 +3,58 @@
   "transforms": [
     {
       "name": "vite:load-fallback",
-      "result": "<template>\r\n    <div class=\"shadow-md shadow-gray-600 rounded-lg duration-200 hover:scale-105 max-w-md mx-auto\">\r\n      <img\r\n        @click=\"handleModalInfo(props.project)\"\r\n        :src=\"props.project.src\"\r\n        alt=\"project card\"\r\n        class=\"rounded-md   cursor-pointer\"\r\n      />\r\n      <div class=\"flex items-center justify-center\">\r\n        <button\r\n          @click=\"handleClickDemo(props.project.demo)\"\r\n          class=\"text-gray-400 hover:text-white w-1/2 px-6 py-2 m-4 cursor-pointer\"\r\n        >\r\n          Demo\r\n        </button>\r\n        <button\r\n          @click=\"handleClickCode(props.project.code)\"\r\n          class=\"text-gray-400 hover:text-white w-1/2 px-6 py-2 m-4 cursor-pointer\"\r\n        >\r\n          Code\r\n        </button>\r\n      </div>\r\n    </div>\r\n</template>\r\n\r\n<script setup>\r\nconst props = defineProps([\"project\"]);\r\nconst emit = defineEmits([\"handleModalInfo\"])\r\n\r\n  const handleClickDemo = (demoUrl) => {\r\n    const newWindow = window.open(demoUrl, \"_blank\");\r\n    newWindow.opener = null;\r\n    newWindow.rel = \"noopener noreferrer\";\r\n  };\r\n\r\n  const handleClickCode = (codeUrl) => {\r\n    const newWindow = window.open(codeUrl, \"_blank\");\r\n    newWindow.opener = null;\r\n    newWindow.rel = \"noopener noreferrer\";\r\n  };\r\n\r\n  function handleModalInfo(project) {\r\n    emit(\"handleModalInfo\", project)\r\n  }\r\n</script>",
-      "start": 1702665908583,
-      "end": 1702665909162,
+      "result": "<template>\r\n    <div class=\"shadow-md shadow-gray-600 rounded-lg duration-200 hover:scale-105 max-w-md mx-auto\">\r\n        <NuxtImg @click=\"handleModalInfo(props.project)\" :src=\"props.project.src\" alt=\"project card\" class=\"rounded-md cursor-pointer\" />\r\n        <div class=\"flex items-center justify-center\">\r\n            <button @click=\"handleClickDemo(props.project.demo)\" class=\"text-gray-400 hover:text-white w-1/2 px-6 py-2 m-4 cursor-pointer\">Demo</button>\r\n            <button @click=\"handleClickCode(props.project.code)\" class=\"text-gray-400 hover:text-white w-1/2 px-6 py-2 m-4 cursor-pointer\">Code</button>\r\n        </div>\r\n    </div>\r\n</template>\r\n\r\n<script setup>\r\nconst props = defineProps([\"project\"]);\r\nconst emit = defineEmits([\"handleModalInfo\"])\r\n\r\nconst handleClickDemo = (demoUrl) => {\r\n    const newWindow = window.open(demoUrl, \"_blank\");\r\n    newWindow.opener = null;\r\n    newWindow.rel = \"noopener noreferrer\";\r\n};\r\n\r\nconst handleClickCode = (codeUrl) => {\r\n    const newWindow = window.open(codeUrl, \"_blank\");\r\n    newWindow.opener = null;\r\n    newWindow.rel = \"noopener noreferrer\";\r\n};\r\n\r\nconst handleModalInfo = (project) => {\r\n    emit(\"handleModalInfo\", project)\r\n}\r\n</script>",
+      "start": 1703957080176,
+      "end": 1703957081705,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1702665909162,
-      "end": 1702665909162,
+      "start": 1703957081705,
+      "end": 1703957081705,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1702665909162,
-      "end": 1702665909162,
+      "start": 1703957081705,
+      "end": 1703957081705,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1702665909163,
-      "end": 1702665909163,
+      "start": 1703957081705,
+      "end": 1703957081705,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1702665909163,
-      "end": 1702665909163,
+      "start": 1703957081705,
+      "end": 1703957081705,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1702665909163,
-      "end": 1702665909163,
+      "start": 1703957081705,
+      "end": 1703957081705,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1702665909163,
-      "end": 1702665909163,
+      "start": 1703957081705,
+      "end": 1703957081705,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1702665909163,
-      "end": 1702665909163,
+      "start": 1703957081705,
+      "end": 1703957081705,
       "order": "normal"
     },
     {
       "name": "vite:vue",
-      "result": "import { createElementVNode as _createElementVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = { class: \"shadow-md shadow-gray-600 rounded-lg duration-200 hover:scale-105 max-w-md mx-auto\" }\nconst _hoisted_2 = [\"src\"]\nconst _hoisted_3 = { class: \"flex items-center justify-center\" }\n\n\nconst _sfc_main = {\n  __name: 'ProjectCard',\n  props: [\"project\"],\n  emits: [\"handleModalInfo\"],\n  setup(__props, { emit: __emit }) {\n\r\nconst props = __props;\r\nconst emit = __emit\r\n\r\n  const handleClickDemo = (demoUrl) => {\r\n    const newWindow = window.open(demoUrl, \"_blank\");\r\n    newWindow.opener = null;\r\n    newWindow.rel = \"noopener noreferrer\";\r\n  };\r\n\r\n  const handleClickCode = (codeUrl) => {\r\n    const newWindow = window.open(codeUrl, \"_blank\");\r\n    newWindow.opener = null;\r\n    newWindow.rel = \"noopener noreferrer\";\r\n  };\r\n\r\n  function handleModalInfo(project) {\r\n    emit(\"handleModalInfo\", project)\r\n  }\r\n\nreturn (_ctx, _cache) => {\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _createElementVNode(\"img\", {\n      onClick: _cache[0] || (_cache[0] = $event => (handleModalInfo(props.project))),\n      src: props.project.src,\n      alt: \"project card\",\n      class: \"rounded-md cursor-pointer\"\n    }, null, 8, _hoisted_2),\n    _createElementVNode(\"div\", _hoisted_3, [\n      _createElementVNode(\"button\", {\n        onClick: _cache[1] || (_cache[1] = $event => (handleClickDemo(props.project.demo))),\n        class: \"text-gray-400 hover:text-white w-1/2 px-6 py-2 m-4 cursor-pointer\"\n      }, \" Demo \"),\n      _createElementVNode(\"button\", {\n        onClick: _cache[2] || (_cache[2] = $event => (handleClickCode(props.project.code))),\n        class: \"text-gray-400 hover:text-white w-1/2 px-6 py-2 m-4 cursor-pointer\"\n      }, \" Code \")\n    ])\n  ]))\n}\n}\n\n}\n\n\n\nexport default _sfc_main",
-      "start": 1702665909163,
-      "end": 1702665909171,
+      "result": "import { resolveComponent as _resolveComponent, createVNode as _createVNode, createElementVNode as _createElementVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = { class: \"shadow-md shadow-gray-600 rounded-lg duration-200 hover:scale-105 max-w-md mx-auto\" }\nconst _hoisted_2 = { class: \"flex items-center justify-center\" }\n\n\nconst _sfc_main = {\n  __name: 'ProjectCard',\n  props: [\"project\"],\n  emits: [\"handleModalInfo\"],\n  setup(__props, { emit: __emit }) {\n\r\nconst props = __props;\r\nconst emit = __emit\r\n\r\nconst handleClickDemo = (demoUrl) => {\r\n    const newWindow = window.open(demoUrl, \"_blank\");\r\n    newWindow.opener = null;\r\n    newWindow.rel = \"noopener noreferrer\";\r\n};\r\n\r\nconst handleClickCode = (codeUrl) => {\r\n    const newWindow = window.open(codeUrl, \"_blank\");\r\n    newWindow.opener = null;\r\n    newWindow.rel = \"noopener noreferrer\";\r\n};\r\n\r\nconst handleModalInfo = (project) => {\r\n    emit(\"handleModalInfo\", project)\r\n}\r\n\nreturn (_ctx, _cache) => {\n  const _component_NuxtImg = _resolveComponent(\"NuxtImg\")\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _createVNode(_component_NuxtImg, {\n      onClick: _cache[0] || (_cache[0] = $event => (handleModalInfo(props.project))),\n      src: props.project.src,\n      alt: \"project card\",\n      class: \"rounded-md cursor-pointer\"\n    }, null, 8, [\"src\"]),\n    _createElementVNode(\"div\", _hoisted_2, [\n      _createElementVNode(\"button\", {\n        onClick: _cache[1] || (_cache[1] = $event => (handleClickDemo(props.project.demo))),\n        class: \"text-gray-400 hover:text-white w-1/2 px-6 py-2 m-4 cursor-pointer\"\n      }, \"Demo\"),\n      _createElementVNode(\"button\", {\n        onClick: _cache[2] || (_cache[2] = $event => (handleClickCode(props.project.code))),\n        class: \"text-gray-400 hover:text-white w-1/2 px-6 py-2 m-4 cursor-pointer\"\n      }, \"Code\")\n    ])\n  ]))\n}\n}\n\n}\n\n\n\nexport default _sfc_main",
+      "start": 1703957081705,
+      "end": 1703957081711,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -62,152 +62,153 @@
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1702665909171,
-      "end": 1702665909171,
+      "start": 1703957081711,
+      "end": 1703957081711,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1702665909171,
-      "end": 1702665909171,
+      "start": 1703957081711,
+      "end": 1703957081711,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1702665909171,
-      "end": 1702665909171,
+      "start": 1703957081711,
+      "end": 1703957081711,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1702665909171,
-      "end": 1702665909171,
+      "start": 1703957081711,
+      "end": 1703957081711,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1702665909171,
-      "end": 1702665909171,
+      "start": 1703957081711,
+      "end": 1703957081711,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1702665909171,
-      "end": 1702665909172,
+      "start": 1703957081711,
+      "end": 1703957081711,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1702665909172,
-      "end": 1702665909172,
+      "start": 1703957081711,
+      "end": 1703957081711,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1702665909172,
-      "end": 1702665909172,
+      "start": 1703957081711,
+      "end": 1703957081712,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1702665909172,
-      "end": 1702665909172,
+      "start": 1703957081712,
+      "end": 1703957081712,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1702665909172,
-      "end": 1702665909172,
+      "start": 1703957081712,
+      "end": 1703957081712,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1702665909172,
-      "end": 1702665909172,
+      "start": 1703957081712,
+      "end": 1703957081712,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1702665909172,
-      "end": 1702665909172,
+      "start": 1703957081712,
+      "end": 1703957081712,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1702665909172,
-      "end": 1702665909172,
+      "start": 1703957081712,
+      "end": 1703957081712,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1702665909172,
-      "end": 1702665909172,
+      "start": 1703957081712,
+      "end": 1703957081712,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1702665909172,
-      "end": 1702665909172,
+      "start": 1703957081712,
+      "end": 1703957081712,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1702665909172,
-      "end": 1702665909172,
+      "start": 1703957081712,
+      "end": 1703957081712,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1702665909172,
-      "end": 1702665909173,
+      "start": 1703957081712,
+      "end": 1703957081713,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1702665909173,
-      "end": 1702665909173,
+      "start": 1703957081713,
+      "end": 1703957081713,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1702665909173,
-      "end": 1702665909173,
+      "start": 1703957081713,
+      "end": 1703957081713,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1702665909173,
-      "end": 1702665909173,
+      "start": 1703957081713,
+      "end": 1703957081713,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1702665909173,
-      "end": 1702665909173,
+      "start": 1703957081713,
+      "end": 1703957081713,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1702665909173,
-      "end": 1702665909173,
+      "result": "import { default as __nuxt_component_0 } from \"C:/Users/user/Desktop/portfolio/node_modules/@nuxt/image/dist/runtime/components/nuxt-img\";\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, createElementVNode as _createElementVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = { class: \"shadow-md shadow-gray-600 rounded-lg duration-200 hover:scale-105 max-w-md mx-auto\" }\nconst _hoisted_2 = { class: \"flex items-center justify-center\" }\n\n\nconst _sfc_main = {\n  __name: 'ProjectCard',\n  props: [\"project\"],\n  emits: [\"handleModalInfo\"],\n  setup(__props, { emit: __emit }) {\n\r\nconst props = __props;\r\nconst emit = __emit\r\n\r\nconst handleClickDemo = (demoUrl) => {\r\n    const newWindow = window.open(demoUrl, \"_blank\");\r\n    newWindow.opener = null;\r\n    newWindow.rel = \"noopener noreferrer\";\r\n};\r\n\r\nconst handleClickCode = (codeUrl) => {\r\n    const newWindow = window.open(codeUrl, \"_blank\");\r\n    newWindow.opener = null;\r\n    newWindow.rel = \"noopener noreferrer\";\r\n};\r\n\r\nconst handleModalInfo = (project) => {\r\n    emit(\"handleModalInfo\", project)\r\n}\r\n\nreturn (_ctx, _cache) => {\n  const _component_NuxtImg = __nuxt_component_0\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _createVNode(_component_NuxtImg, {\n      onClick: _cache[0] || (_cache[0] = $event => (handleModalInfo(props.project))),\n      src: props.project.src,\n      alt: \"project card\",\n      class: \"rounded-md cursor-pointer\"\n    }, null, 8, [\"src\"]),\n    _createElementVNode(\"div\", _hoisted_2, [\n      _createElementVNode(\"button\", {\n        onClick: _cache[1] || (_cache[1] = $event => (handleClickDemo(props.project.demo))),\n        class: \"text-gray-400 hover:text-white w-1/2 px-6 py-2 m-4 cursor-pointer\"\n      }, \"Demo\"),\n      _createElementVNode(\"button\", {\n        onClick: _cache[2] || (_cache[2] = $event => (handleClickCode(props.project.code))),\n        class: \"text-gray-400 hover:text-white w-1/2 px-6 py-2 m-4 cursor-pointer\"\n      }, \"Code\")\n    ])\n  ]))\n}\n}\n\n}\n\n\n\nexport default _sfc_main",
+      "start": 1703957081713,
+      "end": 1703957081714,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1702665909173,
-      "end": 1702665909173,
+      "start": 1703957081714,
+      "end": 1703957081714,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1702665909173,
-      "end": 1702665909174,
+      "start": 1703957081714,
+      "end": 1703957081715,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1702665909174,
-      "end": 1702665909174,
+      "start": 1703957081715,
+      "end": 1703957081715,
       "order": "normal"
     }
   ]

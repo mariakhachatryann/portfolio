@@ -3,70 +3,70 @@
   "transforms": [
     {
       "name": "vite:load-fallback",
-      "result": "<template>\r\n    <footer class=\"relative mt-auto flex flex-col items-center text-gray-300 pb-6 gap-2 md:flex-row md:justify-evenly\">\r\n\r\n        <div class=\"flex gap-x-4 md:order-last\">\r\n            <a class=\"text-4xl hover:text-primary-color hover:animate-bounce\" target=\"_blank\"\r\n                href=\"https://github.com/mariakhachatryann\">\r\n                <!-- <i class=\"bx bxl-github\"></i> -->\r\n                <FaGithub />\r\n            </a>\r\n\r\n            <a class=\"text-4xl hover:text-primary-color hover:animate-bounce\" target=\"_blank\"\r\n                href=\"https://www.linkedin.com/in/maria-khachatryan1606/\">\r\n                <FaLinkedin />\r\n            </a>\r\n\r\n            <a class=\"text-4xl hover:text-primary-color hover:animate-bounce\" target=\"_blank\"\r\n                href=\"https://users-crud-bydt.netlify.app/\">\r\n                <FaQuestion />\r\n            </a>\r\n        </div>\r\n\r\n        <p class=\"md:order-2\">• Copyright ©2023 | All rights reserved • </p>\r\n        <p>@mariakhachatryann</p>\r\n    </footer>\r\n</template>\r\n\r\n<script setup>\r\nimport { FaLinkedin, FaGithub, FaQuestion } from \"vue3-icons/fa\";\r\n\r\n</script>",
-      "start": 1702665918329,
-      "end": 1702665918672,
+      "result": "<template>\r\n    <footer class=\"relative mt-auto flex flex-col items-center text-gray-300 pb-6 gap-2 md:flex-row md:justify-evenly\">\r\n        <div class=\"flex gap-x-4 md:order-last\">\r\n            <a class=\"text-4xl hover:text-primary-color hover:animate-bounce\" target=\"_blank\"\r\n                href=\"https://github.com/mariakhachatryann\">\r\n                <FaGithub />\r\n            </a>\r\n\r\n            <a class=\"text-4xl hover:text-primary-color hover:animate-bounce\" target=\"_blank\"\r\n                href=\"https://www.linkedin.com/in/maria-khachatryan1606/\">\r\n                <FaLinkedin />\r\n            </a>\r\n\r\n            <a class=\"text-4xl hover:text-primary-color hover:animate-bounce\" target=\"_blank\"\r\n                href=\"https://users-crud-bydt.netlify.app/\">\r\n                <FaQuestion />\r\n            </a>\r\n        </div>\r\n\r\n        <p class=\"md:order-2\">• Copyright ©2023 | All rights reserved • </p>\r\n        <p>@mariakhachatryann</p>\r\n    </footer>\r\n</template>\r\n\r\n<script setup>\r\nimport { FaLinkedin, FaGithub, FaQuestion } from \"vue3-icons/fa\";\r\n</script>",
+      "start": 1703957092121,
+      "end": 1703957092554,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1702665918672,
-      "end": 1702665918672,
+      "start": 1703957092554,
+      "end": 1703957092554,
       "order": "pre"
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1702665918672,
-      "end": 1702665918672,
+      "start": 1703957092554,
+      "end": 1703957092554,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1702665918673,
-      "end": 1702665918673,
+      "start": 1703957092554,
+      "end": 1703957092554,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1702665918673,
-      "end": 1702665918673,
+      "start": 1703957092554,
+      "end": 1703957092554,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1702665918673,
-      "end": 1702665918673,
+      "start": 1703957092554,
+      "end": 1703957092554,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1702665918673,
-      "end": 1702665918673,
+      "start": 1703957092554,
+      "end": 1703957092554,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1702665918673,
-      "end": 1702665918673,
+      "start": 1703957092554,
+      "end": 1703957092554,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1702665918673,
-      "end": 1702665918673,
+      "start": 1703957092554,
+      "end": 1703957092554,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1702665918673,
-      "end": 1702665918673,
+      "start": 1703957092554,
+      "end": 1703957092554,
       "order": "normal"
     },
     {
       "name": "vite:vue",
-      "result": "import { unref as _unref, mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderAttrs as _ssrRenderAttrs } from \"vue/server-renderer\"\n\nimport { FaLinkedin, FaGithub, FaQuestion } from \"vue3-icons/fa\";\r\n\r\n\nconst _sfc_main = {\n  __name: 'Footer',\n  __ssrInlineRender: true,\n  setup(__props) {\n\r\n\nreturn (_ctx, _push, _parent, _attrs) => {\n  _push(`<footer${_ssrRenderAttrs(_mergeProps({ class: \"relative mt-auto flex flex-col items-center text-gray-300 pb-6 gap-2 md:flex-row md:justify-evenly\" }, _attrs))}><div class=\"flex gap-x-4 md:order-last\"><a class=\"text-4xl hover:text-primary-color hover:animate-bounce\" target=\"_blank\" href=\"https://github.com/mariakhachatryann\">`)\n  _push(_ssrRenderComponent(_unref(FaGithub), null, null, _parent))\n  _push(`</a><a class=\"text-4xl hover:text-primary-color hover:animate-bounce\" target=\"_blank\" href=\"https://www.linkedin.com/in/maria-khachatryan1606/\">`)\n  _push(_ssrRenderComponent(_unref(FaLinkedin), null, null, _parent))\n  _push(`</a><a class=\"text-4xl hover:text-primary-color hover:animate-bounce\" target=\"_blank\" href=\"https://users-crud-bydt.netlify.app/\">`)\n  _push(_ssrRenderComponent(_unref(FaQuestion), null, null, _parent))\n  _push(`</a></div><p class=\"md:order-2\">• Copyright ©2023 | All rights reserved • </p><p>@mariakhachatryann</p></footer>`)\n}\n}\n\n}\n\n\n\nimport { useSSRContext as __vite_useSSRContext } from 'vue'\nconst _sfc_setup = _sfc_main.setup\n_sfc_main.setup = (props, ctx) => {\n  const ssrContext = __vite_useSSRContext()\n  ;(ssrContext.modules || (ssrContext.modules = new Set())).add(\"components/Footer.vue\")\n  return _sfc_setup ? _sfc_setup(props, ctx) : undefined\n}\nexport default _sfc_main",
-      "start": 1702665918673,
-      "end": 1702665918677,
+      "result": "import { unref as _unref, mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderAttrs as _ssrRenderAttrs } from \"vue/server-renderer\"\n\nimport { FaLinkedin, FaGithub, FaQuestion } from \"vue3-icons/fa\";\r\n\nconst _sfc_main = {\n  __name: 'Footer',\n  __ssrInlineRender: true,\n  setup(__props) {\n\r\n\nreturn (_ctx, _push, _parent, _attrs) => {\n  _push(`<footer${_ssrRenderAttrs(_mergeProps({ class: \"relative mt-auto flex flex-col items-center text-gray-300 pb-6 gap-2 md:flex-row md:justify-evenly\" }, _attrs))}><div class=\"flex gap-x-4 md:order-last\"><a class=\"text-4xl hover:text-primary-color hover:animate-bounce\" target=\"_blank\" href=\"https://github.com/mariakhachatryann\">`)\n  _push(_ssrRenderComponent(_unref(FaGithub), null, null, _parent))\n  _push(`</a><a class=\"text-4xl hover:text-primary-color hover:animate-bounce\" target=\"_blank\" href=\"https://www.linkedin.com/in/maria-khachatryan1606/\">`)\n  _push(_ssrRenderComponent(_unref(FaLinkedin), null, null, _parent))\n  _push(`</a><a class=\"text-4xl hover:text-primary-color hover:animate-bounce\" target=\"_blank\" href=\"https://users-crud-bydt.netlify.app/\">`)\n  _push(_ssrRenderComponent(_unref(FaQuestion), null, null, _parent))\n  _push(`</a></div><p class=\"md:order-2\">• Copyright ©2023 | All rights reserved • </p><p>@mariakhachatryann</p></footer>`)\n}\n}\n\n}\n\n\n\nimport { useSSRContext as __vite_useSSRContext } from 'vue'\nconst _sfc_setup = _sfc_main.setup\n_sfc_main.setup = (props, ctx) => {\n  const ssrContext = __vite_useSSRContext()\n  ;(ssrContext.modules || (ssrContext.modules = new Set())).add(\"components/Footer.vue\")\n  return _sfc_setup ? _sfc_setup(props, ctx) : undefined\n}\nexport default _sfc_main",
+      "start": 1703957092554,
+      "end": 1703957092557,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -74,190 +74,190 @@
           "C:/Users/user/Desktop/portfolio/components/Footer.vue"
         ],
         "sourcesContent": [
-          "<template>\r\n    <footer class=\"relative mt-auto flex flex-col items-center text-gray-300 pb-6 gap-2 md:flex-row md:justify-evenly\">\r\n\r\n        <div class=\"flex gap-x-4 md:order-last\">\r\n            <a class=\"text-4xl hover:text-primary-color hover:animate-bounce\" target=\"_blank\"\r\n                href=\"https://github.com/mariakhachatryann\">\r\n                <!-- <i class=\"bx bxl-github\"></i> -->\r\n                <FaGithub />\r\n            </a>\r\n\r\n            <a class=\"text-4xl hover:text-primary-color hover:animate-bounce\" target=\"_blank\"\r\n                href=\"https://www.linkedin.com/in/maria-khachatryan1606/\">\r\n                <FaLinkedin />\r\n            </a>\r\n\r\n            <a class=\"text-4xl hover:text-primary-color hover:animate-bounce\" target=\"_blank\"\r\n                href=\"https://users-crud-bydt.netlify.app/\">\r\n                <FaQuestion />\r\n            </a>\r\n        </div>\r\n\r\n        <p class=\"md:order-2\">• Copyright ©2023 | All rights reserved • </p>\r\n        <p>@mariakhachatryann</p>\r\n    </footer>\r\n</template>\r\n\r\n<script setup>\r\nimport { FaLinkedin, FaGithub, FaQuestion } from \"vue3-icons/fa\";\r\n\r\n</script>"
+          "<template>\r\n    <footer class=\"relative mt-auto flex flex-col items-center text-gray-300 pb-6 gap-2 md:flex-row md:justify-evenly\">\r\n        <div class=\"flex gap-x-4 md:order-last\">\r\n            <a class=\"text-4xl hover:text-primary-color hover:animate-bounce\" target=\"_blank\"\r\n                href=\"https://github.com/mariakhachatryann\">\r\n                <FaGithub />\r\n            </a>\r\n\r\n            <a class=\"text-4xl hover:text-primary-color hover:animate-bounce\" target=\"_blank\"\r\n                href=\"https://www.linkedin.com/in/maria-khachatryan1606/\">\r\n                <FaLinkedin />\r\n            </a>\r\n\r\n            <a class=\"text-4xl hover:text-primary-color hover:animate-bounce\" target=\"_blank\"\r\n                href=\"https://users-crud-bydt.netlify.app/\">\r\n                <FaQuestion />\r\n            </a>\r\n        </div>\r\n\r\n        <p class=\"md:order-2\">• Copyright ©2023 | All rights reserved • </p>\r\n        <p>@mariakhachatryann</p>\r\n    </footer>\r\n</template>\r\n\r\n<script setup>\r\nimport { FaLinkedin, FaGithub, FaQuestion } from \"vue3-icons/fa\";\r\n</script>"
         ],
         "names": [],
-        "mappings": ";;;AA2BA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClE,CAAC;;;;;;AAFa,CAAC;;;;;;;;;;;;;"
+        "mappings": ";;;AAyBA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;;;;;;AADpD,CAAC;;;;;;;;;;;;;"
       }
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1702665918677,
-      "end": 1702665918677,
+      "start": 1703957092557,
+      "end": 1703957092557,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1702665918677,
-      "end": 1702665918677,
+      "start": 1703957092557,
+      "end": 1703957092557,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1702665918677,
-      "end": 1702665918677,
+      "start": 1703957092557,
+      "end": 1703957092557,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1702665918677,
-      "end": 1702665918677,
+      "start": 1703957092557,
+      "end": 1703957092557,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1702665918677,
-      "end": 1702665918677,
+      "start": 1703957092557,
+      "end": 1703957092557,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1702665918677,
-      "end": 1702665918677,
+      "start": 1703957092558,
+      "end": 1703957092558,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1702665918677,
-      "end": 1702665918678,
+      "start": 1703957092558,
+      "end": 1703957092558,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1702665918678,
-      "end": 1702665918678,
+      "start": 1703957092558,
+      "end": 1703957092558,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1702665918678,
-      "end": 1702665918678,
+      "start": 1703957092558,
+      "end": 1703957092558,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1702665918678,
-      "end": 1702665918678,
+      "start": 1703957092558,
+      "end": 1703957092558,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1702665918678,
-      "end": 1702665918678,
+      "start": 1703957092558,
+      "end": 1703957092558,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1702665918678,
-      "end": 1702665918678,
+      "start": 1703957092558,
+      "end": 1703957092558,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1702665918678,
-      "end": 1702665918678,
+      "start": 1703957092558,
+      "end": 1703957092558,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1702665918678,
-      "end": 1702665918678,
+      "start": 1703957092558,
+      "end": 1703957092558,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1702665918678,
-      "end": 1702665918678,
+      "start": 1703957092558,
+      "end": 1703957092558,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1702665918678,
-      "end": 1702665918678,
+      "start": 1703957092558,
+      "end": 1703957092558,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1702665918678,
-      "end": 1702665918678,
+      "start": 1703957092558,
+      "end": 1703957092558,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1702665918678,
-      "end": 1702665918678,
+      "start": 1703957092558,
+      "end": 1703957092558,
       "order": "post"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1702665918678,
-      "end": 1702665918678,
+      "start": 1703957092558,
+      "end": 1703957092558,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1702665918678,
-      "end": 1702665918679,
+      "start": 1703957092558,
+      "end": 1703957092559,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1702665918678,
-      "end": 1702665918679,
+      "start": 1703957092558,
+      "end": 1703957092559,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1702665918679,
-      "end": 1702665918679,
+      "start": 1703957092559,
+      "end": 1703957092559,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1702665918679,
-      "end": 1702665918679,
+      "start": 1703957092559,
+      "end": 1703957092559,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1702665918679,
-      "end": 1702665918679,
+      "start": 1703957092559,
+      "end": 1703957092559,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1702665918679,
-      "end": 1702665918679,
+      "start": 1703957092559,
+      "end": 1703957092559,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-template",
-      "start": 1702665918679,
-      "end": 1702665918679,
+      "start": 1703957092559,
+      "end": 1703957092559,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1702665918679,
-      "end": 1702665918679,
+      "start": 1703957092559,
+      "end": 1703957092559,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1702665918679,
-      "end": 1702665918679,
+      "start": 1703957092559,
+      "end": 1703957092559,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1702665918679,
-      "end": 1702665918679,
+      "start": 1703957092559,
+      "end": 1703957092559,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1702665918679,
-      "end": 1702665918679,
+      "start": 1703957092560,
+      "end": 1703957092560,
       "order": "normal"
     }
   ]
