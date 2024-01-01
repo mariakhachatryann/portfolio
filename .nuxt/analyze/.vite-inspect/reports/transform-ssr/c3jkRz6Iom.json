@@ -4,69 +4,69 @@
     {
       "name": "vite:load-fallback",
       "result": "<template>\r\n    <section class=\"fixed inset-0 flex items-center justify-center bg-opacity-70 bg-black z-40 over\">\r\n        <div ref=\"modal\" class=\"relative bg-white/20 p-2 rounded-lg w-[70%] sm:w-[60%] max-w-[800px] modalCard max-h-[80vh] flex flex-col overflow-y-auto lg:text-lg lg:w-[90%]\">\r\n            <div>\r\n                <NuxtImg class=\"w-full rounded-tl-lg rounded-tr-lg md:object-cover\" :src=\"props.SelectedProject.src\" alt=\"Resident image\" />\r\n            </div>\r\n\r\n            <div class=\"w-full text-white p-8 flex flex-col bg-black/80 border-opacity-70 border-primary-color rounded-bl-lg rounded-br-lg\">\r\n                <h3 class=\"text-2xl font-semibold self-center pb-1 inline border-b-4 border-primary-color/60 mb-6\">\r\n                    {{ props.SelectedProject.title }}\r\n                </h3>\r\n\r\n                <ul>\r\n                    <li>\r\n                        <span class=\"text-primary-color\">Description: </span>\r\n                        <span>{{ props.SelectedProject.description }}</span>\r\n                    </li>\r\n\r\n                    <li>\r\n                        <span class=\"text-primary-color\">Technologies: </span>\r\n                        <span>{{ props.SelectedProject.technologies }} </span>\r\n                    </li>\r\n\r\n                    <li>\r\n                        <span class=\"text-primary-color\">Demo: </span>\r\n                        <a target=\"_blank\"\r\n                            class=\"hover:underline hover:underline-offset-4 hover:text-dark-green transition-all duration-500\"\r\n                            :href=\"props.SelectedProject.demo\">\r\n                            Click here to see the project\r\n                        </a>\r\n                    </li>\r\n\r\n                    <li>\r\n                        <span class=\"text-primary-color\">Code: </span>\r\n                        <a target=\"_blank\"\r\n                            class=\"hover:underline hover:underline-offset-4 hover:text-dark-green transition-all duration-500\"\r\n                            :href=\"props.SelectedProject.code\">\r\n                            Click here to see the repository\r\n                        </a>\r\n                    </li>\r\n                </ul>\r\n            </div>\r\n        </div>\r\n    </section>\r\n</template>\r\n\r\n<script setup>\r\nimport { onClickOutside } from \"@vueuse/core\"\r\n\r\nconst props = defineProps([\"SelectedProject\"]);\r\nconst emit = defineEmits([\"handleClickCloseButton\"]);\r\n\r\nconst handleClickCloseButton = () => {\r\n    emit(\"handleClickCloseButton\");\r\n}\r\n\r\nlet modal = ref();\r\n\r\nonClickOutside(modal, handleClickCloseButton)\r\n</script>",
-      "start": 1703957092407,
-      "end": 1703957092939,
+      "start": 1703979094031,
+      "end": 1703979094368,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1703957092939,
-      "end": 1703957092939,
+      "start": 1703979094368,
+      "end": 1703979094368,
       "order": "pre"
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1703957092939,
-      "end": 1703957092939,
+      "start": 1703979094368,
+      "end": 1703979094368,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1703957092939,
-      "end": 1703957092939,
+      "start": 1703979094368,
+      "end": 1703979094368,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1703957092939,
-      "end": 1703957092939,
+      "start": 1703979094368,
+      "end": 1703979094368,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1703957092939,
-      "end": 1703957092940,
+      "start": 1703979094368,
+      "end": 1703979094368,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1703957092940,
-      "end": 1703957092940,
+      "start": 1703979094368,
+      "end": 1703979094368,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1703957092940,
-      "end": 1703957092940,
+      "start": 1703979094368,
+      "end": 1703979094368,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1703957092940,
-      "end": 1703957092940,
+      "start": 1703979094368,
+      "end": 1703979094368,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1703957092940,
-      "end": 1703957092940,
+      "start": 1703979094368,
+      "end": 1703979094368,
       "order": "normal"
     },
     {
       "name": "vite:vue",
       "result": "import { resolveComponent as _resolveComponent, mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderAttr as _ssrRenderAttr, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate } from \"vue/server-renderer\"\n\nimport { onClickOutside } from \"@vueuse/core\"\r\n\r\n\nconst _sfc_main = {\n  __name: 'ModalInfo',\n  __ssrInlineRender: true,\n  props: [\"SelectedProject\"],\n  emits: [\"handleClickCloseButton\"],\n  setup(__props, { emit: __emit }) {\n\r\nconst props = __props;\r\nconst emit = __emit;\r\n\r\nconst handleClickCloseButton = () => {\r\n    emit(\"handleClickCloseButton\");\r\n}\r\n\r\nlet modal = ref();\r\n\r\nonClickOutside(modal, handleClickCloseButton)\r\n\nreturn (_ctx, _push, _parent, _attrs) => {\n  const _component_NuxtImg = _resolveComponent(\"NuxtImg\")\n\n  _push(`<section${_ssrRenderAttrs(_mergeProps({ class: \"fixed inset-0 flex items-center justify-center bg-opacity-70 bg-black z-40 over\" }, _attrs))}><div class=\"relative bg-white/20 p-2 rounded-lg w-[70%] sm:w-[60%] max-w-[800px] modalCard max-h-[80vh] flex flex-col overflow-y-auto lg:text-lg lg:w-[90%]\"><div>`)\n  _push(_ssrRenderComponent(_component_NuxtImg, {\n    class: \"w-full rounded-tl-lg rounded-tr-lg md:object-cover\",\n    src: props.SelectedProject.src,\n    alt: \"Resident image\"\n  }, null, _parent))\n  _push(`</div><div class=\"w-full text-white p-8 flex flex-col bg-black/80 border-opacity-70 border-primary-color rounded-bl-lg rounded-br-lg\"><h3 class=\"text-2xl font-semibold self-center pb-1 inline border-b-4 border-primary-color/60 mb-6\">${\n    _ssrInterpolate(props.SelectedProject.title)\n  }</h3><ul><li><span class=\"text-primary-color\">Description: </span><span>${\n    _ssrInterpolate(props.SelectedProject.description)\n  }</span></li><li><span class=\"text-primary-color\">Technologies: </span><span>${\n    _ssrInterpolate(props.SelectedProject.technologies)\n  }</span></li><li><span class=\"text-primary-color\">Demo: </span><a target=\"_blank\" class=\"hover:underline hover:underline-offset-4 hover:text-dark-green transition-all duration-500\"${\n    _ssrRenderAttr(\"href\", props.SelectedProject.demo)\n  }> Click here to see the project </a></li><li><span class=\"text-primary-color\">Code: </span><a target=\"_blank\" class=\"hover:underline hover:underline-offset-4 hover:text-dark-green transition-all duration-500\"${\n    _ssrRenderAttr(\"href\", props.SelectedProject.code)\n  }> Click here to see the repository </a></li></ul></div></div></section>`)\n}\n}\n\n}\n\n\n\nimport { useSSRContext as __vite_useSSRContext } from 'vue'\nconst _sfc_setup = _sfc_main.setup\n_sfc_main.setup = (props, ctx) => {\n  const ssrContext = __vite_useSSRContext()\n  ;(ssrContext.modules || (ssrContext.modules = new Set())).add(\"components/ModalInfo.vue\")\n  return _sfc_setup ? _sfc_setup(props, ctx) : undefined\n}\nexport default _sfc_main",
-      "start": 1703957092940,
-      "end": 1703957092946,
+      "start": 1703979094369,
+      "end": 1703979094373,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -82,123 +82,117 @@
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1703957092946,
-      "end": 1703957092946,
+      "start": 1703979094373,
+      "end": 1703979094373,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1703957092946,
-      "end": 1703957092946,
+      "start": 1703979094373,
+      "end": 1703979094373,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1703957092946,
-      "end": 1703957092946,
+      "start": 1703979094373,
+      "end": 1703979094373,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1703957092946,
-      "end": 1703957092946,
+      "start": 1703979094373,
+      "end": 1703979094373,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1703957092946,
-      "end": 1703957092946,
-      "order": "normal"
-    },
-    {
-      "name": "replace",
-      "start": 1703957092946,
-      "end": 1703957092946,
+      "start": 1703979094373,
+      "end": 1703979094373,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1703957092946,
-      "end": 1703957092946,
+      "start": 1703979094373,
+      "end": 1703979094373,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1703957092946,
-      "end": 1703957092946,
+      "start": 1703979094373,
+      "end": 1703979094373,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1703957092946,
-      "end": 1703957092947,
+      "start": 1703979094373,
+      "end": 1703979094373,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1703957092947,
-      "end": 1703957092947,
+      "start": 1703979094373,
+      "end": 1703979094373,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1703957092947,
-      "end": 1703957092947,
+      "start": 1703979094373,
+      "end": 1703979094373,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1703957092947,
-      "end": 1703957092947,
+      "start": 1703979094373,
+      "end": 1703979094373,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1703957092947,
-      "end": 1703957092947,
+      "start": 1703979094373,
+      "end": 1703979094373,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1703957092947,
-      "end": 1703957092947,
+      "start": 1703979094373,
+      "end": 1703979094373,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1703957092947,
-      "end": 1703957092947,
+      "start": 1703979094373,
+      "end": 1703979094373,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1703957092947,
-      "end": 1703957092947,
+      "start": 1703979094373,
+      "end": 1703979094373,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1703957092947,
-      "end": 1703957092948,
+      "start": 1703979094373,
+      "end": 1703979094373,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1703957092948,
-      "end": 1703957092948,
+      "start": 1703979094373,
+      "end": 1703979094373,
       "order": "post"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1703957092948,
-      "end": 1703957092948,
+      "start": 1703979094373,
+      "end": 1703979094373,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
       "result": "import { ref } from 'vue';\nimport { resolveComponent as _resolveComponent, mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderAttr as _ssrRenderAttr, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate } from \"vue/server-renderer\"\n\nimport { onClickOutside } from \"@vueuse/core\"\r\n\r\n\nconst _sfc_main = {\n  __name: 'ModalInfo',\n  __ssrInlineRender: true,\n  props: [\"SelectedProject\"],\n  emits: [\"handleClickCloseButton\"],\n  setup(__props, { emit: __emit }) {\n\r\nconst props = __props;\r\nconst emit = __emit;\r\n\r\nconst handleClickCloseButton = () => {\r\n    emit(\"handleClickCloseButton\");\r\n}\r\n\r\nlet modal = ref();\r\n\r\nonClickOutside(modal, handleClickCloseButton)\r\n\nreturn (_ctx, _push, _parent, _attrs) => {\n  const _component_NuxtImg = _resolveComponent(\"NuxtImg\")\n\n  _push(`<section${_ssrRenderAttrs(_mergeProps({ class: \"fixed inset-0 flex items-center justify-center bg-opacity-70 bg-black z-40 over\" }, _attrs))}><div class=\"relative bg-white/20 p-2 rounded-lg w-[70%] sm:w-[60%] max-w-[800px] modalCard max-h-[80vh] flex flex-col overflow-y-auto lg:text-lg lg:w-[90%]\"><div>`)\n  _push(_ssrRenderComponent(_component_NuxtImg, {\n    class: \"w-full rounded-tl-lg rounded-tr-lg md:object-cover\",\n    src: props.SelectedProject.src,\n    alt: \"Resident image\"\n  }, null, _parent))\n  _push(`</div><div class=\"w-full text-white p-8 flex flex-col bg-black/80 border-opacity-70 border-primary-color rounded-bl-lg rounded-br-lg\"><h3 class=\"text-2xl font-semibold self-center pb-1 inline border-b-4 border-primary-color/60 mb-6\">${\n    _ssrInterpolate(props.SelectedProject.title)\n  }</h3><ul><li><span class=\"text-primary-color\">Description: </span><span>${\n    _ssrInterpolate(props.SelectedProject.description)\n  }</span></li><li><span class=\"text-primary-color\">Technologies: </span><span>${\n    _ssrInterpolate(props.SelectedProject.technologies)\n  }</span></li><li><span class=\"text-primary-color\">Demo: </span><a target=\"_blank\" class=\"hover:underline hover:underline-offset-4 hover:text-dark-green transition-all duration-500\"${\n    _ssrRenderAttr(\"href\", props.SelectedProject.demo)\n  }> Click here to see the project </a></li><li><span class=\"text-primary-color\">Code: </span><a target=\"_blank\" class=\"hover:underline hover:underline-offset-4 hover:text-dark-green transition-all duration-500\"${\n    _ssrRenderAttr(\"href\", props.SelectedProject.code)\n  }> Click here to see the repository </a></li></ul></div></div></section>`)\n}\n}\n\n}\n\n\n\nimport { useSSRContext as __vite_useSSRContext } from 'vue'\nconst _sfc_setup = _sfc_main.setup\n_sfc_main.setup = (props, ctx) => {\n  const ssrContext = __vite_useSSRContext()\n  ;(ssrContext.modules || (ssrContext.modules = new Set())).add(\"components/ModalInfo.vue\")\n  return _sfc_setup ? _sfc_setup(props, ctx) : undefined\n}\nexport default _sfc_main",
-      "start": 1703957092948,
-      "end": 1703957092949,
+      "start": 1703979094373,
+      "end": 1703979094375,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -212,8 +206,8 @@
     {
       "name": "nuxt:imports-transform",
       "result": "import { ref } from 'vue';\nimport { resolveComponent as _resolveComponent, mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderAttr as _ssrRenderAttr, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate } from \"vue/server-renderer\"\n\nimport { onClickOutside } from \"@vueuse/core\"\r\n\r\n\nconst _sfc_main = {\n  __name: 'ModalInfo',\n  __ssrInlineRender: true,\n  props: [\"SelectedProject\"],\n  emits: [\"handleClickCloseButton\"],\n  setup(__props, { emit: __emit }) {\n\r\nconst props = __props;\r\nconst emit = __emit;\r\n\r\nconst handleClickCloseButton = () => {\r\n    emit(\"handleClickCloseButton\");\r\n}\r\n\r\nlet modal = ref();\r\n\r\nonClickOutside(modal, handleClickCloseButton)\r\n\nreturn (_ctx, _push, _parent, _attrs) => {\n  const _component_NuxtImg = _resolveComponent(\"NuxtImg\")\n\n  _push(`<section${_ssrRenderAttrs(_mergeProps({ class: \"fixed inset-0 flex items-center justify-center bg-opacity-70 bg-black z-40 over\" }, _attrs))}><div class=\"relative bg-white/20 p-2 rounded-lg w-[70%] sm:w-[60%] max-w-[800px] modalCard max-h-[80vh] flex flex-col overflow-y-auto lg:text-lg lg:w-[90%]\"><div>`)\n  _push(_ssrRenderComponent(_component_NuxtImg, {\n    class: \"w-full rounded-tl-lg rounded-tr-lg md:object-cover\",\n    src: props.SelectedProject.src,\n    alt: \"Resident image\"\n  }, null, _parent))\n  _push(`</div><div class=\"w-full text-white p-8 flex flex-col bg-black/80 border-opacity-70 border-primary-color rounded-bl-lg rounded-br-lg\"><h3 class=\"text-2xl font-semibold self-center pb-1 inline border-b-4 border-primary-color/60 mb-6\">${\n    _ssrInterpolate(props.SelectedProject.title)\n  }</h3><ul><li><span class=\"text-primary-color\">Description: </span><span>${\n    _ssrInterpolate(props.SelectedProject.description)\n  }</span></li><li><span class=\"text-primary-color\">Technologies: </span><span>${\n    _ssrInterpolate(props.SelectedProject.technologies)\n  }</span></li><li><span class=\"text-primary-color\">Demo: </span><a target=\"_blank\" class=\"hover:underline hover:underline-offset-4 hover:text-dark-green transition-all duration-500\"${\n    _ssrRenderAttr(\"href\", props.SelectedProject.demo)\n  }> Click here to see the project </a></li><li><span class=\"text-primary-color\">Code: </span><a target=\"_blank\" class=\"hover:underline hover:underline-offset-4 hover:text-dark-green transition-all duration-500\"${\n    _ssrRenderAttr(\"href\", props.SelectedProject.code)\n  }> Click here to see the repository </a></li></ul></div></div></section>`)\n}\n}\n\n}\n\n\n\nimport { useSSRContext as __vite_useSSRContext } from 'vue'\nconst _sfc_setup = _sfc_main.setup\n_sfc_main.setup = (props, ctx) => {\n  const ssrContext = __vite_useSSRContext()\n  ;(ssrContext.modules || (ssrContext.modules = new Set())).add(\"components/ModalInfo.vue\")\n  return _sfc_setup ? _sfc_setup(props, ctx) : undefined\n}\nexport default _sfc_main",
-      "start": 1703957092948,
-      "end": 1703957092949,
+      "start": 1703979094373,
+      "end": 1703979094375,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -226,39 +220,39 @@
     },
     {
       "name": "unctx:transform",
-      "start": 1703957092949,
-      "end": 1703957092949,
+      "start": 1703979094375,
+      "end": 1703979094375,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1703957092949,
-      "end": 1703957092949,
+      "start": 1703979094375,
+      "end": 1703979094375,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1703957092949,
-      "end": 1703957092949,
+      "start": 1703979094375,
+      "end": 1703979094375,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1703957092949,
-      "end": 1703957092949,
+      "start": 1703979094375,
+      "end": 1703979094375,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-template",
-      "start": 1703957092949,
-      "end": 1703957092949,
+      "start": 1703979094375,
+      "end": 1703979094375,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
       "result": "import { default as __nuxt_component_0 } from \"C:/Users/user/Desktop/portfolio/node_modules/@nuxt/image/dist/runtime/components/nuxt-img\";\nimport { ref } from 'vue';\nimport { resolveComponent as _resolveComponent, mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderAttr as _ssrRenderAttr, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate } from \"vue/server-renderer\"\n\nimport { onClickOutside } from \"@vueuse/core\"\r\n\r\n\nconst _sfc_main = {\n  __name: 'ModalInfo',\n  __ssrInlineRender: true,\n  props: [\"SelectedProject\"],\n  emits: [\"handleClickCloseButton\"],\n  setup(__props, { emit: __emit }) {\n\r\nconst props = __props;\r\nconst emit = __emit;\r\n\r\nconst handleClickCloseButton = () => {\r\n    emit(\"handleClickCloseButton\");\r\n}\r\n\r\nlet modal = ref();\r\n\r\nonClickOutside(modal, handleClickCloseButton)\r\n\nreturn (_ctx, _push, _parent, _attrs) => {\n  const _component_NuxtImg = __nuxt_component_0\n\n  _push(`<section${_ssrRenderAttrs(_mergeProps({ class: \"fixed inset-0 flex items-center justify-center bg-opacity-70 bg-black z-40 over\" }, _attrs))}><div class=\"relative bg-white/20 p-2 rounded-lg w-[70%] sm:w-[60%] max-w-[800px] modalCard max-h-[80vh] flex flex-col overflow-y-auto lg:text-lg lg:w-[90%]\"><div>`)\n  _push(_ssrRenderComponent(_component_NuxtImg, {\n    class: \"w-full rounded-tl-lg rounded-tr-lg md:object-cover\",\n    src: props.SelectedProject.src,\n    alt: \"Resident image\"\n  }, null, _parent))\n  _push(`</div><div class=\"w-full text-white p-8 flex flex-col bg-black/80 border-opacity-70 border-primary-color rounded-bl-lg rounded-br-lg\"><h3 class=\"text-2xl font-semibold self-center pb-1 inline border-b-4 border-primary-color/60 mb-6\">${\n    _ssrInterpolate(props.SelectedProject.title)\n  }</h3><ul><li><span class=\"text-primary-color\">Description: </span><span>${\n    _ssrInterpolate(props.SelectedProject.description)\n  }</span></li><li><span class=\"text-primary-color\">Technologies: </span><span>${\n    _ssrInterpolate(props.SelectedProject.technologies)\n  }</span></li><li><span class=\"text-primary-color\">Demo: </span><a target=\"_blank\" class=\"hover:underline hover:underline-offset-4 hover:text-dark-green transition-all duration-500\"${\n    _ssrRenderAttr(\"href\", props.SelectedProject.demo)\n  }> Click here to see the project </a></li><li><span class=\"text-primary-color\">Code: </span><a target=\"_blank\" class=\"hover:underline hover:underline-offset-4 hover:text-dark-green transition-all duration-500\"${\n    _ssrRenderAttr(\"href\", props.SelectedProject.code)\n  }> Click here to see the repository </a></li></ul></div></div></section>`)\n}\n}\n\n}\n\n\n\nimport { useSSRContext as __vite_useSSRContext } from 'vue'\nconst _sfc_setup = _sfc_main.setup\n_sfc_main.setup = (props, ctx) => {\n  const ssrContext = __vite_useSSRContext()\n  ;(ssrContext.modules || (ssrContext.modules = new Set())).add(\"components/ModalInfo.vue\")\n  return _sfc_setup ? _sfc_setup(props, ctx) : undefined\n}\nexport default _sfc_main",
-      "start": 1703957092949,
-      "end": 1703957092950,
+      "start": 1703979094375,
+      "end": 1703979094376,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -271,20 +265,20 @@
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1703957092950,
-      "end": 1703957092950,
+      "start": 1703979094376,
+      "end": 1703979094376,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1703957092951,
-      "end": 1703957092951,
+      "start": 1703979094376,
+      "end": 1703979094376,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1703957092951,
-      "end": 1703957092951,
+      "start": 1703979094376,
+      "end": 1703979094376,
       "order": "normal"
     }
   ]

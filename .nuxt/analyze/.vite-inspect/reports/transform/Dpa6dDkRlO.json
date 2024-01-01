@@ -1,0 +1,17 @@
+{
+  "resolvedId": "C:/Users/user/Desktop/portfolio/node_modules/nuxt/dist/app/types.js",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "",
+      "start": 1703979084158,
+      "end": 1703979084158
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1703979084158,
+      "end": 1703979084158,
+      "order": "normal"
+    }
+  ]
+}

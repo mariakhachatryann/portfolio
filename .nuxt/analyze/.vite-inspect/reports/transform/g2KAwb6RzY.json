@@ -4,57 +4,57 @@
     {
       "name": "vite:load-fallback",
       "result": "<template>\r\n    <section name=\"Contact\" class=\"relative w-full p-4 text-white\">\r\n        <div class=\"flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full\">\r\n            <div class=\"pb-8\">\r\n                <h2 class=\"text-4xl font-bold inline border-b-4 border-primary-color/40 sm:text-5xl\">Contact</h2>\r\n                <p class=\"py-6\">Submit the form below to get in touch with me</p>\r\n            </div>\r\n\r\n            <div class=\"flex justify-center items-center\">\r\n                <form @submit.prevent=\"handleSubmit($event)\" class=\"flex flex-col w-full md:w-1/2\">\r\n                    <input type=\"text\" name=\"name\" placeholder=\"Enter your name\"\r\n                        class=\"p-2 bg-transparent border-2 rounded-md text-white focus:outline-none focus:border-primary-color\" required />\r\n\r\n                    <input type=\"email\" name=\"email\" placeholder=\"Enter your email\"\r\n                        class=\"my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none focus:border-primary-color\" required />\r\n\r\n                    <textarea name=\"message\" rows=\"10\" placeholder=\"Enter your message\"\r\n                        class=\"p-2 bg-transparent border-2 rounded-md text-white focus:outline-none focus:border-primary-color\" required></textarea>\r\n\r\n                    <button class=\"text-black font-semibold bg-gradient-to-t from-green-400 to-primary-color px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300\">Contact me</button>\r\n                </form>\r\n            </div>\r\n        </div>\r\n    </section>\r\n</template>\r\n\r\n<script setup>\r\nimport Swal from \"sweetalert2\";\r\n\r\nconst handleSubmit = (event) => {\r\n    const formData = Object.fromEntries(new FormData(event.target));\r\n    console.log(formData);\r\n\r\n    $fetch(\"https://getform.io/f/0bf8bb06-e08e-4831-b551-aec6e2820300\", {\r\n        method: \"POST\",\r\n        body: {\r\n            formData\r\n        }\r\n    }).then(() =>{\r\n        Swal.fire({\r\n            icon: 'success',\r\n            iconColor: '#0DFC4B',\r\n            title: 'Thank you for contacting me. I will be in touch soon!',\r\n            showConfirmButton: true,\r\n            background: '#191a19',\r\n            color: '#fff',\r\n            confirmButtonColor: 'rgba(13, 252, 75, 0.9)',\r\n            backdrop: `\r\n                rgba(54, 55, 54,0.4)\r\n            `\r\n        })\r\n    }).catch(() => {\r\n        console.log(\"error\");\r\n    })\r\n    \r\n    event.target.reset();\r\n}\r\n</script>",
-      "start": 1703957079071,
-      "end": 1703957079624,
+      "start": 1703979083299,
+      "end": 1703979084139,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1703957079624,
-      "end": 1703957079624,
+      "start": 1703979084140,
+      "end": 1703979084140,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1703957079624,
-      "end": 1703957079624,
+      "start": 1703979084140,
+      "end": 1703979084140,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1703957079624,
-      "end": 1703957079624,
+      "start": 1703979084140,
+      "end": 1703979084140,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1703957079624,
-      "end": 1703957079624,
+      "start": 1703979084140,
+      "end": 1703979084140,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1703957079624,
-      "end": 1703957079624,
+      "start": 1703979084140,
+      "end": 1703979084140,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1703957079624,
-      "end": 1703957079624,
+      "start": 1703979084140,
+      "end": 1703979084140,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1703957079624,
-      "end": 1703957079624,
+      "start": 1703979084140,
+      "end": 1703979084140,
       "order": "normal"
     },
     {
       "name": "vite:vue",
       "result": "import { createElementVNode as _createElementVNode, withModifiers as _withModifiers, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = {\n  name: \"Contact\",\n  class: \"relative w-full p-4 text-white\"\n}\nconst _hoisted_2 = { class: \"flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full\" }\nconst _hoisted_3 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"pb-8\" }, [\n  /*#__PURE__*/_createElementVNode(\"h2\", { class: \"text-4xl font-bold inline border-b-4 border-primary-color/40 sm:text-5xl\" }, \"Contact\"),\n  /*#__PURE__*/_createElementVNode(\"p\", { class: \"py-6\" }, \"Submit the form below to get in touch with me\")\n], -1)\nconst _hoisted_4 = { class: \"flex justify-center items-center\" }\nconst _hoisted_5 = /*#__PURE__*/_createElementVNode(\"input\", {\n  type: \"text\",\n  name: \"name\",\n  placeholder: \"Enter your name\",\n  class: \"p-2 bg-transparent border-2 rounded-md text-white focus:outline-none focus:border-primary-color\",\n  required: \"\"\n}, null, -1)\nconst _hoisted_6 = /*#__PURE__*/_createElementVNode(\"input\", {\n  type: \"email\",\n  name: \"email\",\n  placeholder: \"Enter your email\",\n  class: \"my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none focus:border-primary-color\",\n  required: \"\"\n}, null, -1)\nconst _hoisted_7 = /*#__PURE__*/_createElementVNode(\"textarea\", {\n  name: \"message\",\n  rows: \"10\",\n  placeholder: \"Enter your message\",\n  class: \"p-2 bg-transparent border-2 rounded-md text-white focus:outline-none focus:border-primary-color\",\n  required: \"\"\n}, null, -1)\nconst _hoisted_8 = /*#__PURE__*/_createElementVNode(\"button\", { class: \"text-black font-semibold bg-gradient-to-t from-green-400 to-primary-color px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300\" }, \"Contact me\", -1)\nconst _hoisted_9 = [\n  _hoisted_5,\n  _hoisted_6,\n  _hoisted_7,\n  _hoisted_8\n]\n\nimport Swal from \"sweetalert2\";\r\n\r\n\nconst _sfc_main = {\n  __name: 'Contact',\n  setup(__props) {\n\r\nconst handleSubmit = (event) => {\r\n    const formData = Object.fromEntries(new FormData(event.target));\r\n    console.log(formData);\r\n\r\n    $fetch(\"https://getform.io/f/0bf8bb06-e08e-4831-b551-aec6e2820300\", {\r\n        method: \"POST\",\r\n        body: {\r\n            formData\r\n        }\r\n    }).then(() =>{\r\n        Swal.fire({\r\n            icon: 'success',\r\n            iconColor: '#0DFC4B',\r\n            title: 'Thank you for contacting me. I will be in touch soon!',\r\n            showConfirmButton: true,\r\n            background: '#191a19',\r\n            color: '#fff',\r\n            confirmButtonColor: 'rgba(13, 252, 75, 0.9)',\r\n            backdrop: `\r\n                rgba(54, 55, 54,0.4)\r\n            `\r\n        })\r\n    }).catch(() => {\r\n        console.log(\"error\");\r\n    })\r\n    \r\n    event.target.reset();\r\n}\r\n\nreturn (_ctx, _cache) => {\n  return (_openBlock(), _createElementBlock(\"section\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _hoisted_3,\n      _createElementVNode(\"div\", _hoisted_4, [\n        _createElementVNode(\"form\", {\n          onSubmit: _cache[0] || (_cache[0] = _withModifiers($event => (handleSubmit($event)), [\"prevent\"])),\n          class: \"flex flex-col w-full md:w-1/2\"\n        }, _hoisted_9, 32)\n      ])\n    ])\n  ]))\n}\n}\n\n}\n\n\n\nexport default _sfc_main",
-      "start": 1703957079624,
-      "end": 1703957079630,
+      "start": 1703979084140,
+      "end": 1703979084145,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -62,152 +62,152 @@
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1703957079630,
-      "end": 1703957079630,
+      "start": 1703979084145,
+      "end": 1703979084145,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1703957079630,
-      "end": 1703957079630,
+      "start": 1703979084145,
+      "end": 1703979084145,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1703957079630,
-      "end": 1703957079630,
+      "start": 1703979084145,
+      "end": 1703979084145,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1703957079630,
-      "end": 1703957079630,
+      "start": 1703979084145,
+      "end": 1703979084145,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1703957079630,
-      "end": 1703957079631,
+      "start": 1703979084145,
+      "end": 1703979084145,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1703957079631,
-      "end": 1703957079631,
+      "start": 1703979084145,
+      "end": 1703979084145,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1703957079631,
-      "end": 1703957079631,
+      "start": 1703979084145,
+      "end": 1703979084145,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1703957079631,
-      "end": 1703957079631,
+      "start": 1703979084145,
+      "end": 1703979084146,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1703957079631,
-      "end": 1703957079631,
+      "start": 1703979084146,
+      "end": 1703979084146,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1703957079631,
-      "end": 1703957079631,
+      "start": 1703979084146,
+      "end": 1703979084146,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1703957079631,
-      "end": 1703957079631,
+      "start": 1703979084146,
+      "end": 1703979084146,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1703957079631,
-      "end": 1703957079631,
+      "start": 1703979084146,
+      "end": 1703979084146,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1703957079631,
-      "end": 1703957079631,
+      "start": 1703979084146,
+      "end": 1703979084146,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1703957079631,
-      "end": 1703957079631,
+      "start": 1703979084146,
+      "end": 1703979084146,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1703957079631,
-      "end": 1703957079631,
+      "start": 1703979084146,
+      "end": 1703979084146,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1703957079631,
-      "end": 1703957079631,
+      "start": 1703979084146,
+      "end": 1703979084146,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1703957079631,
-      "end": 1703957079633,
+      "start": 1703979084146,
+      "end": 1703979084148,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1703957079633,
-      "end": 1703957079633,
+      "start": 1703979084148,
+      "end": 1703979084148,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1703957079633,
-      "end": 1703957079634,
+      "start": 1703979084148,
+      "end": 1703979084148,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1703957079634,
-      "end": 1703957079634,
+      "start": 1703979084148,
+      "end": 1703979084148,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1703957079634,
-      "end": 1703957079634,
+      "start": 1703979084148,
+      "end": 1703979084148,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1703957079634,
-      "end": 1703957079634,
+      "start": 1703979084148,
+      "end": 1703979084149,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1703957079634,
-      "end": 1703957079634,
+      "start": 1703979084149,
+      "end": 1703979084149,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1703957079634,
-      "end": 1703957079634,
+      "start": 1703979084149,
+      "end": 1703979084149,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1703957079634,
-      "end": 1703957079634,
+      "start": 1703979084149,
+      "end": 1703979084149,
       "order": "normal"
     }
   ]

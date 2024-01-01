@@ -4,69 +4,69 @@
     {
       "name": "vite:load-fallback",
       "result": "<template>\r\n    <div class=\"fixed inset-0 flex items-center justify-center z-50 bg-black/60 duration-300\"\r\n        :class=\"props.selectedImage.img ? 'opacity-100' : 'opacity-0 pointer-events-none'\">\r\n        <div ref=\"modal\" class=\" bg-white/20 p-2 rounded-lg max-w-[800px] relative shadow-md shadow-gray-600 miniModal\">\r\n            <NuxtImg \r\n                class=\"rounded-md w-full object-contain miniModal\"\r\n                :class=\"props.selectedImage.otherSize ? 'h-[700px]' : 'h-full'\"\r\n                :src=\"props.selectedImage.img\"\r\n                alt=\"Selected Certificate\"> </NuxtImg>\r\n        </div>\r\n    </div>\r\n</template>\r\n\r\n<script setup>\r\nimport { onClickOutside } from '@vueuse/core'\r\n\r\nconst props = defineProps([\"selectedImage\"]);\r\nconst emit = defineEmits([\"handleCloseButton\"]);\r\n\r\nconst handleCloseButton = () => {\r\n    emit(\"handleCloseButton\");\r\n}\r\nlet modal = ref(null);\r\n\r\nonClickOutside(modal, handleCloseButton);\r\n</script>",
-      "start": 1703957092388,
-      "end": 1703957092913,
+      "start": 1703979094040,
+      "end": 1703979094422,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1703957092913,
-      "end": 1703957092913,
+      "start": 1703979094422,
+      "end": 1703979094422,
       "order": "pre"
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1703957092913,
-      "end": 1703957092913,
+      "start": 1703979094422,
+      "end": 1703979094422,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1703957092913,
-      "end": 1703957092913,
+      "start": 1703979094422,
+      "end": 1703979094422,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1703957092913,
-      "end": 1703957092913,
+      "start": 1703979094422,
+      "end": 1703979094422,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1703957092913,
-      "end": 1703957092913,
+      "start": 1703979094422,
+      "end": 1703979094422,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1703957092913,
-      "end": 1703957092913,
+      "start": 1703979094422,
+      "end": 1703979094422,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1703957092913,
-      "end": 1703957092913,
+      "start": 1703979094422,
+      "end": 1703979094422,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1703957092913,
-      "end": 1703957092913,
+      "start": 1703979094422,
+      "end": 1703979094422,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1703957092913,
-      "end": 1703957092913,
+      "start": 1703979094422,
+      "end": 1703979094422,
       "order": "normal"
     },
     {
       "name": "vite:vue",
       "result": "import { resolveComponent as _resolveComponent, mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderAttrs as _ssrRenderAttrs } from \"vue/server-renderer\"\n\nimport { onClickOutside } from '@vueuse/core'\r\n\r\n\nconst _sfc_main = {\n  __name: 'CertificateModal',\n  __ssrInlineRender: true,\n  props: [\"selectedImage\"],\n  emits: [\"handleCloseButton\"],\n  setup(__props, { emit: __emit }) {\n\r\nconst props = __props;\r\nconst emit = __emit;\r\n\r\nconst handleCloseButton = () => {\r\n    emit(\"handleCloseButton\");\r\n}\r\nlet modal = ref(null);\r\n\r\nonClickOutside(modal, handleCloseButton);\r\n\nreturn (_ctx, _push, _parent, _attrs) => {\n  const _component_NuxtImg = _resolveComponent(\"NuxtImg\")\n\n  _push(`<div${_ssrRenderAttrs(_mergeProps({\n    class: [\"fixed inset-0 flex items-center justify-center z-50 bg-black/60 duration-300\", props.selectedImage.img ? 'opacity-100' : 'opacity-0 pointer-events-none']\n  }, _attrs))}><div class=\"bg-white/20 p-2 rounded-lg max-w-[800px] relative shadow-md shadow-gray-600 miniModal\">`)\n  _push(_ssrRenderComponent(_component_NuxtImg, {\n    class: [\"rounded-md w-full object-contain miniModal\", props.selectedImage.otherSize ? 'h-[700px]' : 'h-full'],\n    src: props.selectedImage.img,\n    alt: \"Selected Certificate\"\n  }, null, _parent))\n  _push(`</div></div>`)\n}\n}\n\n}\n\n\n\nimport { useSSRContext as __vite_useSSRContext } from 'vue'\nconst _sfc_setup = _sfc_main.setup\n_sfc_main.setup = (props, ctx) => {\n  const ssrContext = __vite_useSSRContext()\n  ;(ssrContext.modules || (ssrContext.modules = new Set())).add(\"components/CertificateModal.vue\")\n  return _sfc_setup ? _sfc_setup(props, ctx) : undefined\n}\nexport default _sfc_main",
-      "start": 1703957092913,
-      "end": 1703957092917,
+      "start": 1703979094422,
+      "end": 1703979094426,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -82,123 +82,117 @@
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1703957092917,
-      "end": 1703957092917,
+      "start": 1703979094426,
+      "end": 1703979094426,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1703957092917,
-      "end": 1703957092917,
+      "start": 1703979094426,
+      "end": 1703979094426,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1703957092917,
-      "end": 1703957092917,
+      "start": 1703979094426,
+      "end": 1703979094426,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1703957092917,
-      "end": 1703957092917,
+      "start": 1703979094426,
+      "end": 1703979094426,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1703957092917,
-      "end": 1703957092917,
-      "order": "normal"
-    },
-    {
-      "name": "replace",
-      "start": 1703957092917,
-      "end": 1703957092917,
+      "start": 1703979094426,
+      "end": 1703979094426,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1703957092917,
-      "end": 1703957092917,
+      "start": 1703979094426,
+      "end": 1703979094426,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1703957092917,
-      "end": 1703957092917,
+      "start": 1703979094426,
+      "end": 1703979094426,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1703957092917,
-      "end": 1703957092917,
+      "start": 1703979094426,
+      "end": 1703979094426,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1703957092917,
-      "end": 1703957092917,
+      "start": 1703979094426,
+      "end": 1703979094426,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1703957092917,
-      "end": 1703957092917,
+      "start": 1703979094426,
+      "end": 1703979094426,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1703957092917,
-      "end": 1703957092917,
+      "start": 1703979094426,
+      "end": 1703979094426,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1703957092917,
-      "end": 1703957092917,
+      "start": 1703979094426,
+      "end": 1703979094426,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1703957092917,
-      "end": 1703957092917,
+      "start": 1703979094426,
+      "end": 1703979094426,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1703957092917,
-      "end": 1703957092917,
+      "start": 1703979094426,
+      "end": 1703979094426,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1703957092917,
-      "end": 1703957092917,
+      "start": 1703979094426,
+      "end": 1703979094426,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1703957092917,
-      "end": 1703957092917,
+      "start": 1703979094426,
+      "end": 1703979094426,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1703957092918,
-      "end": 1703957092918,
+      "start": 1703979094426,
+      "end": 1703979094426,
       "order": "post"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1703957092918,
-      "end": 1703957092918,
+      "start": 1703979094426,
+      "end": 1703979094426,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
       "result": "import { ref } from 'vue';\nimport { resolveComponent as _resolveComponent, mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderAttrs as _ssrRenderAttrs } from \"vue/server-renderer\"\n\nimport { onClickOutside } from '@vueuse/core'\r\n\r\n\nconst _sfc_main = {\n  __name: 'CertificateModal',\n  __ssrInlineRender: true,\n  props: [\"selectedImage\"],\n  emits: [\"handleCloseButton\"],\n  setup(__props, { emit: __emit }) {\n\r\nconst props = __props;\r\nconst emit = __emit;\r\n\r\nconst handleCloseButton = () => {\r\n    emit(\"handleCloseButton\");\r\n}\r\nlet modal = ref(null);\r\n\r\nonClickOutside(modal, handleCloseButton);\r\n\nreturn (_ctx, _push, _parent, _attrs) => {\n  const _component_NuxtImg = _resolveComponent(\"NuxtImg\")\n\n  _push(`<div${_ssrRenderAttrs(_mergeProps({\n    class: [\"fixed inset-0 flex items-center justify-center z-50 bg-black/60 duration-300\", props.selectedImage.img ? 'opacity-100' : 'opacity-0 pointer-events-none']\n  }, _attrs))}><div class=\"bg-white/20 p-2 rounded-lg max-w-[800px] relative shadow-md shadow-gray-600 miniModal\">`)\n  _push(_ssrRenderComponent(_component_NuxtImg, {\n    class: [\"rounded-md w-full object-contain miniModal\", props.selectedImage.otherSize ? 'h-[700px]' : 'h-full'],\n    src: props.selectedImage.img,\n    alt: \"Selected Certificate\"\n  }, null, _parent))\n  _push(`</div></div>`)\n}\n}\n\n}\n\n\n\nimport { useSSRContext as __vite_useSSRContext } from 'vue'\nconst _sfc_setup = _sfc_main.setup\n_sfc_main.setup = (props, ctx) => {\n  const ssrContext = __vite_useSSRContext()\n  ;(ssrContext.modules || (ssrContext.modules = new Set())).add(\"components/CertificateModal.vue\")\n  return _sfc_setup ? _sfc_setup(props, ctx) : undefined\n}\nexport default _sfc_main",
-      "start": 1703957092918,
-      "end": 1703957092919,
+      "start": 1703979094426,
+      "end": 1703979094428,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -212,8 +206,8 @@
     {
       "name": "nuxt:imports-transform",
       "result": "import { ref } from 'vue';\nimport { resolveComponent as _resolveComponent, mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderAttrs as _ssrRenderAttrs } from \"vue/server-renderer\"\n\nimport { onClickOutside } from '@vueuse/core'\r\n\r\n\nconst _sfc_main = {\n  __name: 'CertificateModal',\n  __ssrInlineRender: true,\n  props: [\"selectedImage\"],\n  emits: [\"handleCloseButton\"],\n  setup(__props, { emit: __emit }) {\n\r\nconst props = __props;\r\nconst emit = __emit;\r\n\r\nconst handleCloseButton = () => {\r\n    emit(\"handleCloseButton\");\r\n}\r\nlet modal = ref(null);\r\n\r\nonClickOutside(modal, handleCloseButton);\r\n\nreturn (_ctx, _push, _parent, _attrs) => {\n  const _component_NuxtImg = _resolveComponent(\"NuxtImg\")\n\n  _push(`<div${_ssrRenderAttrs(_mergeProps({\n    class: [\"fixed inset-0 flex items-center justify-center z-50 bg-black/60 duration-300\", props.selectedImage.img ? 'opacity-100' : 'opacity-0 pointer-events-none']\n  }, _attrs))}><div class=\"bg-white/20 p-2 rounded-lg max-w-[800px] relative shadow-md shadow-gray-600 miniModal\">`)\n  _push(_ssrRenderComponent(_component_NuxtImg, {\n    class: [\"rounded-md w-full object-contain miniModal\", props.selectedImage.otherSize ? 'h-[700px]' : 'h-full'],\n    src: props.selectedImage.img,\n    alt: \"Selected Certificate\"\n  }, null, _parent))\n  _push(`</div></div>`)\n}\n}\n\n}\n\n\n\nimport { useSSRContext as __vite_useSSRContext } from 'vue'\nconst _sfc_setup = _sfc_main.setup\n_sfc_main.setup = (props, ctx) => {\n  const ssrContext = __vite_useSSRContext()\n  ;(ssrContext.modules || (ssrContext.modules = new Set())).add(\"components/CertificateModal.vue\")\n  return _sfc_setup ? _sfc_setup(props, ctx) : undefined\n}\nexport default _sfc_main",
-      "start": 1703957092918,
-      "end": 1703957092919,
+      "start": 1703979094426,
+      "end": 1703979094428,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -226,39 +220,39 @@
     },
     {
       "name": "unctx:transform",
-      "start": 1703957092919,
-      "end": 1703957092919,
+      "start": 1703979094428,
+      "end": 1703979094428,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1703957092919,
-      "end": 1703957092919,
+      "start": 1703979094428,
+      "end": 1703979094428,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1703957092919,
-      "end": 1703957092919,
+      "start": 1703979094428,
+      "end": 1703979094428,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1703957092919,
-      "end": 1703957092919,
+      "start": 1703979094428,
+      "end": 1703979094428,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-template",
-      "start": 1703957092919,
-      "end": 1703957092919,
+      "start": 1703979094428,
+      "end": 1703979094428,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
       "result": "import { default as __nuxt_component_0 } from \"C:/Users/user/Desktop/portfolio/node_modules/@nuxt/image/dist/runtime/components/nuxt-img\";\nimport { ref } from 'vue';\nimport { resolveComponent as _resolveComponent, mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderAttrs as _ssrRenderAttrs } from \"vue/server-renderer\"\n\nimport { onClickOutside } from '@vueuse/core'\r\n\r\n\nconst _sfc_main = {\n  __name: 'CertificateModal',\n  __ssrInlineRender: true,\n  props: [\"selectedImage\"],\n  emits: [\"handleCloseButton\"],\n  setup(__props, { emit: __emit }) {\n\r\nconst props = __props;\r\nconst emit = __emit;\r\n\r\nconst handleCloseButton = () => {\r\n    emit(\"handleCloseButton\");\r\n}\r\nlet modal = ref(null);\r\n\r\nonClickOutside(modal, handleCloseButton);\r\n\nreturn (_ctx, _push, _parent, _attrs) => {\n  const _component_NuxtImg = __nuxt_component_0\n\n  _push(`<div${_ssrRenderAttrs(_mergeProps({\n    class: [\"fixed inset-0 flex items-center justify-center z-50 bg-black/60 duration-300\", props.selectedImage.img ? 'opacity-100' : 'opacity-0 pointer-events-none']\n  }, _attrs))}><div class=\"bg-white/20 p-2 rounded-lg max-w-[800px] relative shadow-md shadow-gray-600 miniModal\">`)\n  _push(_ssrRenderComponent(_component_NuxtImg, {\n    class: [\"rounded-md w-full object-contain miniModal\", props.selectedImage.otherSize ? 'h-[700px]' : 'h-full'],\n    src: props.selectedImage.img,\n    alt: \"Selected Certificate\"\n  }, null, _parent))\n  _push(`</div></div>`)\n}\n}\n\n}\n\n\n\nimport { useSSRContext as __vite_useSSRContext } from 'vue'\nconst _sfc_setup = _sfc_main.setup\n_sfc_main.setup = (props, ctx) => {\n  const ssrContext = __vite_useSSRContext()\n  ;(ssrContext.modules || (ssrContext.modules = new Set())).add(\"components/CertificateModal.vue\")\n  return _sfc_setup ? _sfc_setup(props, ctx) : undefined\n}\nexport default _sfc_main",
-      "start": 1703957092919,
-      "end": 1703957092920,
+      "start": 1703979094428,
+      "end": 1703979094429,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -271,20 +265,20 @@
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1703957092920,
-      "end": 1703957092920,
+      "start": 1703979094429,
+      "end": 1703979094429,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1703957092920,
-      "end": 1703957092920,
+      "start": 1703979094429,
+      "end": 1703979094429,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1703957092920,
-      "end": 1703957092920,
+      "start": 1703979094429,
+      "end": 1703979094429,
       "order": "normal"
     }
   ]

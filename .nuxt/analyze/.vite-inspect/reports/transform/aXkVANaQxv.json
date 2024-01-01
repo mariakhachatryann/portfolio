@@ -4,57 +4,57 @@
     {
       "name": "vite:load-fallback",
       "result": "<template>\r\n    <section name=\"About\" class=\"relative w-full h-full mb-10\">\r\n        <div class=\"max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 py-16 md:py-24 lg:py-0 lg:flex-row lg:gap-8\">\r\n            <div class=\"flex flex-col justify-center items-center mt-24 h-[85%] md:h-full\">\r\n                <h1 class=\"text-4xl md:text-5xl font-bold text-white mb-2 md:mb-4\">About me and my journey</h1>\r\n                <div class=\"flex items-center bg-primary-color/20 rounded-md py-2 px-4\">\r\n                    <NuxtImg class=\"h-[30px] w-[30px] mr-2 rounded-full\" src=\"/logo/arm.png\" alt=\"\" />\r\n                    <h2 class=\"text-lg sm:text-xl md:text-2xl md:py-1 font-semibold text-white\">Armenian - 18 years old</h2>\r\n                </div>\r\n                <p class=\"text-md md:text-lg text-gray-300 py-4 max-x-md text-justify\">\r\n                    My journey with HTML and CSS started unexpectedly with curiosity and a desire to blend creativity with\r\n                    technology.I stumbled upon tutorials on YouTube and was instantly\r\n                    drawn in. What began as a curious click soon became a deep dive into the world of web development.\r\n                    I was so hooked that I quickly grasped the ins and outs of HTML and CSS, and my hunger for knowledge\r\n                    urged\r\n                    me to explore JavaScript. While navigating the realm of JavaScript, I stumbled upon an advanced course\r\n                    by\r\n                    one of my favorite programmers (Samvel [Sami] Hayrapetyan) - the same person whose tutorials had\r\n                    kickstarted\r\n                    my coding journey.\r\n                    Without a second thought, I joined his course. His teaching had been invaluable in my knowledge\r\n                    learning, and this new opportunity was too good to pass up.After mastering the basics of JavaScript, I\r\n                    dived\r\n                    into its cooler features and intricate concepts. The advanced course I completed was packed with\r\n                    valuable\r\n                    theory and practical exercises, which deepened my understanding.From theory to practice, I embraced\r\n                    every\r\n                    challenge, eagerly absorbing the complexities. It was a journey\r\n                    that expanded my skills and fueled my passion for using JavaScript creatively.\r\n                    After finishing the course, I discovered Vue.js.Its elegance and functionality immediately captivated\r\n                    me, prompting me to immerse myself in tutorials, documentation, and various resources about Vue.\r\n                    The more I delved into Vue.js, the more I appreciated its simplicity and power in building dynamic and\r\n                    responsive user interfaces.\r\n                    After delving sufficiently into Vue, my curiosity led me to explore Nuxt.js.The transition from Vue to\r\n                    Nuxt felt like discovering a shortcut to efficient and scalable web development. It empowered me to\r\n                    build robust applications while maintaining the flexibility and simplicity that initially drew me to\r\n                    Vue.\r\n                </p>\r\n\r\n                <p class=\"text-md md:text-lg text-gray-300 max-x-md text-justify\">Check out \r\n                    <a href=\"https://github.com/mariakhachatryann\" class=\"underline underline-offset-4 \">my github</a> profile to see my projects\r\n                </p>\r\n            </div>\r\n        </div>\r\n    </section>\r\n</template>",
-      "start": 1703957078106,
-      "end": 1703957078734,
+      "start": 1703979082396,
+      "end": 1703979082771,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1703957078734,
-      "end": 1703957078734,
+      "start": 1703979082771,
+      "end": 1703979082771,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1703957078734,
-      "end": 1703957078735,
+      "start": 1703979082771,
+      "end": 1703979082771,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1703957078735,
-      "end": 1703957078735,
+      "start": 1703979082771,
+      "end": 1703979082771,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1703957078735,
-      "end": 1703957078735,
+      "start": 1703979082771,
+      "end": 1703979082771,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1703957078735,
-      "end": 1703957078735,
+      "start": 1703979082771,
+      "end": 1703979082771,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1703957078735,
-      "end": 1703957078735,
+      "start": 1703979082772,
+      "end": 1703979082772,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1703957078735,
-      "end": 1703957078735,
+      "start": 1703979082772,
+      "end": 1703979082772,
       "order": "normal"
     },
     {
       "name": "vite:vue",
       "result": "const _sfc_main = {}\nimport { createElementVNode as _createElementVNode, resolveComponent as _resolveComponent, createVNode as _createVNode, createTextVNode as _createTextVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = {\n  name: \"About\",\n  class: \"relative w-full h-full mb-10\"\n}\nconst _hoisted_2 = { class: \"max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 py-16 md:py-24 lg:py-0 lg:flex-row lg:gap-8\" }\nconst _hoisted_3 = { class: \"flex flex-col justify-center items-center mt-24 h-[85%] md:h-full\" }\nconst _hoisted_4 = /*#__PURE__*/_createElementVNode(\"h1\", { class: \"text-4xl md:text-5xl font-bold text-white mb-2 md:mb-4\" }, \"About me and my journey\", -1)\nconst _hoisted_5 = { class: \"flex items-center bg-primary-color/20 rounded-md py-2 px-4\" }\nconst _hoisted_6 = /*#__PURE__*/_createElementVNode(\"h2\", { class: \"text-lg sm:text-xl md:text-2xl md:py-1 font-semibold text-white\" }, \"Armenian - 18 years old\", -1)\nconst _hoisted_7 = /*#__PURE__*/_createElementVNode(\"p\", { class: \"text-md md:text-lg text-gray-300 py-4 max-x-md text-justify\" }, \" My journey with HTML and CSS started unexpectedly with curiosity and a desire to blend creativity with technology.I stumbled upon tutorials on YouTube and was instantly drawn in. What began as a curious click soon became a deep dive into the world of web development. I was so hooked that I quickly grasped the ins and outs of HTML and CSS, and my hunger for knowledge urged me to explore JavaScript. While navigating the realm of JavaScript, I stumbled upon an advanced course by one of my favorite programmers (Samvel [Sami] Hayrapetyan) - the same person whose tutorials had kickstarted my coding journey. Without a second thought, I joined his course. His teaching had been invaluable in my knowledge learning, and this new opportunity was too good to pass up.After mastering the basics of JavaScript, I dived into its cooler features and intricate concepts. The advanced course I completed was packed with valuable theory and practical exercises, which deepened my understanding.From theory to practice, I embraced every challenge, eagerly absorbing the complexities. It was a journey that expanded my skills and fueled my passion for using JavaScript creatively. After finishing the course, I discovered Vue.js.Its elegance and functionality immediately captivated me, prompting me to immerse myself in tutorials, documentation, and various resources about Vue. The more I delved into Vue.js, the more I appreciated its simplicity and power in building dynamic and responsive user interfaces. After delving sufficiently into Vue, my curiosity led me to explore Nuxt.js.The transition from Vue to Nuxt felt like discovering a shortcut to efficient and scalable web development. It empowered me to build robust applications while maintaining the flexibility and simplicity that initially drew me to Vue. \", -1)\nconst _hoisted_8 = /*#__PURE__*/_createElementVNode(\"p\", { class: \"text-md md:text-lg text-gray-300 max-x-md text-justify\" }, [\n  /*#__PURE__*/_createTextVNode(\"Check out \"),\n  /*#__PURE__*/_createElementVNode(\"a\", {\n    href: \"https://github.com/mariakhachatryann\",\n    class: \"underline underline-offset-4\"\n  }, \"my github\"),\n  /*#__PURE__*/_createTextVNode(\" profile to see my projects \")\n], -1)\n\nfunction _sfc_render(_ctx, _cache) {\n  const _component_NuxtImg = _resolveComponent(\"NuxtImg\")\n\n  return (_openBlock(), _createElementBlock(\"section\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _createElementVNode(\"div\", _hoisted_3, [\n        _hoisted_4,\n        _createElementVNode(\"div\", _hoisted_5, [\n          _createVNode(_component_NuxtImg, {\n            class: \"h-[30px] w-[30px] mr-2 rounded-full\",\n            src: \"/logo/arm.png\",\n            alt: \"\"\n          }),\n          _hoisted_6\n        ]),\n        _hoisted_7,\n        _hoisted_8\n      ])\n    ])\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
-      "start": 1703957078735,
-      "end": 1703957078738,
+      "start": 1703979082772,
+      "end": 1703979082777,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -62,153 +62,153 @@
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1703957078738,
-      "end": 1703957078738,
+      "start": 1703979082777,
+      "end": 1703979082777,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1703957078738,
-      "end": 1703957078738,
+      "start": 1703979082777,
+      "end": 1703979082777,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1703957078738,
-      "end": 1703957078738,
+      "start": 1703979082777,
+      "end": 1703979082777,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1703957078739,
-      "end": 1703957078739,
+      "start": 1703979082777,
+      "end": 1703979082777,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1703957078739,
-      "end": 1703957078739,
+      "start": 1703979082778,
+      "end": 1703979082778,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1703957078739,
-      "end": 1703957078739,
+      "start": 1703979082778,
+      "end": 1703979082778,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1703957078739,
-      "end": 1703957078739,
+      "start": 1703979082778,
+      "end": 1703979082778,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1703957078739,
-      "end": 1703957078739,
+      "start": 1703979082778,
+      "end": 1703979082778,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1703957078739,
-      "end": 1703957078739,
+      "start": 1703979082778,
+      "end": 1703979082778,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1703957078739,
-      "end": 1703957078739,
+      "start": 1703979082778,
+      "end": 1703979082778,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1703957078739,
-      "end": 1703957078739,
+      "start": 1703979082778,
+      "end": 1703979082778,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1703957078739,
-      "end": 1703957078739,
+      "start": 1703979082778,
+      "end": 1703979082778,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1703957078739,
-      "end": 1703957078739,
+      "start": 1703979082778,
+      "end": 1703979082778,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1703957078739,
-      "end": 1703957078739,
+      "start": 1703979082778,
+      "end": 1703979082778,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1703957078739,
-      "end": 1703957078739,
+      "start": 1703979082778,
+      "end": 1703979082778,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1703957078739,
-      "end": 1703957078740,
+      "start": 1703979082778,
+      "end": 1703979082778,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1703957078740,
-      "end": 1703957078741,
+      "start": 1703979082778,
+      "end": 1703979082780,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1703957078741,
-      "end": 1703957078741,
+      "start": 1703979082780,
+      "end": 1703979082780,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1703957078741,
-      "end": 1703957078741,
+      "start": 1703979082780,
+      "end": 1703979082781,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1703957078741,
-      "end": 1703957078742,
+      "start": 1703979082781,
+      "end": 1703979082781,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1703957078742,
-      "end": 1703957078742,
+      "start": 1703979082781,
+      "end": 1703979082781,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
       "result": "import { default as __nuxt_component_0 } from \"C:/Users/user/Desktop/portfolio/node_modules/@nuxt/image/dist/runtime/components/nuxt-img\";\nconst _sfc_main = {}\nimport { createElementVNode as _createElementVNode, resolveComponent as _resolveComponent, createVNode as _createVNode, createTextVNode as _createTextVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = {\n  name: \"About\",\n  class: \"relative w-full h-full mb-10\"\n}\nconst _hoisted_2 = { class: \"max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 py-16 md:py-24 lg:py-0 lg:flex-row lg:gap-8\" }\nconst _hoisted_3 = { class: \"flex flex-col justify-center items-center mt-24 h-[85%] md:h-full\" }\nconst _hoisted_4 = /*#__PURE__*/_createElementVNode(\"h1\", { class: \"text-4xl md:text-5xl font-bold text-white mb-2 md:mb-4\" }, \"About me and my journey\", -1)\nconst _hoisted_5 = { class: \"flex items-center bg-primary-color/20 rounded-md py-2 px-4\" }\nconst _hoisted_6 = /*#__PURE__*/_createElementVNode(\"h2\", { class: \"text-lg sm:text-xl md:text-2xl md:py-1 font-semibold text-white\" }, \"Armenian - 18 years old\", -1)\nconst _hoisted_7 = /*#__PURE__*/_createElementVNode(\"p\", { class: \"text-md md:text-lg text-gray-300 py-4 max-x-md text-justify\" }, \" My journey with HTML and CSS started unexpectedly with curiosity and a desire to blend creativity with technology.I stumbled upon tutorials on YouTube and was instantly drawn in. What began as a curious click soon became a deep dive into the world of web development. I was so hooked that I quickly grasped the ins and outs of HTML and CSS, and my hunger for knowledge urged me to explore JavaScript. While navigating the realm of JavaScript, I stumbled upon an advanced course by one of my favorite programmers (Samvel [Sami] Hayrapetyan) - the same person whose tutorials had kickstarted my coding journey. Without a second thought, I joined his course. His teaching had been invaluable in my knowledge learning, and this new opportunity was too good to pass up.After mastering the basics of JavaScript, I dived into its cooler features and intricate concepts. The advanced course I completed was packed with valuable theory and practical exercises, which deepened my understanding.From theory to practice, I embraced every challenge, eagerly absorbing the complexities. It was a journey that expanded my skills and fueled my passion for using JavaScript creatively. After finishing the course, I discovered Vue.js.Its elegance and functionality immediately captivated me, prompting me to immerse myself in tutorials, documentation, and various resources about Vue. The more I delved into Vue.js, the more I appreciated its simplicity and power in building dynamic and responsive user interfaces. After delving sufficiently into Vue, my curiosity led me to explore Nuxt.js.The transition from Vue to Nuxt felt like discovering a shortcut to efficient and scalable web development. It empowered me to build robust applications while maintaining the flexibility and simplicity that initially drew me to Vue. \", -1)\nconst _hoisted_8 = /*#__PURE__*/_createElementVNode(\"p\", { class: \"text-md md:text-lg text-gray-300 max-x-md text-justify\" }, [\n  /*#__PURE__*/_createTextVNode(\"Check out \"),\n  /*#__PURE__*/_createElementVNode(\"a\", {\n    href: \"https://github.com/mariakhachatryann\",\n    class: \"underline underline-offset-4\"\n  }, \"my github\"),\n  /*#__PURE__*/_createTextVNode(\" profile to see my projects \")\n], -1)\n\nfunction _sfc_render(_ctx, _cache) {\n  const _component_NuxtImg = __nuxt_component_0\n\n  return (_openBlock(), _createElementBlock(\"section\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _createElementVNode(\"div\", _hoisted_3, [\n        _hoisted_4,\n        _createElementVNode(\"div\", _hoisted_5, [\n          _createVNode(_component_NuxtImg, {\n            class: \"h-[30px] w-[30px] mr-2 rounded-full\",\n            src: \"/logo/arm.png\",\n            alt: \"\"\n          }),\n          _hoisted_6\n        ]),\n        _hoisted_7,\n        _hoisted_8\n      ])\n    ])\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
-      "start": 1703957078742,
-      "end": 1703957078743,
+      "start": 1703979082781,
+      "end": 1703979082782,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1703957078743,
-      "end": 1703957078743,
+      "start": 1703979082782,
+      "end": 1703979082782,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1703957078743,
-      "end": 1703957078744,
+      "start": 1703979082782,
+      "end": 1703979082782,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1703957078744,
-      "end": 1703957078744,
+      "start": 1703979082782,
+      "end": 1703979082782,
       "order": "normal"
     }
   ]

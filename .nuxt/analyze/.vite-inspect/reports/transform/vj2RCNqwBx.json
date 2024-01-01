@@ -4,206 +4,206 @@
     {
       "name": "vite:load-fallback",
       "result": "import { calcExactPositionOrRandomFromSize, clamp, getDistance, getParticleBaseVelocity, getParticleDirectionAngle, getRandom, getRangeValue, getValue, randomInRange, setRangeValue, } from \"../Utils/NumberUtils\";\nimport { deepExtend, getPosition, initParticleNumericAnimationValue, isInArray, itemFromSingleOrMultiple, } from \"../Utils/Utils\";\nimport { getHslFromAnimation, rangeColorToRgb } from \"../Utils/ColorUtils\";\nimport { Interactivity } from \"../Options/Classes/Interactivity/Interactivity\";\nimport { Vector } from \"./Utils/Vector\";\nimport { Vector3d } from \"./Utils/Vector3d\";\nimport { alterHsl } from \"../Utils/CanvasUtils\";\nimport { errorPrefix } from \"./Utils/Constants\";\nimport { loadParticlesOptions } from \"../Utils/OptionsUtils\";\nconst fixOutMode = (data) => {\n    if (!isInArray(data.outMode, data.checkModes)) {\n        return;\n    }\n    const diameter = data.radius * 2;\n    if (data.coord > data.maxCoord - diameter) {\n        data.setCb(-data.radius);\n    }\n    else if (data.coord < diameter) {\n        data.setCb(data.radius);\n    }\n};\nexport class Particle {\n    constructor(engine, id, container, position, overrideOptions, group) {\n        this.container = container;\n        this._calcPosition = (container, position, zIndex, tryCount = 0) => {\n            for (const [, plugin] of container.plugins) {\n                const pluginPos = plugin.particlePosition !== undefined ? plugin.particlePosition(position, this) : undefined;\n                if (pluginPos) {\n                    return Vector3d.create(pluginPos.x, pluginPos.y, zIndex);\n                }\n            }\n            const canvasSize = container.canvas.size, exactPosition = calcExactPositionOrRandomFromSize({\n                size: canvasSize,\n                position: position,\n            }), pos = Vector3d.create(exactPosition.x, exactPosition.y, zIndex), radius = this.getRadius(), outModes = this.options.move.outModes, fixHorizontal = (outMode) => {\n                fixOutMode({\n                    outMode,\n                    checkModes: [\"bounce\", \"bounce-horizontal\"],\n                    coord: pos.x,\n                    maxCoord: container.canvas.size.width,\n                    setCb: (value) => (pos.x += value),\n                    radius,\n                });\n            }, fixVertical = (outMode) => {\n                fixOutMode({\n                    outMode,\n                    checkModes: [\"bounce\", \"bounce-vertical\"],\n                    coord: pos.y,\n                    maxCoord: container.canvas.size.height,\n                    setCb: (value) => (pos.y += value),\n                    radius,\n                });\n            };\n            fixHorizontal(outModes.left ?? outModes.default);\n            fixHorizontal(outModes.right ?? outModes.default);\n            fixVertical(outModes.top ?? outModes.default);\n            fixVertical(outModes.bottom ?? outModes.default);\n            if (this._checkOverlap(pos, tryCount)) {\n                return this._calcPosition(container, undefined, zIndex, tryCount + 1);\n            }\n            return pos;\n        };\n        this._calculateVelocity = () => {\n            const baseVelocity = getParticleBaseVelocity(this.direction), res = baseVelocity.copy(), moveOptions = this.options.move;\n            if (moveOptions.direction === \"inside\" || moveOptions.direction === \"outside\") {\n                return res;\n            }\n            const rad = (Math.PI / 180) * getRangeValue(moveOptions.angle.value), radOffset = (Math.PI / 180) * getRangeValue(moveOptions.angle.offset), range = {\n                left: radOffset - rad / 2,\n                right: radOffset + rad / 2,\n            };\n            if (!moveOptions.straight) {\n                res.angle += randomInRange(setRangeValue(range.left, range.right));\n            }\n            if (moveOptions.random && typeof moveOptions.speed === \"number\") {\n                res.length *= getRandom();\n            }\n            return res;\n        };\n        this._checkOverlap = (pos, tryCount = 0) => {\n            const collisionsOptions = this.options.collisions, radius = this.getRadius();\n            if (!collisionsOptions.enable) {\n                return false;\n            }\n            const overlapOptions = collisionsOptions.overlap;\n            if (overlapOptions.enable) {\n                return false;\n            }\n            const retries = overlapOptions.retries;\n            if (retries >= 0 && tryCount > retries) {\n                throw new Error(`${errorPrefix} particle is overlapping and can't be placed`);\n            }\n            return !!this.container.particles.find((particle) => getDistance(pos, particle.position) < radius + particle.getRadius());\n        };\n        this._getRollColor = (color) => {\n            if (!color || !this.roll || (!this.backColor && !this.roll.alter)) {\n                return color;\n            }\n            const backFactor = this.roll.horizontal && this.roll.vertical ? 2 : 1, backSum = this.roll.horizontal ? Math.PI / 2 : 0, rolled = Math.floor(((this.roll.angle ?? 0) + backSum) / (Math.PI / backFactor)) % 2;\n            if (!rolled) {\n                return color;\n            }\n            if (this.backColor) {\n                return this.backColor;\n            }\n            if (this.roll.alter) {\n                return alterHsl(color, this.roll.alter.type, this.roll.alter.value);\n            }\n            return color;\n        };\n        this._initPosition = (position) => {\n            const container = this.container, zIndexValue = getRangeValue(this.options.zIndex.value);\n            this.position = this._calcPosition(container, position, clamp(zIndexValue, 0, container.zLayers));\n            this.initialPosition = this.position.copy();\n            const canvasSize = container.canvas.size;\n            this.moveCenter = {\n                ...getPosition(this.options.move.center, canvasSize),\n                radius: this.options.move.center.radius ?? 0,\n                mode: this.options.move.center.mode ?? \"percent\",\n            };\n            this.direction = getParticleDirectionAngle(this.options.move.direction, this.position, this.moveCenter);\n            switch (this.options.move.direction) {\n                case \"inside\":\n                    this.outType = \"inside\";\n                    break;\n                case \"outside\":\n                    this.outType = \"outside\";\n                    break;\n            }\n            this.offset = Vector.origin;\n        };\n        this._loadShapeData = (shapeOptions, reduceDuplicates) => {\n            const shapeData = shapeOptions.options[this.shape];\n            if (!shapeData) {\n                return;\n            }\n            return deepExtend({\n                close: shapeOptions.close,\n                fill: shapeOptions.fill,\n            }, itemFromSingleOrMultiple(shapeData, this.id, reduceDuplicates));\n        };\n        this._engine = engine;\n        this.init(id, position, overrideOptions, group);\n    }\n    destroy(override) {\n        if (this.unbreakable || this.destroyed) {\n            return;\n        }\n        this.destroyed = true;\n        this.bubble.inRange = false;\n        this.slow.inRange = false;\n        const container = this.container, pathGenerator = this.pathGenerator;\n        for (const [, plugin] of container.plugins) {\n            if (plugin.particleDestroyed) {\n                plugin.particleDestroyed(this, override);\n            }\n        }\n        for (const updater of container.particles.updaters) {\n            if (updater.particleDestroyed) {\n                updater.particleDestroyed(this, override);\n            }\n        }\n        if (pathGenerator) {\n            pathGenerator.reset(this);\n        }\n    }\n    draw(delta) {\n        const container = this.container;\n        for (const [, plugin] of container.plugins) {\n            container.canvas.drawParticlePlugin(plugin, this, delta);\n        }\n        container.canvas.drawParticle(this, delta);\n    }\n    getFillColor() {\n        return this._getRollColor(this.bubble.color ?? getHslFromAnimation(this.color));\n    }\n    getMass() {\n        return (this.getRadius() ** 2 * Math.PI) / 2;\n    }\n    getPosition() {\n        return {\n            x: this.position.x + this.offset.x,\n            y: this.position.y + this.offset.y,\n            z: this.position.z,\n        };\n    }\n    getRadius() {\n        return this.bubble.radius ?? this.size.value;\n    }\n    getStrokeColor() {\n        return this._getRollColor(this.bubble.color ?? getHslFromAnimation(this.strokeColor));\n    }\n    init(id, position, overrideOptions, group) {\n        const container = this.container, engine = this._engine;\n        this.id = id;\n        this.group = group;\n        this.fill = true;\n        this.pathRotation = false;\n        this.close = true;\n        this.lastPathTime = 0;\n        this.destroyed = false;\n        this.unbreakable = false;\n        this.rotation = 0;\n        this.misplaced = false;\n        this.retina = {\n            maxDistance: {},\n        };\n        this.outType = \"normal\";\n        this.ignoresResizeRatio = true;\n        const pxRatio = container.retina.pixelRatio, mainOptions = container.actualOptions, particlesOptions = loadParticlesOptions(this._engine, container, mainOptions.particles), shapeType = particlesOptions.shape.type, { reduceDuplicates } = particlesOptions;\n        this.shape = itemFromSingleOrMultiple(shapeType, this.id, reduceDuplicates);\n        const shapeOptions = particlesOptions.shape;\n        if (overrideOptions && overrideOptions.shape && overrideOptions.shape.type) {\n            const overrideShapeType = overrideOptions.shape.type, shape = itemFromSingleOrMultiple(overrideShapeType, this.id, reduceDuplicates);\n            if (shape) {\n                this.shape = shape;\n                shapeOptions.load(overrideOptions.shape);\n            }\n        }\n        this.shapeData = this._loadShapeData(shapeOptions, reduceDuplicates);\n        particlesOptions.load(overrideOptions);\n        const shapeData = this.shapeData;\n        if (shapeData) {\n            particlesOptions.load(shapeData.particles);\n        }\n        const interactivity = new Interactivity(engine, container);\n        interactivity.load(container.actualOptions.interactivity);\n        interactivity.load(particlesOptions.interactivity);\n        this.interactivity = interactivity;\n        this.fill = shapeData?.fill ?? particlesOptions.shape.fill;\n        this.close = shapeData?.close ?? particlesOptions.shape.close;\n        this.options = particlesOptions;\n        const pathOptions = this.options.move.path;\n        this.pathDelay = getValue(pathOptions.delay) * 1000;\n        if (pathOptions.generator) {\n            this.pathGenerator = this._engine.plugins.getPathGenerator(pathOptions.generator);\n            if (this.pathGenerator && container.addPath(pathOptions.generator, this.pathGenerator)) {\n                this.pathGenerator.init(container);\n            }\n        }\n        container.retina.initParticle(this);\n        this.size = initParticleNumericAnimationValue(this.options.size, pxRatio);\n        this.bubble = {\n            inRange: false,\n        };\n        this.slow = {\n            inRange: false,\n            factor: 1,\n        };\n        this._initPosition(position);\n        this.initialVelocity = this._calculateVelocity();\n        this.velocity = this.initialVelocity.copy();\n        this.moveDecay = 1 - getRangeValue(this.options.move.decay);\n        const particles = container.particles;\n        particles.needsSort = particles.needsSort || particles.lastZIndex < this.position.z;\n        particles.lastZIndex = this.position.z;\n        this.zIndexFactor = this.position.z / container.zLayers;\n        this.sides = 24;\n        let drawer = container.drawers.get(this.shape);\n        if (!drawer) {\n            drawer = this._engine.plugins.getShapeDrawer(this.shape);\n            if (drawer) {\n                container.drawers.set(this.shape, drawer);\n            }\n        }\n        if (drawer && drawer.loadShape) {\n            drawer.loadShape(this);\n        }\n        const sideCountFunc = drawer?.getSidesCount;\n        if (sideCountFunc) {\n            this.sides = sideCountFunc(this);\n        }\n        this.spawning = false;\n        this.shadowColor = rangeColorToRgb(this.options.shadow.color);\n        for (const updater of container.particles.updaters) {\n            updater.init(this);\n        }\n        for (const mover of container.particles.movers) {\n            mover.init && mover.init(this);\n        }\n        if (drawer && drawer.particleInit) {\n            drawer.particleInit(container, this);\n        }\n        for (const [, plugin] of container.plugins) {\n            plugin.particleCreated && plugin.particleCreated(this);\n        }\n    }\n    isInsideCanvas() {\n        const radius = this.getRadius(), canvasSize = this.container.canvas.size, position = this.position;\n        return (position.x >= -radius &&\n            position.y >= -radius &&\n            position.y <= canvasSize.height + radius &&\n            position.x <= canvasSize.width + radius);\n    }\n    isVisible() {\n        return !this.destroyed && !this.spawning && this.isInsideCanvas();\n    }\n    reset() {\n        for (const updater of this.container.particles.updaters) {\n            updater.reset && updater.reset(this);\n        }\n    }\n}\n",
-      "start": 1703957086030,
-      "end": 1703957086145,
+      "start": 1703979088109,
+      "end": 1703979088195,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1703957086145,
-      "end": 1703957086145,
+      "start": 1703979088195,
+      "end": 1703979088195,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1703957086145,
-      "end": 1703957086145,
+      "start": 1703979088195,
+      "end": 1703979088195,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1703957086145,
-      "end": 1703957086145,
+      "start": 1703979088195,
+      "end": 1703979088196,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1703957086145,
-      "end": 1703957086145,
+      "start": 1703979088196,
+      "end": 1703979088196,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1703957086145,
-      "end": 1703957086145,
+      "start": 1703979088196,
+      "end": 1703979088196,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1703957086145,
-      "end": 1703957086145,
+      "start": 1703979088196,
+      "end": 1703979088196,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1703957086145,
-      "end": 1703957086145,
+      "start": 1703979088196,
+      "end": 1703979088196,
       "order": "normal"
     },
     {
       "name": "vite:vue",
-      "start": 1703957086145,
-      "end": 1703957086145,
+      "start": 1703979088196,
+      "end": 1703979088196,
       "order": "normal"
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1703957086145,
-      "end": 1703957086145,
+      "start": 1703979088196,
+      "end": 1703979088196,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1703957086145,
-      "end": 1703957086146,
+      "start": 1703979088196,
+      "end": 1703979088196,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1703957086146,
-      "end": 1703957086146,
+      "start": 1703979088196,
+      "end": 1703979088196,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1703957086146,
-      "end": 1703957086146,
+      "start": 1703979088196,
+      "end": 1703979088196,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1703957086146,
-      "end": 1703957086146,
+      "start": 1703979088196,
+      "end": 1703979088196,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1703957086146,
-      "end": 1703957086146,
+      "start": 1703979088196,
+      "end": 1703979088196,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1703957086146,
-      "end": 1703957086146,
+      "start": 1703979088196,
+      "end": 1703979088196,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1703957086146,
-      "end": 1703957086146,
+      "start": 1703979088196,
+      "end": 1703979088196,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1703957086146,
-      "end": 1703957086146,
+      "start": 1703979088196,
+      "end": 1703979088196,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1703957086146,
-      "end": 1703957086146,
+      "start": 1703979088196,
+      "end": 1703979088196,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1703957086146,
-      "end": 1703957086146,
+      "start": 1703979088196,
+      "end": 1703979088196,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1703957086146,
-      "end": 1703957086146,
+      "start": 1703979088196,
+      "end": 1703979088196,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1703957086146,
-      "end": 1703957086152,
+      "start": 1703979088196,
+      "end": 1703979088198,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1703957086152,
-      "end": 1703957086152,
+      "start": 1703979088198,
+      "end": 1703979088198,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1703957086152,
-      "end": 1703957086152,
+      "start": 1703979088198,
+      "end": 1703979088198,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1703957086152,
-      "end": 1703957086152,
+      "start": 1703979088198,
+      "end": 1703979088198,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1703957086152,
-      "end": 1703957086153,
+      "start": 1703979088198,
+      "end": 1703979088198,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1703957086153,
-      "end": 1703957086153,
+      "start": 1703979088198,
+      "end": 1703979088198,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1703957086153,
-      "end": 1703957086153,
+      "start": 1703979088198,
+      "end": 1703979088198,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1703957086153,
-      "end": 1703957086153,
+      "start": 1703979088198,
+      "end": 1703979088198,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1703957086153,
-      "end": 1703957086153,
+      "start": 1703979088198,
+      "end": 1703979088198,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1703957086153,
-      "end": 1703957086153,
+      "start": 1703979088198,
+      "end": 1703979088198,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1703957086153,
-      "end": 1703957086153,
+      "start": 1703979088198,
+      "end": 1703979088198,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1703957086153,
-      "end": 1703957086153,
+      "start": 1703979088198,
+      "end": 1703979088198,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1703957086153,
-      "end": 1703957086153,
+      "start": 1703979088198,
+      "end": 1703979088198,
       "order": "normal"
     }
   ]

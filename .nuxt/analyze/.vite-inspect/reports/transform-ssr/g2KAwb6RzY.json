@@ -4,69 +4,69 @@
     {
       "name": "vite:load-fallback",
       "result": "<template>\r\n    <section name=\"Contact\" class=\"relative w-full p-4 text-white\">\r\n        <div class=\"flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full\">\r\n            <div class=\"pb-8\">\r\n                <h2 class=\"text-4xl font-bold inline border-b-4 border-primary-color/40 sm:text-5xl\">Contact</h2>\r\n                <p class=\"py-6\">Submit the form below to get in touch with me</p>\r\n            </div>\r\n\r\n            <div class=\"flex justify-center items-center\">\r\n                <form @submit.prevent=\"handleSubmit($event)\" class=\"flex flex-col w-full md:w-1/2\">\r\n                    <input type=\"text\" name=\"name\" placeholder=\"Enter your name\"\r\n                        class=\"p-2 bg-transparent border-2 rounded-md text-white focus:outline-none focus:border-primary-color\" required />\r\n\r\n                    <input type=\"email\" name=\"email\" placeholder=\"Enter your email\"\r\n                        class=\"my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none focus:border-primary-color\" required />\r\n\r\n                    <textarea name=\"message\" rows=\"10\" placeholder=\"Enter your message\"\r\n                        class=\"p-2 bg-transparent border-2 rounded-md text-white focus:outline-none focus:border-primary-color\" required></textarea>\r\n\r\n                    <button class=\"text-black font-semibold bg-gradient-to-t from-green-400 to-primary-color px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300\">Contact me</button>\r\n                </form>\r\n            </div>\r\n        </div>\r\n    </section>\r\n</template>\r\n\r\n<script setup>\r\nimport Swal from \"sweetalert2\";\r\n\r\nconst handleSubmit = (event) => {\r\n    const formData = Object.fromEntries(new FormData(event.target));\r\n    console.log(formData);\r\n\r\n    $fetch(\"https://getform.io/f/0bf8bb06-e08e-4831-b551-aec6e2820300\", {\r\n        method: \"POST\",\r\n        body: {\r\n            formData\r\n        }\r\n    }).then(() =>{\r\n        Swal.fire({\r\n            icon: 'success',\r\n            iconColor: '#0DFC4B',\r\n            title: 'Thank you for contacting me. I will be in touch soon!',\r\n            showConfirmButton: true,\r\n            background: '#191a19',\r\n            color: '#fff',\r\n            confirmButtonColor: 'rgba(13, 252, 75, 0.9)',\r\n            backdrop: `\r\n                rgba(54, 55, 54,0.4)\r\n            `\r\n        })\r\n    }).catch(() => {\r\n        console.log(\"error\");\r\n    })\r\n    \r\n    event.target.reset();\r\n}\r\n</script>",
-      "start": 1703957091851,
-      "end": 1703957092335,
+      "start": 1703979093498,
+      "end": 1703979093805,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1703957092336,
-      "end": 1703957092336,
+      "start": 1703979093805,
+      "end": 1703979093805,
       "order": "pre"
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1703957092336,
-      "end": 1703957092336,
+      "start": 1703979093805,
+      "end": 1703979093805,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1703957092336,
-      "end": 1703957092336,
+      "start": 1703979093805,
+      "end": 1703979093805,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1703957092336,
-      "end": 1703957092336,
+      "start": 1703979093805,
+      "end": 1703979093805,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1703957092336,
-      "end": 1703957092336,
+      "start": 1703979093805,
+      "end": 1703979093805,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1703957092336,
-      "end": 1703957092336,
+      "start": 1703979093805,
+      "end": 1703979093805,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1703957092336,
-      "end": 1703957092336,
+      "start": 1703979093805,
+      "end": 1703979093805,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1703957092336,
-      "end": 1703957092336,
+      "start": 1703979093805,
+      "end": 1703979093805,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1703957092336,
-      "end": 1703957092336,
+      "start": 1703979093805,
+      "end": 1703979093805,
       "order": "normal"
     },
     {
       "name": "vite:vue",
       "result": "import { mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderAttrs as _ssrRenderAttrs } from \"vue/server-renderer\"\n\nimport Swal from \"sweetalert2\";\r\n\r\n\nconst _sfc_main = {\n  __name: 'Contact',\n  __ssrInlineRender: true,\n  setup(__props) {\n\r\nconst handleSubmit = (event) => {\r\n    const formData = Object.fromEntries(new FormData(event.target));\r\n    console.log(formData);\r\n\r\n    $fetch(\"https://getform.io/f/0bf8bb06-e08e-4831-b551-aec6e2820300\", {\r\n        method: \"POST\",\r\n        body: {\r\n            formData\r\n        }\r\n    }).then(() =>{\r\n        Swal.fire({\r\n            icon: 'success',\r\n            iconColor: '#0DFC4B',\r\n            title: 'Thank you for contacting me. I will be in touch soon!',\r\n            showConfirmButton: true,\r\n            background: '#191a19',\r\n            color: '#fff',\r\n            confirmButtonColor: 'rgba(13, 252, 75, 0.9)',\r\n            backdrop: `\r\n                rgba(54, 55, 54,0.4)\r\n            `\r\n        })\r\n    }).catch(() => {\r\n        console.log(\"error\");\r\n    })\r\n    \r\n    event.target.reset();\r\n}\r\n\nreturn (_ctx, _push, _parent, _attrs) => {\n  _push(`<section${_ssrRenderAttrs(_mergeProps({\n    name: \"Contact\",\n    class: \"relative w-full p-4 text-white\"\n  }, _attrs))}><div class=\"flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full\"><div class=\"pb-8\"><h2 class=\"text-4xl font-bold inline border-b-4 border-primary-color/40 sm:text-5xl\">Contact</h2><p class=\"py-6\">Submit the form below to get in touch with me</p></div><div class=\"flex justify-center items-center\"><form class=\"flex flex-col w-full md:w-1/2\"><input type=\"text\" name=\"name\" placeholder=\"Enter your name\" class=\"p-2 bg-transparent border-2 rounded-md text-white focus:outline-none focus:border-primary-color\" required><input type=\"email\" name=\"email\" placeholder=\"Enter your email\" class=\"my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none focus:border-primary-color\" required><textarea name=\"message\" rows=\"10\" placeholder=\"Enter your message\" class=\"p-2 bg-transparent border-2 rounded-md text-white focus:outline-none focus:border-primary-color\" required></textarea><button class=\"text-black font-semibold bg-gradient-to-t from-green-400 to-primary-color px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300\">Contact me</button></form></div></div></section>`)\n}\n}\n\n}\n\n\n\nimport { useSSRContext as __vite_useSSRContext } from 'vue'\nconst _sfc_setup = _sfc_main.setup\n_sfc_main.setup = (props, ctx) => {\n  const ssrContext = __vite_useSSRContext()\n  ;(ssrContext.modules || (ssrContext.modules = new Set())).add(\"components/Contact.vue\")\n  return _sfc_setup ? _sfc_setup(props, ctx) : undefined\n}\nexport default _sfc_main",
-      "start": 1703957092336,
-      "end": 1703957092344,
+      "start": 1703979093805,
+      "end": 1703979093809,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -82,182 +82,176 @@
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1703957092344,
-      "end": 1703957092344,
+      "start": 1703979093809,
+      "end": 1703979093809,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1703957092345,
-      "end": 1703957092345,
+      "start": 1703979093809,
+      "end": 1703979093809,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1703957092345,
-      "end": 1703957092345,
+      "start": 1703979093809,
+      "end": 1703979093809,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1703957092345,
-      "end": 1703957092345,
+      "start": 1703979093809,
+      "end": 1703979093809,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1703957092345,
-      "end": 1703957092345,
-      "order": "normal"
-    },
-    {
-      "name": "replace",
-      "start": 1703957092345,
-      "end": 1703957092345,
+      "start": 1703979093809,
+      "end": 1703979093809,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1703957092345,
-      "end": 1703957092345,
+      "start": 1703979093809,
+      "end": 1703979093809,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1703957092345,
-      "end": 1703957092345,
+      "start": 1703979093809,
+      "end": 1703979093809,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1703957092345,
-      "end": 1703957092345,
+      "start": 1703979093809,
+      "end": 1703979093809,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1703957092345,
-      "end": 1703957092346,
+      "start": 1703979093809,
+      "end": 1703979093809,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1703957092346,
-      "end": 1703957092346,
+      "start": 1703979093809,
+      "end": 1703979093809,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1703957092346,
-      "end": 1703957092346,
+      "start": 1703979093809,
+      "end": 1703979093809,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1703957092346,
-      "end": 1703957092346,
+      "start": 1703979093809,
+      "end": 1703979093809,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1703957092346,
-      "end": 1703957092346,
+      "start": 1703979093810,
+      "end": 1703979093810,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1703957092346,
-      "end": 1703957092346,
+      "start": 1703979093810,
+      "end": 1703979093810,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1703957092346,
-      "end": 1703957092346,
+      "start": 1703979093810,
+      "end": 1703979093810,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1703957092346,
-      "end": 1703957092346,
+      "start": 1703979093810,
+      "end": 1703979093810,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1703957092346,
-      "end": 1703957092346,
+      "start": 1703979093810,
+      "end": 1703979093810,
       "order": "post"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1703957092346,
-      "end": 1703957092346,
+      "start": 1703979093810,
+      "end": 1703979093810,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1703957092346,
-      "end": 1703957092347,
+      "start": 1703979093810,
+      "end": 1703979093811,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1703957092346,
-      "end": 1703957092347,
+      "start": 1703979093810,
+      "end": 1703979093811,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1703957092348,
-      "end": 1703957092348,
+      "start": 1703979093811,
+      "end": 1703979093811,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1703957092348,
-      "end": 1703957092348,
+      "start": 1703979093811,
+      "end": 1703979093811,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1703957092348,
-      "end": 1703957092348,
+      "start": 1703979093811,
+      "end": 1703979093811,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1703957092348,
-      "end": 1703957092348,
+      "start": 1703979093811,
+      "end": 1703979093811,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-template",
-      "start": 1703957092348,
-      "end": 1703957092348,
+      "start": 1703979093811,
+      "end": 1703979093811,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1703957092348,
-      "end": 1703957092348,
+      "start": 1703979093811,
+      "end": 1703979093811,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1703957092348,
-      "end": 1703957092348,
+      "start": 1703979093811,
+      "end": 1703979093811,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1703957092352,
-      "end": 1703957092352,
+      "start": 1703979093811,
+      "end": 1703979093811,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1703957092353,
-      "end": 1703957092353,
+      "start": 1703979093811,
+      "end": 1703979093811,
       "order": "normal"
     }
   ]
